@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IDX | شركة التحول الرقمي الذكي</title>
+<meta name="description" content="شركة التحول الرقمي الذكي (IDX): أنظمة أتمتة عبر واتساب وحلول برمجية وتسويق رقمي للمنشآت في المملكة العربية السعودية.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#14213D;      /* الحبر: النصوص والعناوين */
+    --ink-soft:#4A5872;
+    --sky:#EAF2F6;      /* خلفية الأقسام الهادئة */
+    --paper:#FBFCFD;
+    --green:#14896A;    /* لون الإجراء ورسائل البوت */
+    --bubble:#DDF3E9;
+    --saffron:#E0A030;  /* لمسة صغيرة فقط */
+    --line:#D9E3EA;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Readex Pro",Tahoma,Arial,sans-serif;color:var(--ink);background:var(--paper);font-weight:300;line-height:1.75;font-size:17px}
+  a{color:var(--green)}
+  a:focus-visible,summary:focus-visible{outline:3px solid var(--saffron);outline-offset:3px;border-radius:4px}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+  .ltr{direction:ltr;unicode-bidi:isolate}
+
+  /* الرأس */
+  header .wrap{display:flex;align-items:center;justify-content:space-between;height:76px}
+  .mark{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+  .mark b{font-weight:700;font-size:28px;letter-spacing:.5px;direction:ltr}
+  .mark b i{font-style:normal;color:var(--green)}
+  .mark small{font-size:13px;color:var(--ink-soft);border-inline-start:1px solid var(--line);padding-inline-start:10px}
+  nav a{color:var(--ink-soft);text-decoration:none;font-size:15px;margin-inline-start:26px}
+  nav a:hover{color:var(--ink)}
+
+  /* البطل: محادثة واتساب حقيقية من منتج OSP */
+  .hero{padding:56px 0 88px}
+  .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+  .hero h1{font-weight:700;font-size:clamp(34px,4.6vw,56px);line-height:1.25;letter-spacing:-.5px}
+  .hero p.lead{margin-top:22px;font-size:19px;color:var(--ink-soft);max-width:30ch}
+  .hero .cta{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap}
+  .btn{display:inline-block;padding:13px 24px;border-radius:999px;text-decoration:none;font-weight:600;font-size:16px}
+  .btn.primary{background:var(--ink);color:#fff}
+  .btn.ghost{color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+
+  .phone{justify-self:center;width:min(360px,100%);background:#fff;border-radius:34px;padding:12px;box-shadow:0 30px 60px -30px #14213D55,0 0 0 1px var(--line)}
+  .screen{background:#EFF4F2;border-radius:24px;overflow:hidden}
+  .bar{background:var(--green);color:#fff;padding:14px 18px;display:flex;align-items:center;gap:12px}
+  .bar .av{width:36px;height:36px;border-radius:50%;background:#fff;color:var(--green);display:grid;place-items:center;font-weight:700;font-size:13px;direction:ltr}
+  .bar b{display:block;font-weight:600;font-size:15px;line-height:1.3}
+  .bar span{font-size:12px;opacity:.85}
+  .chat{padding:18px 14px 22px;display:flex;flex-direction:column;gap:10px;min-height:380px}
+  .msg{max-width:84%;padding:9px 13px;border-radius:14px;font-size:14.5px;line-height:1.6;background:#fff;box-shadow:0 1px 0 #0000000d;opacity:0;transform:translateY(6px);animation:in .45s ease forwards}
+  .msg.me{align-self:flex-start;background:var(--bubble);border-start-start-radius:4px}
+  .msg.bot{align-self:flex-end;border-start-end-radius:4px}
+  .msg .t{display:block;font-size:11px;color:var(--ink-soft);margin-top:2px;text-align:left;direction:ltr}
+  .msg .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+  .msg .chips span{font-size:12.5px;color:var(--green);border:1px solid #14896A55;border-radius:999px;padding:2px 10px}
+  .msg:nth-child(1){animation-delay:.3s}.msg:nth-child(2){animation-delay:1.1s}.msg:nth-child(3){animation-delay:1.9s}.msg:nth-child(4){animation-delay:2.7s}.msg:nth-child(5){animation-delay:3.5s}
+  @keyframes in{to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion:reduce){.msg{animation:none;opacity:1;transform:none}}
+
+  /* ما نبنيه */
+  .build{background:var(--sky);padding:84px 0}
+  h2{font-weight:700;font-size:clamp(26px,3vw,36px);line-height:1.35;margin-bottom:34px;max-width:22ch}
+  .rows{border-top:1.5px solid var(--ink)}
+  .row{display:grid;grid-template-columns:minmax(200px,1fr) 2fr;gap:28px;padding:26px 0;border-bottom:1px solid var(--line)}
+  .row h3{font-weight:600;font-size:22px}
+  .row p{color:var(--ink-soft);max-width:56ch}
+
+  /* OSP */
+  .osp{padding:92px 0}
+  .osp .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+  .osp .name{font-weight:700;font-size:clamp(64px,9vw,120px);line-height:1;color:var(--green);direction:ltr;text-align:right;letter-spacing:-2px}
+  .osp .sub{font-size:20px;margin-top:12px;font-weight:400}
+  .osp .desc{color:var(--ink-soft);margin-top:18px;max-width:42ch}
+  .feat{list-style:none}
+  .feat li{padding:16px 0 16px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:22px 1fr;gap:14px}
+  .feat li::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--saffron);margin-top:10px}
+  .feat b{font-weight:600;display:block}
+  .feat span{color:var(--ink-soft);font-size:15.5px}
+
+  /* السجل */
+  .record{background:var(--ink);color:#fff;padding:84px 0}
+  .record h2{color:#fff}
+  .record dl{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:0 48px}
+  .record dl div{padding:18px 0;border-top:1px solid #ffffff26}
+  .record dt{font-size:14px;color:#B9C4D6}
+  .record dd{font-size:18px;font-weight:400;margin-top:4px}
+  .record dd .ltr{display:block;font-size:14.5px;color:#B9C4D6;margin-top:2px}
+  .record a{color:#8FE0C2}
+
+  /* الخصوصية */
+  .privacy{padding:72px 0}
+  details{border-top:1.5px solid var(--ink);border-bottom:1px solid var(--line)}
+  details+details{border-top:none}
+  summary{cursor:pointer;list-style:none;padding:22px 0;font-weight:600;font-size:20px;display:flex;justify-content:space-between;align-items:center}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";font-weight:300;font-size:28px;color:var(--green);transition:transform .2s}
+  details[open] summary::after{transform:rotate(45deg)}
+  .policy{padding:0 0 26px;color:var(--ink-soft);max-width:70ch}
+  .policy ul{padding-inline-start:20px;margin:10px 0}
+  .policy li{margin:6px 0}
+  .policy b{color:var(--ink);font-weight:600}
+  .policy.en{direction:ltr;text-align:left;margin-inline-start:auto}
+
+  footer{padding:30px 0 40px;color:var(--ink-soft);font-size:14px}
+  footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:24px}
+
+  @media (max-width:860px){
+    .hero .wrap,.osp .wrap{grid-template-columns:1fr}
+    .hero{padding-top:24px}
+    .row{grid-template-columns:1fr;gap:6px}
+    nav{display:none}
+    .osp .name{text-align:right}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="mark" href="#top" aria-label="IDX الصفحة الرئيسية"><b>ID<i>X</i></b><small>التحول الرقمي الذكي</small></a>
+    <nav aria-label="أقسام الصفحة">
+      <a href="#build">خدماتنا</a>
+      <a href="#osp">منصة OSP</a>
+      <a href="#record">تواصل معنا</a>
+      <a href="#privacy">الخصوصية</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1>نحوّل شغل منشأتك اليومي إلى نظام يشتغل من واتساب</h1>
+      <p class="lead">نبني أنظمة أتمتة وبرمجيات تختصر المتابعة والمراسلات، بلغة عملائك وعلى التطبيق اللي يستخدمونه أصلاً.</p>
+      <div class="cta">
+        <a class="btn primary" href="https://wa.me/966563838599">كلّمنا على واتساب</a>
+        <a class="btn ghost" href="#osp">شوف منصة OSP</a>
+      </div>
+    </div>
+
+    <div class="phone" aria-label="مثال محادثة من منصة OSP">
+      <div class="screen">
+        <div class="bar"><div class="av">OSP</div><div><b>جمعية الملاك</b><span>حساب أعمال</span></div></div>
+        <div class="chat">
+          <div class="msg me">فيه تسريب ماء في ممر الدور الثاني<span class="t">9:41</span></div>
+          <div class="msg bot">وصل بلاغك 👍 وين بالضبط؟
+            <div class="chips"><span>مبنى D</span><span>الدور 2</span><span>مكان آخر</span></div><span class="t">9:41</span></div>
+          <div class="msg me">مبنى D<span class="t">9:42</span></div>
+          <div class="msg bot">سجّلنا البلاغ برقم <b class="ltr">M-0142</b> وتنبّه مشرف المجمع الحين.<span class="t">9:42</span></div>
+          <div class="msg bot">✅ المشرف بدأ العمل على بلاغك.<span class="t">9:58</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="build" id="build">
+  <div class="wrap">
+    <h2>وش نسوي للمنشآت</h2>
+    <div class="rows">
+      <div class="row"><h3>أتمتة عبر واتساب</h3><p>بوتات تستقبل الطلبات والبلاغات، وتوزّعها على المسؤول، وتتابعها لين تنقفل، وتذكّر العملاء بالمستحقات.</p></div>
+      <div class="row"><h3>تطوير البرمجيات</h3><p>لوحات تحكم وأنظمة داخلية مبنية على احتياج المنشأة، مربوطة بقواعد بيانات سحابية.</p></div>
+      <div class="row"><h3>التسويق الرقمي</h3><p>إدارة الحملات والمحتوى الرقمي وبناء حضور المنشأة على الإنترنت.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="osp" id="osp">
+  <div class="wrap">
+    <div>
+      <div class="name">OSP</div>
+      <p class="sub">منصة خدمات الملاك</p>
+      <p class="desc">نظام لإدارة جمعيات الملاك والمجمعات السكنية كاملاً من واتساب، بدون تطبيق يحمّله الساكن. المدير يعتمد، والمشرف ينفّذ، والساكن يتابع طلبه خطوة بخطوة.</p>
+      <p class="desc ltr" style="text-align:left">OSP (Owners Services Platform) runs owners associations and residential complexes over WhatsApp: requests, complaints, services, fee follow-up and an admin dashboard.</p>
+    </div>
+    <ul class="feat">
+      <li><div><b>بلاغات الصيانة والطوارئ</b><span>تنبيه فوري للمشرف، وتحديث الساكن بكل مرحلة.</span></div></li>
+      <li><div><b>الشكاوى</b><span>توجيه كل شكوى حسب نوعها، مع حماية هوية المشتكي.</span></div></li>
+      <li><div><b>الطلبات والخدمات</b><span>فتح السطح، والريموت، والرش، والدهان، والمفقودات، بأسعار يعتمدها المدير.</span></div></li>
+      <li><div><b>الرسوم والسداد</b><span>المستحقات وإيصالات التحويل وتذكير المتأخرين.</span></div></li>
+      <li><div><b>عهدة المشرف</b><span>تحويل العهدة ومشتريات الطلبات وتصفيتها.</span></div></li>
+    </ul>
+  </div>
+</section>
+
+<section class="record" id="record">
+  <div class="wrap">
+    <h2>بيانات الشركة والتواصل</h2>
+    <dl>
+      <div><dt>الاسم التجاري</dt><dd>شركة التحول الرقمي الذكي<span class="ltr">Al Tahawul Al Raqmi Al Dhaki Company</span></dd></div>
+      <div><dt>الرقم الوطني الموحد</dt><dd class="ltr" style="text-align:right">7051364813</dd></div>
+      <div><dt>نوع الكيان</dt><dd>شركة ذات مسؤولية محدودة (شخص واحد)</dd></div>
+      <div><dt>العنوان الوطني</dt><dd>2904 شارع أبي بن معاذ الأنصاري، حي الربيع، الرياض 13316، الرقم الفرعي 7067<span class="ltr">2904 Abi Ibn Muath Al Ansari St, Ar Rabie Dist., Riyadh 13316, Saudi Arabia</span></dd></div>
+      <div><dt>الجوال وواتساب</dt><dd><a class="ltr" href="tel:+966563838599">+966 56 383 8599</a></dd></div>
+      <div><dt>البريد الإلكتروني</dt><dd><a class="ltr" href="mailto:info@idx.sa">info@idx.sa</a></dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="privacy" id="privacy">
+  <div class="wrap">
+    <details open>
+      <summary>سياسة الخصوصية</summary>
+      <div class="policy">
+        <p>تحترم شركة التحول الرقمي الذكي خصوصية مستخدمي خدماتها، ومنها الخدمات المقدمة عبر واتساب.</p>
+        <ul>
+          <li><b>البيانات التي نجمعها:</b> رقم الجوال، والاسم، ورقم الوحدة، ومحتوى الطلبات والبلاغات والصور، وإيصالات السداد.</li>
+          <li><b>استخدامها:</b> لتقديم الخدمة المطلوبة فقط، مثل معالجة الطلبات ومتابعة الرسوم وإرسال الإشعارات المتعلقة بها.</li>
+          <li><b>مشاركتها:</b> لا نبيع البيانات ولا نشاركها، إلا مع إدارة الجمعية المعنية بالخدمة أو جهة رسمية مختصة عند الطلب النظامي.</li>
+          <li><b>حفظها:</b> لدى مزودي خدمات سحابية موثوقين، طوال مدة الخدمة أو المدة التي تتطلبها الأنظمة.</li>
+          <li><b>حقوقك:</b> الاطلاع على بياناتك أو تصحيحها أو حذفها بمراسلة <a class="ltr" href="mailto:info@idx.sa">info@idx.sa</a>.</li>
+        </ul>
+        <p>تخضع هذه السياسة لنظام حماية البيانات الشخصية في المملكة العربية السعودية.</p>
+      </div>
+    </details>
+    <details>
+      <summary><span class="ltr">Privacy Policy</span></summary>
+      <div class="policy en">
+        <p>Al Tahawul Al Raqmi Al Dhaki Company (IDX) respects the privacy of the users of its services, including services provided over WhatsApp.</p>
+        <ul>
+          <li><b>Data we collect:</b> phone number, name, unit number, and the requests, photos and payment receipts users send.</li>
+          <li><b>How we use it:</b> only to provide the requested service, such as handling requests, fee follow-up and related notifications.</li>
+          <li><b>Sharing:</b> we do not sell or share data, except with the relevant association's management or a competent authority when legally required.</li>
+          <li><b>Storage:</b> with trusted cloud providers, for the duration of the service or as required by law.</li>
+          <li><b>Your rights:</b> request access, correction or deletion of your data at <a href="mailto:info@idx.sa">info@idx.sa</a>.</li>
+        </ul>
+        <p>This policy is governed by the Personal Data Protection Law of the Kingdom of Saudi Arabia.</p>
+      </div>
+    </details>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 شركة التحول الرقمي الذكي، الرياض</span>
+    <span>الرقم الوطني الموحد <span class="ltr">7051364813</span></span>
+    <span><a href="/privacy/">Privacy Policy</a> · <a href="/data-deletion/">Data Deletion</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
