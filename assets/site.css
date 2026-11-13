@@ -108,6 +108,7 @@ h3{font-size:22px;font-weight:600;line-height:1.45}
 
 /* الرحلة */
 .journey{position:relative;margin-top:56px;display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
+.journey.four{grid-template-columns:repeat(4,1fr)}
 .journey:before{content:"";position:absolute;top:21px;inset-inline:6%;height:2px;background:repeating-linear-gradient(90deg,var(--brand-green) 0 10px,transparent 10px 18px)}
 .stage{position:relative;padding-top:60px}
 .stage .dot{position:absolute;top:0;inset-inline-start:0;width:44px;height:44px;border-radius:12px;background:var(--bg);border:2px solid var(--heading);color:var(--heading);display:grid;place-items:center;font-weight:700;font-size:16px}
@@ -116,7 +117,7 @@ h3{font-size:22px;font-weight:600;line-height:1.45}
 .stage h3{font-size:19px}
 .stage p{font-size:15.5px;color:var(--text-2);margin-top:6px;line-height:1.75}
 @media (max-width:900px){
-  .journey{grid-template-columns:1fr;gap:28px}
+  .journey,.journey.four{grid-template-columns:1fr;gap:28px}
   .journey:before{top:0;bottom:0;inset-inline-start:21px;inset-inline-end:auto;width:2px;height:auto;background:repeating-linear-gradient(180deg,var(--brand-green) 0 10px,transparent 10px 18px)}
   .stage{padding-top:0;padding-inline-start:66px}
 }
