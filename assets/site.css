@@ -195,7 +195,9 @@ a.row:hover h3{color:var(--link)}
 .list li span{color:var(--text-2);font-size:15.5px}
 .legal h2{font-size:22px;margin-top:32px}
 .legal p,.legal li{color:var(--text-2);margin-top:8px}
-.legal ul{padding-inline-start:20px}
+.legal ul,.legal ol{padding-inline-start:20px}
+.legal a{color:var(--link);text-decoration:underline;text-underline-offset:3px}
+.legal h2:first-child{margin-top:0}
 
 /* التذييل */
 footer{background:var(--night);color:var(--night-2);padding:56px 0 32px;font-size:15px}
