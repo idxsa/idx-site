@@ -614,7 +614,9 @@ main{padding-top:0}
 .status{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);backdrop-filter:blur(8px);border-radius:999px;padding:7px 14px 7px 16px;font-size:13px;color:#C9CCEE;margin-bottom:26px}
 .status b{width:8px;height:8px;border-radius:50%;background:#57C27F;box-shadow:0 0 0 0 rgba(87,194,127,.6);animation:live 2s infinite}
 @keyframes live{70%{box-shadow:0 0 0 10px rgba(87,194,127,0)}100%{box-shadow:0 0 0 0 rgba(87,194,127,0)}}
-.hero3 h1{font-size:clamp(42px,6.4vw,92px);line-height:1.12;letter-spacing:-.015em;color:#fff}
+.hero3 h1{font-size:clamp(38px,5.2vw,74px);line-height:1.45;letter-spacing:0;word-spacing:.08em;color:#fff}
+.hero3 h1 .ln{display:block;white-space:nowrap}
+@media(max-width:520px){.hero3 h1 .ln{white-space:normal}}
 .hero3 .lead{color:#A9ACD6;font-size:clamp(17px,1.6vw,20px);margin:24px 0 34px;max-width:560px}
 .hero3 .btn.ghost{color:#fff;border-color:rgba(255,255,255,.2)}
 .hero3 .btn.ghost:hover{border-color:#fff}
@@ -795,7 +797,7 @@ main{padding-top:0}
   <div class="wrap">
     <div>
       <p class="status rv"><b></b>شركة التحول الرقمي الذكي · الرياض</p>
-      <h1 id="h1"><span class="wd" style="--i:0">نبني</span> <span class="wd" style="--i:1">التقنية</span><br><span class="wd" style="--i:2">اللي</span> <span class="wd" style="--i:3">تشغّل</span><br><span class="wd grad-text" style="--i:4">منشأتك.</span></h1>
+      <h1 id="h1"><span class="ln"><span class="wd" style="--i:0">نبني</span> <span class="wd" style="--i:1">التقنية</span></span><span class="ln"><span class="wd" style="--i:2">اللي</span> <span class="wd" style="--i:3">تشغّل</span> <span class="wd grad-text" style="--i:4">منشأتك.</span></span></h1>
       <p class="lead rv d2">نصمم ونبرمج ونشغّل التقنية اللي تحتاجها منشأتك: مواقع تتصدر قوقل، وحملات تجيب عملاء، ووكلاء ذكاء اصطناعي وأنظمة مترابطة تشتغل عنك على مدار الساعة.</p>
       <div class="actions rv d3">
         <a class="btn green mag js-wa" href="#" data-msg="السلام عليكم، أبغى استشارة مجانية من iDX">احجز استشارة مجانية</a>
