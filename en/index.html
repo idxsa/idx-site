@@ -777,6 +777,15 @@ main{padding-top:0}
 .d-auto .nd{font-size:12px;padding:8px 9px}
 .bx:not(.w2) .d-auto .ln{min-width:14px}
 .bx:not(.w2) h3{font-size:18px}
+
+/* blog teaser */
+.bl3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:900px){.bl3{grid-template-columns:1fr}}
+.wy.bl{display:flex;flex-direction:column;gap:12px;text-decoration:none;color:inherit}
+.wy.bl .bt{align-self:flex-start;font-size:12.5px;font-weight:600;color:var(--accent-text);background:var(--soft);border-radius:999px;padding:4px 12px}
+.wy.bl h3{font-size:19px;line-height:1.5}
+.wy.bl p{color:var(--muted);font-size:15px}
+.wy.bl .go{margin-top:auto;font-weight:600;color:var(--accent-text)}
 @media (prefers-reduced-motion:reduce){.grad-text{animation:none}.bx::after{animation:none}}
 
 
@@ -808,7 +817,7 @@ select{background-position:calc(100% - 24px) 52%,calc(100% - 18px) 52%}
 <header class="top">
   <div class="wrap">
     <a class="brand" href="/en/" aria-label="iDX — Home"><svg viewBox="190 720 810 360" role="img" aria-label="iDX" class="lg-hdr" style="overflow:visible"><g fill="currentColor"><rect class="lp p-stem" x="211" y="845" width="76" height="215"/><path class="lp p-d" d="M327,741 H490 C590,741 660,810 660,900 C660,990 590,1060 490,1060 H327 V858 H403 V983 H490 C545,983 583,950 583,900 C583,850 545,818 490,818 H327 Z"/><polygon class="lp p-x1" points="606,741 704,741 801,838 801,887 752,887"/><polygon class="lp p-x2" points="801,913 801,962 704,1060 606,1060 752,913"/><polygon class="lp p-x3" points="826,913 876,913 948,985 977,985 977,1060 900,1060 900,1035 826,962"/></g><g fill="#57C27F"><rect class="lp p-dot" x="211" y="741" width="76" height="76" rx="6"/><polygon class="lp p-arr" points="900,741 977,741 977,816 948,816 876,887 826,887 826,838 900,764"/></g></svg></a>
-    <nav class="nav" id="nav" aria-label="Menu"><a href="/en/" aria-current="page">Home</a><a href="#services">Capabilities</a><a href="#arch">How we build</a><a href="#work">Our work</a><a href="/en/products/">Products</a><a href="#faq">FAQ</a><a class="btn nav-cta js-wa" href="#" data-msg="Hello, I'd like to know more about iDX services">Contact us</a></nav>
+    <nav class="nav" id="nav" aria-label="Menu"><a href="/en/" aria-current="page">Home</a><a href="#services">Capabilities</a><a href="#arch">How we build</a><a href="#work">Our work</a><a href="/en/products/">Products</a><a href="/en/blog/">Blog</a><a href="#faq">FAQ</a><a class="btn nav-cta js-wa" href="#" data-msg="Hello, I'd like to know more about iDX services">Contact us</a></nav>
     <div class="tools">
       <a class="icon-btn" href="/" hreflang="ar" lang="ar" aria-label="النسخة العربية">ع</a>
       <button class="icon-btn" id="theme" type="button" aria-label="Toggle dark mode" aria-pressed="false"><svg class="theme-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="theme-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
@@ -1054,6 +1063,14 @@ select{background-position:calc(100% - 24px) 52%,calc(100% - 18px) 52%}
   </div>
 </section>
 
+<!-- BLOG -->
+<section style="padding-bottom:0">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="eyebrow rv">From the blog</p><h2 class="rv d1">Articles to help you decide</h2></div><a class="btn ghost rv" href="/en/blog/">All articles →</a></div>
+    <div class="bl3"><a class="wy bl spot tilt rv" href="/en/blog/best-whatsapp-bot/"><span class="bt">WhatsApp</span><h3>The best WhatsApp bot for business: 7 criteria before you choose</h3><p>Seven criteria to measure any bot against before you pay: official platform, Arabic, integrations and full cost.</p><span class="go">Read the article →</span></a><a class="wy bl spot tilt rv d1" href="/en/blog/ai-whatsapp-bot-chatgpt/"><span class="bt">AI</span><h3>AI WhatsApp bots: can you connect ChatGPT to your business WhatsApp?</h3><p>What Meta allows since 2026, and the difference between a general assistant and your business's agent.</p><span class="go">Read the article →</span></a><a class="wy bl spot tilt rv d2" href="/en/blog/real-estate-whatsapp-bot/"><span class="bt">Real estate</span><h3>WhatsApp bots for real estate offices: sorting serious buyers automatically</h3><p>From the ad message to the viewing: how the bot saves the agent's time for serious buyers.</p><span class="go">Read the article →</span></a></div>
+  </div>
+</section>
+
 <!-- 10. FAQ -->
 <section id="faq">
   <div class="wrap">
@@ -1120,7 +1137,7 @@ select{background-position:calc(100% - 24px) 52%,calc(100% - 18px) 52%}
         <p style="margin-top:8px">We build WhatsApp-based systems, AI agents, websites and marketing campaigns for your business. A Saudi company in Riyadh.</p>
         <p style="margin-top:8px">Unified National Number <span class="ltr">7051364813</span></p>
       </div>
-      <div><h4>Services & products</h4><ul><li><a href="/en/chatbot/">WhatsApp bot for business</a></li><li><a href="/en/ai/">AI agent</a></li><li><a href="/en/web/">Websites, landing pages & SEO</a></li><li><a href="/en/marketing/">Marketing & ads</a></li><li><a href="/en/apps/">Apps & systems</a></li><li><a href="/en/branding/">Brand identity & profiles</a></li><li><a href="/en/dashboards/">Reports & dashboards</a></li><li><a href="/en/automation/">Automation & integrations</a></li><li><a href="/en/products/">Products</a></li><li><a href="/blog/">Blog (Arabic)</a></li><li><a href="#work">Our work</a></li><li><a href="#services">All capabilities</a></li></ul></div>
+      <div><h4>Services & products</h4><ul><li><a href="/en/chatbot/">WhatsApp bot for business</a></li><li><a href="/en/ai/">AI agent</a></li><li><a href="/en/web/">Websites, landing pages & SEO</a></li><li><a href="/en/marketing/">Marketing & ads</a></li><li><a href="/en/apps/">Apps & systems</a></li><li><a href="/en/branding/">Brand identity & profiles</a></li><li><a href="/en/dashboards/">Reports & dashboards</a></li><li><a href="/en/automation/">Automation & integrations</a></li><li><a href="/en/products/">Products</a></li><li><a href="/en/blog/">Blog</a></li><li><a href="#work">Our work</a></li><li><a href="#services">All capabilities</a></li></ul></div>
       <div><h4>Contact</h4><ul><li><a class="ltr" href="tel:+966563838599">+966 56 383 8599</a></li><li><a href="mailto:info@idx.sa">info@idx.sa</a></li><li><a href="https://share.google/FOqrIvV83dQOFFw5g" target="_blank" rel="noopener">Our Google Maps profile</a></li><li>2904 Abi Ibn Muath Al Ansari St, Ar Rabie Dist., Riyadh 13316</li></ul></div>
     </div>
     <div class="base"><span>© 2026 Smart Digital Transformation Company (iDX). All rights reserved.</span><span><a href="/privacy/">Privacy policy</a> &nbsp;·&nbsp; <a href="/data-deletion/">Data deletion</a> &nbsp;·&nbsp; <a href="/en/terms/">Terms & conditions</a></span></div>
