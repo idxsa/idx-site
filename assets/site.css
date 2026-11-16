@@ -227,3 +227,10 @@ footer .base{border-top:1px solid rgba(255,255,255,.12);margin-top:40px;padding-
 .legend{margin-top:18px;font-size:14px;color:var(--text-2);display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .legend span{display:inline-block;width:22px;height:14px;border:1.5px solid var(--heading);border-radius:4px}
 .legend span.ext{border-style:dashed;margin-inline-start:12px}
+
+/* OSP brand lockup */
+.osp-brand{display:flex;align-items:center;gap:16px;margin:4px 0 20px;flex-wrap:wrap}
+.osp-brand .osp-mark{height:56px;width:auto;color:var(--heading);direction:ltr}
+.osp-brand span{font-size:20px;font-weight:600;color:var(--text-2);padding-inline-start:16px;border-inline-start:3px solid #57C27F}
+.osp-ref{margin-top:10px;font-size:16px;color:var(--text-2)}
+@media (max-width:700px){.osp-brand .osp-mark{height:44px}.osp-brand span{font-size:17px}}
