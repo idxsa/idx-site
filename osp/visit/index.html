@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0A0A6B">
+<title>قائمة فحص الزيارة | OSP</title>
+<link rel="icon" href="/assets/icon.svg" type="image/svg+xml">
+<style>
+@font-face{font-family:Plex;src:url(/assets/fonts/plex-arabic-400.woff2) format("woff2");font-weight:400}
+@font-face{font-family:Plex;src:url(/assets/fonts/plex-arabic-600.woff2) format("woff2");font-weight:600}
+@font-face{font-family:Plex;src:url(/assets/fonts/plex-arabic-700.woff2) format("woff2");font-weight:700}
+:root{--navy:#0A0A6B;--green:#57C27F;--ok:#1f9d55;--warn:#e3a008;--bad:#d64545;--mist:#F3F5FA;--line:#E1E4EF;--text:#1A1E3C;--muted:#5b6475}
+[hidden]{display:none!important}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;font-family:Plex,system-ui,Tahoma,sans-serif;color:var(--text);background:var(--mist);font-size:16px;line-height:1.6;padding-bottom:110px}
+header{background:var(--navy);color:#fff;padding:14px 16px 16px}
+.brand{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.brand b{font-size:20px;letter-spacing:.5px}.brand b span{color:var(--green)}
+.vend{display:flex;align-items:center;gap:8px;font-size:13px;text-align:left}
+.vend img{height:34px;border-radius:6px;background:#fff;padding:2px}
+h1{font-size:18px;margin:12px 0 2px}.sub{opacity:.8;font-size:13px}
+main{padding:14px;max-width:720px;margin:auto}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:12px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.el{border:2px solid var(--line);background:#fff;border-radius:14px;padding:10px 4px;text-align:center;font-family:inherit;cursor:pointer}
+.el b{display:block;font-size:26px;color:var(--navy);line-height:1.1}
+.el small{color:var(--muted);font-size:12px}
+.el.done{border-color:var(--ok)}.el.done small{color:var(--ok);font-weight:600}
+.el.part{border-color:var(--warn)}
+.btn{display:block;width:100%;border:0;border-radius:12px;padding:14px;font:600 17px Plex,sans-serif;cursor:pointer}
+.btn.primary{background:#167A47;color:#fff}.btn.ghost{background:#fff;color:var(--navy);border:1px solid var(--line)}
+.btn:disabled{opacity:.5}
+.bar{position:fixed;bottom:0;inset-inline:0;background:#fff;border-top:1px solid var(--line);padding:12px 14px calc(12px + env(safe-area-inset-bottom))}
+.bar .in{max-width:720px;margin:auto;display:flex;gap:10px}
+.sec{font-weight:700;color:var(--navy);margin:16px 2px 8px;font-size:15px}
+.item{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px;margin-bottom:8px}
+.item .t{font-weight:600;margin-bottom:8px}
+.seg{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.seg button{border:2px solid var(--line);background:#fff;border-radius:10px;padding:10px 2px;font:600 14px Plex,sans-serif;cursor:pointer;color:var(--text)}
+.seg button.on.ok{background:var(--ok);border-color:var(--ok);color:#fff}
+.seg button.on.watch{background:var(--warn);border-color:var(--warn);color:#fff}
+.seg button.on.fail{background:var(--bad);border-color:var(--bad);color:#fff}
+.seg.o3 button.on{background:var(--navy);border-color:var(--navy);color:#fff}
+.extra{margin-top:10px;display:none}.extra.show{display:block}
+textarea,input[type=number],input[type=text]{width:100%;border:1px solid var(--line);border-radius:10px;padding:10px;font:16px Plex,sans-serif;background:#fff}
+.num{display:flex;gap:8px;align-items:center}.num input{max-width:130px;font-size:20px;text-align:center}
+.photo{display:flex;align-items:center;gap:10px;margin-top:8px}
+.photo label{flex:1;border:2px dashed var(--line);border-radius:10px;padding:10px;text-align:center;cursor:pointer;color:var(--navy);font-weight:600}
+.photo img{width:64px;height:64px;object-fit:cover;border-radius:8px}
+.req{color:var(--bad);font-size:13px;margin-top:6px}
+.hot{color:var(--bad);font-weight:700}
+.saved{font-size:12px;color:var(--ok);margin-top:4px;min-height:16px}
+.top2{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.top2 h2{margin:0;color:var(--navy)}
+.prog{height:8px;background:var(--line);border-radius:8px;overflow:hidden;margin:8px 0}.prog i{display:block;height:100%;background:var(--green)}
+.err{background:#fdecec;border:1px solid #f3b4b4;color:#8a1f1f;border-radius:12px;padding:12px;margin-bottom:12px}
+.err ul{margin:6px 0 0;padding-inline-start:18px}
+.okmsg{text-align:center;padding:30px 16px}.okmsg b{font-size:48px;display:block;color:var(--ok)}
+.parts .row{display:flex;gap:6px;margin-bottom:6px}.parts .row input:first-child{flex:3}.parts .row input:last-child{flex:1}
+.muted{color:var(--muted);font-size:13px}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand"><b>OSP <span>●</span></b><div class="vend" id="vend"></div></div>
+  <h1 id="title">قائمة فحص الزيارة</h1><div class="sub" id="subtitle">جاري التحميل…</div>
+</header>
+<main id="app"></main>
+<div class="bar" id="bar" hidden><div class="in" id="barIn"></div></div>
+
+<script>
+const API = "https://hscwuuqkizupczcvcacv.supabase.co/functions/v1/visits";
+const T = new URLSearchParams(location.search).get("t") || "";
+let D = null, cur = null;
+const $ = (s) => document.querySelector(s);
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+async function api(action, extra = {}) {
+  const r = await fetch(API, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ action, t: T, ...extra }) });
+  const j = await r.json().catch(() => ({ error: "تعذّر الاتصال" }));
+  if (!r.ok) throw Object.assign(new Error(j.error || "خطأ"), { data: j });
+  return j;
+}
+const key = (a, i) => a + "|" + i;
+const resMap = () => new Map(D.results.map((r) => [key(r.asset_id, r.item_id), r]));
+const arMap = () => new Map(D.asset_results.map((r) => [r.asset_id, r]));
+function itemDone(r, it) {
+  if (!r) return false;
+  if (it.kind === "number") return r.value !== null && r.value !== undefined;
+  return !!r.status && (r.status === "ok" || (!!r.note && !!r.photo_path));
+}
+function assetProgress(a) {
+  const m = resMap(); const n = D.items.filter((it) => itemDone(m.get(key(a.id, it.id)), it)).length;
+  return { n, total: D.items.length, overall: !!arMap().get(a.id)?.overall };
+}
+function monthName(d) { return new Date(d).toLocaleDateString("ar-SA-u-ca-gregory", { month: "long", year: "numeric" }); }
+
+async function load() {
+  if (!/^[0-9a-f]{48}$/.test(T)) return fatal("الرابط غير صحيح. افتح الرابط اللي وصلك على الواتساب.");
+  try { D = await api("form_get"); } catch (e) { return fatal(e.message); }
+  $("#vend").innerHTML = (D.vendor?.logo_url ? `<img src="${esc(D.vendor.logo_url)}" alt="">` : "") + `<div>${esc(D.vendor?.name)}</div>`;
+  $("#title").textContent = "صيانة المصاعد — " + monthName(D.visit.month);
+  $("#subtitle").textContent = `${D.complex?.name ?? ""} · ${D.visit.ref}` + (D.technician ? ` · الفني: ${D.technician.full_name}` : "");
+  if (!D.visit.editable) return done(true);
+  home();
+}
+function fatal(msg) { $("#subtitle").textContent = ""; $("#app").innerHTML = `<div class="err">${esc(msg)}</div>`; $("#bar").hidden = true; }
+
+function home() {
+  cur = null; window.scrollTo(0, 0);
+  const total = D.assets.length; const full = D.assets.filter((a) => { const p = assetProgress(a); return p.n === p.total && p.overall; }).length;
+  let h = "";
+  if (!D.visit.arrived_at) h += `<div class="card"><b>قبل لا تبدأ</b><p class="muted" style="margin:4px 0 12px">اضغط "بدأت الزيارة" عند وصولك، يتسجّل وقت الوصول تلقائياً.</p><button class="btn primary" onclick="start()">بدأت الزيارة</button></div>`;
+  h += `<div class="card"><div class="top2"><h2>المصاعد</h2><span class="muted">${full} / ${total} مكتمل</span></div><div class="prog"><i style="width:${total ? full / total * 100 : 0}%"></i></div><div class="grid">`;
+  for (const a of D.assets) {
+    const p = assetProgress(a); const cls = p.n === p.total && p.overall ? "done" : p.n ? "part" : "";
+    h += `<button class="el ${cls}" onclick="openAsset('${a.id}')"><b>${esc(a.code)}</b><small>${cls === "done" ? "✓ مكتمل" : p.n + " / " + p.total}</small></button>`;
+  }
+  h += `</div></div><div id="errBox"></div>`;
+  $("#app").innerHTML = h;
+  $("#bar").hidden = false;
+  $("#barIn").innerHTML = `<button class="btn primary" id="sub" onclick="submitVisit()" ${full === total ? "" : "disabled"}>إرسال التقرير</button>`;
+}
+async function start() { try { await api("start"); D.visit.arrived_at = new Date().toISOString(); home(); } catch (e) { alertBox(e.message); } }
+
+function openAsset(id) {
+  cur = D.assets.find((a) => a.id === id); window.scrollTo(0, 0);
+  const m = resMap(); const ar = arMap().get(id) || {};
+  let h = `<div class="top2"><h2>مصعد ${esc(cur.code)}${cur.building ? " — " + esc(cur.building) : ""}</h2><button class="btn ghost" style="width:auto;padding:8px 14px" onclick="home()">رجوع</button></div>`;
+  let sec = "";
+  for (const it of D.items) {
+    if (it.section !== sec) { sec = it.section; h += `<div class="sec">${esc(sec)}</div>`; }
+    const r = m.get(key(id, it.id)) || {};
+    h += `<div class="item" id="i_${it.id}"><div class="t">${esc(it.item)}${it.route_to === "complex" ? ' <span class="muted">(يُبلَّغ المجمع)</span>' : ""}</div>`;
+    if (it.kind === "number") {
+      const hot = it.alert_above != null && r.value > it.alert_above;
+      h += `<div class="num"><input type="number" inputmode="decimal" value="${r.value ?? ""}" onchange="saveNum('${it.id}',this.value)"><span class="${hot ? "hot" : "muted"}">${esc(it.unit ?? "")} ${it.alert_above != null ? "· الحد " + it.alert_above : ""}</span></div>`;
+    } else {
+      h += `<div class="seg">` + [["ok", "✓ سليم"], ["watch", "⚠ متابعة"], ["fail", "✕ معطل"]].map(([s, l]) =>
+        `<button class="${s} ${r.status === s ? "on" : ""}" onclick="setStatus('${it.id}','${s}')">${l}</button>`).join("") + `</div>`;
+      const show = r.status && r.status !== "ok";
+      h += `<div class="extra ${show ? "show" : ""}"><textarea rows="2" placeholder="وش المشكلة؟ (إلزامي)" onchange="setNote('${it.id}',this.value)">${esc(r.note ?? "")}</textarea>
+        <div class="photo"><label>📷 ${r.photo_path ? "تغيير الصورة" : "صوّر المشكلة (إلزامي)"}<input type="file" accept="image/*" capture="environment" hidden onchange="photo('${it.id}',this)"></label>${r.photo_url ? `<img src="${esc(r.photo_url)}" alt="">` : r.photo_path ? "<span class='muted'>✓ تم الرفع</span>" : ""}</div>
+        ${show && (!r.note || !r.photo_path) ? `<div class="req">الملاحظة والصورة إلزامية لأي بند غير سليم</div>` : ""}</div>`;
+    }
+    h += `<div class="saved" id="s_${it.id}"></div></div>`;
+  }
+  const parts = (ar.parts_replaced || []).concat([{ name: "", qty: "" }]);
+  h += `<div class="sec">الحالة العامة للمصعد</div><div class="item"><div class="seg o3">` +
+    [["ok", "يعمل"], ["notes", "بملاحظات"], ["down", "متوقف"]].map(([s, l]) => `<button class="${ar.overall === s ? "on" : ""}" onclick="setOverall('${s}')">${l}</button>`).join("") +
+    `</div></div><div class="sec">القطع المستبدلة</div><div class="item parts" id="parts">` +
+    parts.map((p) => `<div class="row"><input type="text" placeholder="القطعة" value="${esc(p.name)}"><input type="text" placeholder="الكمية" value="${esc(p.qty)}"></div>`).join("") +
+    `<button class="btn ghost" style="padding:8px" onclick="addPart()">+ قطعة</button></div>
+    <div class="sec">التوصيات</div><div class="item"><textarea id="rec" rows="3" placeholder="اختياري">${esc(ar.recommendations ?? "")}</textarea></div>`;
+  $("#app").innerHTML = h;
+  $("#barIn").innerHTML = `<button class="btn primary" onclick="saveAsset()">حفظ المصعد ${esc(cur.code)}</button>`;
+}
+function upsertLocal(itemId, patch) {
+  const k = key(cur.id, itemId); let r = D.results.find((x) => key(x.asset_id, x.item_id) === k);
+  if (!r) { r = { asset_id: cur.id, item_id: itemId }; D.results.push(r); }
+  Object.assign(r, patch); return r;
+}
+async function saveRow(itemId, patch) {
+  const r = upsertLocal(itemId, patch); const s = $("#s_" + itemId);
+  if (s) s.textContent = "جاري الحفظ…";
+  try {
+    const out = await api("save_item", { asset_id: cur.id, item_id: itemId, status: r.status, value: r.value, note: r.note, photo_path: r.photo_path ?? null });
+    r.status = out.status; if (s) s.textContent = "✓ محفوظ";
+  } catch (e) { if (s) { s.style.color = "var(--bad)"; s.textContent = "ما انحفظ: " + e.message; } }
+}
+async function setStatus(id, st) { await saveRow(id, { status: st }); openAsset(cur.id); document.getElementById("i_" + id)?.scrollIntoView({ block: "center" }); }
+function setNote(id, v) { saveRow(id, { note: v.trim() || null }); }
+async function saveNum(id, v) { if (v === "") return; await saveRow(id, { value: Number(v) }); openAsset(cur.id); document.getElementById("i_" + id)?.scrollIntoView({ block: "center" }); }
+async function shrink(file) {
+  const img = await createImageBitmap(file); const max = 1280; const k = Math.min(1, max / Math.max(img.width, img.height));
+  const c = document.createElement("canvas"); c.width = Math.round(img.width * k); c.height = Math.round(img.height * k);
+  c.getContext("2d").drawImage(img, 0, 0, c.width, c.height);
+  return await new Promise((res) => c.toBlob(res, "image/jpeg", 0.72));
+}
+async function photo(id, input) {
+  const f = input.files?.[0]; if (!f) return; const s = $("#s_" + id); if (s) s.textContent = "جاري رفع الصورة…";
+  try {
+    const blob = await shrink(f); const u = await api("photo_url");
+    const up = await fetch(u.url, { method: "PUT", headers: { "Content-Type": "image/jpeg" }, body: blob });
+    if (!up.ok) throw new Error("فشل رفع الصورة");
+    const r = upsertLocal(id, {}); r.photo_url = URL.createObjectURL(blob);
+    await saveRow(id, { photo_path: u.path }); openAsset(cur.id); document.getElementById("i_" + id)?.scrollIntoView({ block: "center" });
+  } catch (e) { if (s) { s.style.color = "var(--bad)"; s.textContent = e.message; } }
+}
+let overall = null;
+function setOverall(s) { overall = s; document.querySelectorAll(".o3 button").forEach((b, i) => b.classList.toggle("on", ["ok", "notes", "down"][i] === s)); }
+function addPart() { const d = document.createElement("div"); d.className = "row"; d.innerHTML = '<input type="text" placeholder="القطعة"><input type="text" placeholder="الكمية">'; $("#parts").insertBefore(d, $("#parts").lastElementChild); }
+async function saveAsset() {
+  const ar = arMap().get(cur.id) || {}; const ov = overall || ar.overall;
+  if (!ov) { alert("اختر الحالة العامة للمصعد"); return; }
+  const parts = [...document.querySelectorAll("#parts .row")].map((r) => ({ name: r.children[0].value.trim(), qty: r.children[1].value.trim() })).filter((p) => p.name);
+  const rec = $("#rec").value.trim();
+  try {
+    await api("save_asset", { asset_id: cur.id, overall: ov, parts, recommendations: rec });
+    const i = D.asset_results.findIndex((x) => x.asset_id === cur.id); const row = { asset_id: cur.id, overall: ov, parts_replaced: parts, recommendations: rec };
+    if (i >= 0) D.asset_results[i] = row; else D.asset_results.push(row);
+    overall = null; home();
+  } catch (e) { alert(e.message); }
+}
+function alertBox(msg, list) { $("#errBox").innerHTML = `<div class="err">${esc(msg)}${list?.length ? "<ul>" + list.map((x) => `<li>${esc(x)}</li>`).join("") + "</ul>" : ""}</div>`; }
+async function submitVisit() {
+  if (!confirm("متأكد؟ بعد الإرسال ما تقدر تعدّل التقرير.")) return;
+  const b = $("#sub"); b.disabled = true; b.textContent = "جاري الإرسال…";
+  try { await api("submit"); done(false); }
+  catch (e) { b.disabled = false; b.textContent = "إرسال التقرير"; alertBox(e.message, e.data?.missing); }
+}
+function done(already) {
+  $("#bar").hidden = true;
+  $("#app").innerHTML = `<div class="card okmsg"><b>✓</b><h2>${already ? "هذي الزيارة انرسلت من قبل" : "تم إرسال التقرير"}</h2><p class="muted">وصل التقرير لمشرف المجمع ومديره، وأي ملاحظة انفتح لها طلب صيانة تلقائياً. شكراً لك.</p></div>`;
+}
+load();
+</script>
+</body>
+</html>

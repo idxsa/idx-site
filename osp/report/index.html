@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0A0A6B">
+<title>تقرير الصيانة الدورية | OSP</title>
+<link rel="icon" href="/assets/icon.svg" type="image/svg+xml">
+<style>
+@font-face{font-family:Plex;src:url(/assets/fonts/plex-arabic-400.woff2) format("woff2");font-weight:400}
+@font-face{font-family:Plex;src:url(/assets/fonts/plex-arabic-600.woff2) format("woff2");font-weight:600}
+@font-face{font-family:Plex;src:url(/assets/fonts/plex-arabic-700.woff2) format("woff2");font-weight:700}
+:root{--navy:#0A0A6B;--green:#57C27F;--ok:#1f9d55;--warn:#e3a008;--bad:#d64545;--mist:#F3F5FA;--line:#E1E4EF;--text:#1A1E3C;--muted:#5b6475}
+[hidden]{display:none!important}
+*{box-sizing:border-box}
+body{margin:0;background:#e9ecf3;font-family:Plex,system-ui,Tahoma,sans-serif;color:var(--text);font-size:14px;line-height:1.6}
+.page{max-width:820px;margin:16px auto;background:#fff;padding:28px 30px;border-radius:10px;box-shadow:0 10px 30px -18px rgba(10,10,107,.4)}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:3px solid var(--navy);padding-bottom:12px}
+.brand b{font-size:24px;color:var(--navy)}.brand b span{color:var(--green)}.brand div{color:var(--muted);font-size:12px}
+.vend{display:flex;align-items:center;gap:8px;text-align:left}.vend img{height:48px}
+.vend b{display:block}.muted{color:var(--muted);font-size:12px}
+h1{font-size:20px;color:var(--navy);margin:14px 0 0}
+h2{font-size:15px;color:var(--navy);margin:20px 0 8px;border-right:4px solid var(--green);padding-right:8px}
+.meta{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px}
+.meta div{background:var(--mist);border-radius:8px;padding:8px 10px}.meta b{display:block;font-size:11px;color:var(--muted);font-weight:400}
+.cards{display:grid;grid-template-columns:repeat(8,1fr);gap:6px}
+.card{border-radius:8px;padding:8px 2px;text-align:center;color:#fff}.card b{font-size:22px;display:block;line-height:1.2}.card small{font-size:11px}
+.card.ok{background:var(--ok)}.card.notes{background:var(--warn)}.card.down{background:var(--bad)}.card.none{background:#aab}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:10px}
+.kpis div{border:1px solid var(--line);border-radius:8px;padding:8px 10px}.kpis b{font-size:20px;color:var(--navy);display:block}
+table{width:100%;border-collapse:collapse;font-size:12.5px}
+th{background:var(--navy);color:#fff;padding:6px;font-weight:600}
+td{border-bottom:1px solid #eceef4;padding:4px;text-align:center}td.it{text-align:right;padding-right:8px}
+tr.sec td{background:#eef1f8;font-weight:700;text-align:right;color:var(--navy)}
+.d{display:inline-block;width:11px;height:11px;border-radius:50%}.d.ok{background:var(--ok)}.d.watch{background:var(--warn)}.d.fail{background:var(--bad)}.d.none{background:#ccd}
+.hot{color:var(--bad);font-weight:700}
+.legend{font-size:12px;color:var(--muted);margin-bottom:6px}.legend .d{vertical-align:middle;margin:0 4px 0 12px}
+.find{display:grid;grid-template-columns:1fr 130px;gap:12px;border:1px solid var(--line);border-right:5px solid var(--warn);border-radius:8px;padding:10px 12px;margin-bottom:8px;break-inside:avoid}
+.find.fail{border-right-color:var(--bad)}.find h3{margin:0;font-size:14px}.find p{margin:4px 0}
+.find img{width:130px;height:95px;object-fit:cover;border-radius:6px}
+.tag{display:inline-block;background:#eef1f8;border-radius:4px;padding:0 6px;font-size:11px;margin-left:4px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}.box{border:1px solid var(--line);border-radius:8px;padding:10px 12px}
+.box h2{margin-top:0}
+.sig{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}.sig div{background:var(--mist);border-radius:8px;padding:10px}
+.foot{margin-top:16px;border-top:1px solid var(--line);padding-top:8px;color:var(--muted);font-size:11px;display:flex;justify-content:space-between}
+.actions{max-width:820px;margin:12px auto 0;display:flex;gap:8px;padding:0 8px}
+.btn{flex:1;border:0;border-radius:10px;padding:12px;font:600 15px Plex,sans-serif;cursor:pointer;background:#167A47;color:#fff}
+.btn.ghost{background:#fff;color:var(--navy);border:1px solid var(--line)}
+.confirm{max-width:820px;margin:12px auto 0;background:#fff7e6;border:1px solid #f0c27a;border-radius:10px;padding:14px;text-align:center}
+.err{max-width:820px;margin:30px auto;background:#fdecec;border:1px solid #f3b4b4;color:#8a1f1f;border-radius:10px;padding:16px}
+.nofind{color:var(--ok);font-weight:600}
+@media (max-width:640px){.page{padding:16px;margin:8px;border-radius:8px}.meta,.kpis{grid-template-columns:repeat(2,1fr)}.cards{grid-template-columns:repeat(4,1fr)}.two,.sig{grid-template-columns:1fr}.find{grid-template-columns:1fr}.find img{width:100%;height:160px}table{font-size:11px}}
+@media print{@page{size:A4;margin:10mm}body{background:#fff}.page{box-shadow:none;margin:0;padding:0;max-width:none}.actions,.confirm{display:none}
+ *{-webkit-print-color-adjust:exact;print-color-adjust:exact}.meta,.kpis{grid-template-columns:repeat(4,1fr)}.cards{grid-template-columns:repeat(8,1fr)}.two,.sig{grid-template-columns:1fr 1fr}.find{grid-template-columns:1fr 130px}.pb{break-before:page}}
+</style>
+</head>
+<body>
+<div id="confirm"></div>
+<div class="actions" id="actions" hidden><button class="btn" onclick="print()">حفظ PDF / طباعة</button></div>
+<div id="root"><div class="err" style="background:#fff;border-color:#ddd;color:#555">جاري تحميل التقرير…</div></div>
+<script>
+const API = "https://hscwuuqkizupczcvcacv.supabase.co/functions/v1/visits";
+const q = new URLSearchParams(location.search); const R = q.get("r"), C = q.get("c");
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const tz = { timeZone: "Asia/Riyadh" };
+const fDate = (d) => d ? new Date(d).toLocaleDateString("ar-SA-u-ca-gregory", { ...tz, weekday: "long", day: "numeric", month: "numeric", year: "numeric" }) : "—";
+const fTime = (d) => d ? new Date(d).toLocaleTimeString("ar-SA", { ...tz, hour: "numeric", minute: "2-digit" }) : "—";
+const fMonth = (d) => new Date(d).toLocaleDateString("ar-SA-u-ca-gregory", { month: "long", year: "numeric" });
+const OV = { ok: "يعمل", notes: "يعمل بملاحظات", down: "متوقف" };
+async function api(action, extra) {
+  const r = await fetch(API, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ action, ...extra }) });
+  const j = await r.json().catch(() => ({ error: "تعذّر الاتصال" })); if (!r.ok) throw new Error(j.error || "خطأ"); return j;
+}
+function dur(a, b) { if (!a || !b) return "—"; const m = Math.round((new Date(b) - new Date(a)) / 60000); return `${Math.floor(m / 60)}:${String(m % 60).padStart(2, "0")} س`; }
+async function load() {
+  let D;
+  try { D = await api("report_get", R ? { r: R } : { c: C }); } catch (e) { document.getElementById("root").innerHTML = `<div class="err">${esc(e.message)}</div>`; return; }
+  document.getElementById("actions").hidden = false;
+  if (D.can_confirm) document.getElementById("confirm").innerHTML = `<div class="confirm"><b>${esc(D.supervisor_label)}</b>، راجع التقرير وأكّد إن الفني زار المجمع فعلاً.<br><br><button class="btn" style="max-width:320px" onclick="doConfirm(this)">✔ أؤكد إن الزيارة تمت</button></div>`;
+  const v = D.visit, m = new Map(D.results.map((r) => [r.asset_id + "|" + r.item_id, r])), ar = new Map(D.asset_results.map((r) => [r.asset_id, r]));
+  const num = D.items.filter((i) => i.kind === "number");
+  // ملاحظات
+  const finds = [];
+  for (const a of D.assets) for (const it of D.items) {
+    const r = m.get(a.id + "|" + it.id); if (!r) continue;
+    const bad = it.kind === "number" ? it.alert_above != null && r.value > it.alert_above : r.status !== "ok";
+    if (bad) finds.push({ a, it, r, sev: it.kind === "number" || r.status === "fail" ? "fail" : "watch" });
+  }
+  finds.sort((x, y) => (x.sev === "fail" ? 0 : 1) - (y.sev === "fail" ? 0 : 1));
+  const reqs = new Map(D.requests.map((q) => [q.id, q]));
+  const maxT = num.length ? Math.max(...D.assets.map((a) => m.get(a.id + "|" + num[0].id)?.value ?? -99)) : null;
+  const maxEl = num.length ? D.assets.find((a) => m.get(a.id + "|" + num[0].id)?.value === maxT) : null;
+  const cnt = (o) => D.asset_results.filter((x) => x.overall === o).length;
+  let h = `<div class="page">
+  <div class="top"><div class="brand"><b>OSP <span>●</span></b><div>بوت خدمات اتحاد الملاك — من iDX</div></div>
+  <div class="vend">${D.vendor?.logo_url ? `<img src="${esc(D.vendor.logo_url)}" alt="">` : ""}<div><b>${esc(D.vendor?.name)}</b><span class="muted">مزوّد الخدمة${D.vendor?.cr_number ? " · س.ت " + esc(D.vendor.cr_number) : ""}</span></div></div></div>
+  <h1>تقرير الصيانة الدورية للمصاعد — ${fMonth(v.month)}</h1>
+  <div class="muted">${esc(D.complex?.name)} · رقم التقرير: ${esc(v.ref)} · ${esc(D.contract?.title ?? "")}${D.contract?.visits_per_year ? " · الزيارة " + D.stats.done + " من " + D.contract.visits_per_year : ""}</div>
+  <div class="meta"><div><b>تاريخ الزيارة</b>${fDate(v.arrived_at)}</div><div><b>فني الشركة</b>${esc(D.technician?.full_name ?? "—")}</div>
+  <div><b>الوصول ← المغادرة</b>${fTime(v.arrived_at)} ← ${fTime(v.left_at)}</div>
+  <div><b>تأكيد مشرف المجمع</b>${v.confirmed_at ? "✔ " + esc(v.confirmed_by) + " — " + fTime(v.confirmed_at) : "بانتظار التأكيد"}</div></div>
+  <h2>ملخص حالة المصاعد</h2><div class="cards">` + D.assets.map((a) => { const o = ar.get(a.id)?.overall || "none"; return `<div class="card ${o}"><b>${esc(a.code)}</b><small>${OV[o] ?? "—"}</small></div>`; }).join("") + `</div>
+  <div class="kpis"><div><b>${D.asset_results.length} / ${D.assets.length}</b>مصاعد تم فحصها</div><div><b>${finds.length}</b>ملاحظات (${finds.filter((f) => f.sev === "fail").length} عاجلة)</div>
+  <div><b>${D.requests.length}</b>طلبات صيانة فُتحت تلقائياً</div><div><b>${maxT != null && maxT > -99 ? maxT + "°" : "—"}</b>أعلى حرارة غرفة ماكينة${maxEl ? " (" + esc(maxEl.code) + ")" : ""}</div></div>
+  <h2>قائمة الفحص التفصيلية</h2><div class="legend"><span class="d ok"></span>سليم<span class="d watch"></span>يحتاج متابعة<span class="d fail"></span>معطل</div>
+  <table><thead><tr><th style="text-align:right;width:32%">البند</th>${D.assets.map((a) => `<th>${esc(a.code)}</th>`).join("")}</tr></thead><tbody>`;
+  let sec = "";
+  for (const it of D.items) {
+    if (it.section !== sec) { sec = it.section; h += `<tr class="sec"><td colspan="${D.assets.length + 1}">${esc(sec)}</td></tr>`; }
+    h += `<tr><td class="it">${esc(it.item)}${it.unit ? " (" + esc(it.unit) + ")" : ""}</td>` + D.assets.map((a) => {
+      const r = m.get(a.id + "|" + it.id);
+      if (it.kind === "number") return `<td class="${r && it.alert_above != null && r.value > it.alert_above ? "hot" : ""}">${r?.value ?? "—"}</td>`;
+      return `<td><span class="d ${r?.status ?? "none"}"></span></td>`;
+    }).join("") + `</tr>`;
+  }
+  h += `</tbody></table><div class="pb"></div><h2>الملاحظات والإجراءات</h2>`;
+  if (!finds.length) h += `<p class="nofind">✓ لا توجد ملاحظات — جميع البنود سليمة.</p>`;
+  for (const f of finds) {
+    const q2 = reqs.get(f.r.maintenance_request_id);
+    const to = f.it.route_to === "vendor" ? "الشركة + مشرف المجمع" : "مشرف المجمع + مدير المجمع";
+    h += `<div class="find ${f.sev}"><div><h3>مصعد ${esc(f.a.code)} — ${esc(f.it.item)}${f.it.kind === "number" ? ` (${f.r.value}${esc(f.it.unit ?? "")})` : f.sev === "fail" ? " — معطل" : " — يحتاج متابعة"}</h3>
+    <p>${esc(f.r.note ?? "")}</p><p>${q2 ? `<span class="tag">طلب صيانة #${esc(q2.ref_code)}</span>` : ""}<span class="tag">يُتابع من: ${to}</span></p></div>
+    ${f.r.photo_url ? `<img src="${esc(f.r.photo_url)}" alt="صورة الفني">` : "<div></div>"}</div>`;
+  }
+  const parts = []; for (const a of D.assets) for (const p of ar.get(a.id)?.parts_replaced || []) parts.push({ ...p, code: a.code });
+  const recs = D.assets.map((a) => ({ code: a.code, t: ar.get(a.id)?.recommendations })).filter((x) => x.t);
+  h += `<div class="two" style="margin-top:12px"><div class="box"><h2>القطع المستبدلة</h2>` + (parts.length ? `<table><tr><th style="text-align:right">القطعة</th><th>الكمية</th><th>المصعد</th></tr>${parts.map((p) => `<tr><td class="it">${esc(p.name)}</td><td>${esc(p.qty)}</td><td>${esc(p.code)}</td></tr>`).join("")}</table>` : `<p class="muted">لا يوجد</p>`) +
+    `${D.contract?.covers_parts === true ? '<p class="muted">القطع على حساب الشركة (عقد شامل)</p>' : D.contract?.covers_parts === false ? '<p class="muted">القطع على حساب الجمعية</p>' : ""}</div>
+    <div class="box"><h2>مقارنة بالزيارة السابقة</h2>${D.previous ? (() => {
+      const pf = D.previous.results.filter((r) => r.status && r.status !== "ok").length; const pd = D.previous.asset_results.filter((x) => x.overall === "down").length;
+      return `<table><tr><th style="text-align:right">المؤشر</th><th>${fMonth(D.previous.month)}</th><th>${fMonth(v.month)}</th></tr><tr><td class="it">عدد الملاحظات</td><td>${pf}</td><td>${finds.length}</td></tr><tr><td class="it">مصاعد متوقفة</td><td>${pd}</td><td>${cnt("down")}</td></tr><tr><td class="it">مدة الزيارة</td><td>${dur(D.previous.arrived_at, D.previous.left_at)}</td><td>${dur(v.arrived_at, v.left_at)}</td></tr></table>`;
+    })() : `<p class="muted">هذي أول زيارة مسجّلة في OSP.</p>`}</div></div>
+  <div class="two" style="margin-top:12px"><div class="box"><h2>التزام العقد</h2><p>الزيارات المنجزة: <b>${D.stats.done}${D.contract?.visits_per_year ? " / " + D.contract.visits_per_year : ""}</b> · الفائتة: <b>${D.stats.missed}</b></p>
+  ${D.contract?.end_date ? `<p>ينتهي العقد: <b>${new Date(D.contract.end_date).toLocaleDateString("ar-SA-u-ca-gregory")}</b></p>` : ""}</div>
+  <div class="box"><h2>التوصيات</h2>${recs.length ? recs.map((x) => `<p><b>${esc(x.code)}:</b> ${esc(x.t)}</p>`).join("") : '<p class="muted">لا يوجد</p>'}</div></div>
+  <div class="sig"><div><b>فني ${esc(D.vendor?.name ?? "الشركة")}</b><br>${esc(D.technician?.full_name ?? "—")} — أُرسل من قائمة فحص OSP · ${fTime(v.submitted_at)}</div>
+  <div><b>تأكيد مشرف المجمع</b><br>${v.confirmed_at ? esc(v.confirmed_by) + " — تم التأكد من الزيارة · " + fTime(v.confirmed_at) : "بانتظار التأكيد"}</div></div>
+  <div class="foot"><span>أُنشئ تلقائياً بواسطة OSP · idx.sa/osp</span><span>${esc(v.ref)}</span></div></div>`;
+  document.getElementById("root").innerHTML = h;
+}
+async function doConfirm(b) { b.disabled = true; b.textContent = "جاري التأكيد…"; try { await api("confirm", { c: C }); document.getElementById("confirm").innerHTML = '<div class="confirm" style="background:#e8f7ee;border-color:#9fd8b5">✔ تم تأكيد الزيارة. شكراً لك.</div>'; load(); } catch (e) { b.disabled = false; b.textContent = "✔ أؤكد إن الزيارة تمت"; alert(e.message); } }
+load();
+</script>
+</body>
+</html>
