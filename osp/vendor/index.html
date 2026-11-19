@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0A0A6B">
+<title>بوابة مزوّد الخدمة | OSP</title>
+<link rel="icon" href="/assets/icon.svg" type="image/svg+xml">
+<style>
+@font-face{font-family:Plex;src:url(/assets/fonts/plex-arabic-400.woff2) format("woff2");font-weight:400}
+@font-face{font-family:Plex;src:url(/assets/fonts/plex-arabic-600.woff2) format("woff2");font-weight:600}
+@font-face{font-family:Plex;src:url(/assets/fonts/plex-arabic-700.woff2) format("woff2");font-weight:700}
+:root{--navy:#0A0A6B;--green:#57C27F;--btn:#167A47;--ok:#1f9d55;--warn:#e3a008;--bad:#d64545;--mist:#F3F5FA;--line:#E1E4EF;--text:#1A1E3C;--muted:#5b6475}
+[hidden]{display:none!important}
+*{box-sizing:border-box}
+body{margin:0;font-family:Plex,system-ui,Tahoma,sans-serif;color:var(--text);background:var(--mist);font-size:15px;line-height:1.6}
+header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+.hd{max-width:1080px;margin:auto;padding:10px 16px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.vb{display:flex;align-items:center;gap:10px}.vb img{height:40px}.vb b{display:block;color:var(--navy)}.vb small{color:var(--muted)}
+.tabs{max-width:1080px;margin:auto;display:flex;gap:4px;overflow-x:auto;padding:0 12px;scrollbar-width:none}.tabs::-webkit-scrollbar{display:none}
+.tabs button{border:0;background:none;padding:10px 12px;font:600 14px Plex,sans-serif;color:var(--muted);border-bottom:3px solid transparent;white-space:nowrap;cursor:pointer}
+.tabs button.on{color:var(--navy);border-bottom-color:var(--green)}
+.tabs b{background:var(--bad);color:#fff;border-radius:10px;padding:0 6px;font-size:11px;margin-inline-start:4px}
+main{max-width:1080px;margin:auto;padding:16px}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-bottom:12px}
+.row{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+h2{margin:0 0 10px;color:var(--navy);font-size:18px}h3{margin:0;font-size:15px}
+.muted{color:var(--muted);font-size:13px}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:12px}
+.kpi{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px;cursor:pointer}.kpi b{display:block;font-size:26px;color:var(--navy)}
+.badge{display:inline-block;border-radius:20px;padding:1px 10px;font-size:12px;font-weight:600;background:#eef1f8;color:var(--navy)}
+.badge.ok{background:#e3f5ea;color:#11683a}.badge.warn{background:#fff3d6;color:#8a5a00}.badge.bad{background:#fde6e6;color:#9b2222}
+.btn{border:0;border-radius:10px;padding:9px 14px;font:600 14px Plex,sans-serif;cursor:pointer;background:var(--btn);color:#fff}
+.btn.ghost{background:#fff;color:var(--navy);border:1px solid var(--line)}.btn.sm{padding:6px 10px;font-size:13px}.btn.red{background:var(--bad)}
+.btn:disabled{opacity:.5}
+input,select,textarea{width:100%;border:1px solid var(--line);border-radius:10px;padding:9px 10px;font:15px Plex,sans-serif;background:#fff}
+label{display:block;font-size:13px;color:var(--muted);margin:8px 0 4px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+table{width:100%;border-collapse:collapse;font-size:14px}th{background:var(--mist);color:var(--navy);text-align:right;padding:8px}td{border-bottom:1px solid var(--line);padding:8px;vertical-align:top}
+.items .it{border:1px solid var(--line);border-radius:12px;padding:10px;margin-bottom:8px;background:#fcfcfe}
+.items .g{display:grid;grid-template-columns:1.2fr 1fr 2fr .6fr .8fr auto;gap:6px;align-items:end}
+.err{background:#fdecec;border:1px solid #f3b4b4;color:#8a1f1f;border-radius:12px;padding:10px 12px;margin:10px 0}
+.okm{background:#e8f7ee;border:1px solid #9fd8b5;color:#11683a;border-radius:12px;padding:10px 12px;margin:10px 0}
+.modal{position:fixed;inset:0;background:rgba(10,10,40,.45);display:flex;align-items:center;justify-content:center;padding:16px;z-index:20}
+.modal .card{max-width:520px;width:100%;max-height:90vh;overflow:auto}
+.login{max-width:440px;margin:40px auto;text-align:center}
+.code{font-size:40px;letter-spacing:8px;font-weight:700;color:var(--navy);margin:10px 0}
+.foot{text-align:center;color:var(--muted);font-size:12px;padding:20px}
+.foot b{color:var(--navy)}
+@media(max-width:720px){.kpis{grid-template-columns:repeat(2,1fr)}.grid2{grid-template-columns:1fr}.items .g{grid-template-columns:1fr 1fr}table{font-size:13px}}
+</style>
+</head>
+<body>
+<header id="hdr" hidden><div class="hd"><div class="vb" id="vb"></div><div><span class="muted" id="who"></span> <button class="btn ghost sm" onclick="logout()">خروج</button></div></div><nav class="tabs" id="tabs"></nav></header>
+<main id="app"><div class="card login"><p class="muted">جاري التحميل…</p></div></main>
+<div id="modal"></div>
+<div class="foot">بوابة مزوّدي الخدمة — <b>OSP</b> · من <b>iDX</b></div>
+<script>
+const API = "https://hscwuuqkizupczcvcacv.supabase.co/functions/v1/vendor";
+const BOT = "966565020464";
+let TOKEN = null, D = null, TAB = "home";
+try { TOKEN = localStorage.getItem("osp_vendor_token"); } catch (e) {}
+const $ = (s) => document.querySelector(s);
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const money = (n) => Number(n ?? 0).toLocaleString("en-US", { maximumFractionDigits: 2 });
+const tz = { timeZone: "Asia/Riyadh" };
+const fD = (d) => d ? new Date(d).toLocaleDateString("ar-SA-u-ca-gregory", { ...tz, day: "numeric", month: "numeric", year: "numeric" }) : "—";
+const fDT = (d) => d ? new Date(d).toLocaleString("ar-SA-u-ca-gregory", { ...tz, weekday: "short", day: "numeric", month: "numeric", hour: "numeric", minute: "2-digit" }) : "—";
+const fM = (d) => new Date(d).toLocaleDateString("ar-SA-u-ca-gregory", { month: "long", year: "numeric" });
+async function api(action, extra = {}) {
+  const h = { "Content-Type": "application/json" }; if (TOKEN) h.Authorization = "Bearer " + TOKEN;
+  const r = await fetch(API, { method: "POST", headers: h, body: JSON.stringify({ action, ...extra }) });
+  const j = await r.json().catch(() => ({ error: "تعذّر الاتصال" }));
+  if (r.status === 401) { setToken(null); loginScreen(); throw new Error("انتهت الجلسة"); }
+  if (!r.ok) throw Object.assign(new Error(j.error || "خطأ"), { data: j });
+  return j;
+}
+function setToken(t) { TOKEN = t; try { t ? localStorage.setItem("osp_vendor_token", t) : localStorage.removeItem("osp_vendor_token"); } catch (e) {} }
+const cx = (id) => D.complexes.find((c) => c.id === id)?.name ?? "";
+const ctr = (id) => D.contracts.find((c) => c.id === id);
+const tech = (id) => D.team.find((t) => t.id === id);
+const canSched = () => ["gm", "coordinator"].includes(D.me.role);
+const VST = { pending: ["بانتظار الجدولة", "warn"], scheduled: ["مجدولة", ""], in_progress: ["جارية", ""], submitted: ["أُرسل التقرير", "ok"], confirmed: ["مؤكدة", "ok"], missed: ["فائتة", "bad"], cancelled: ["ملغاة", ""] };
+const QST = { submitted: ["بانتظار اعتماد المدير", "warn"], approved: ["معتمد", "ok"], rejected: ["مرفوض", "bad"] };
+const ITYPE = { wear: "قطعة صيانة / تلف طبيعي", damage: "ضرر من طرف خارجي", customer_request: "طلب إضافي من العميل" };
+const ROLES = { gm: "المدير العام", coordinator: "منسق", technician: "فني", accountant: "محاسب" };
+const FREQ = { annual: "سنوي", semiannual: "نصف سنوي", quarterly: "ربع سنوي", monthly: "شهري" };
+const COV = { full: "شامل قطع الغيار", none: "غير شامل", partial: "شامل مع استثناءات" };
+function invState(x) { if (x.is_paid) return ["مدفوعة", "ok"]; if (x.decision === "rejected") return ["مرفوضة", "bad"]; if (x.match_status === "matched" || x.decision === "approved") return ["جاهزة للدفع", "ok"]; return ["غير مطابقة — بانتظار المدير", "warn"]; }
+
+// ===== الدخول =====
+async function loginScreen() {
+  $("#hdr").hidden = true;
+  $("#app").innerHTML = `<div class="card login"><h2>بوابة مزوّدي الخدمة</h2><p class="muted">ادخل برقم جوالك المسجّل عند مدير العقار.</p><button class="btn" onclick="startLogin()">تسجيل الدخول</button><div id="lg"></div></div>`;
+}
+async function startLogin() {
+  try {
+    const s = await api("start"); const msg = encodeURIComponent("دخول " + s.code);
+    $("#lg").innerHTML = `<p class="muted" style="margin-top:16px">أرسل هذا الرمز لبوت OSP من جوالك المسجّل:</p><div class="code">${s.code}</div>
+      <a class="btn" style="display:inline-block;text-decoration:none" href="https://wa.me/${BOT}?text=${msg}" target="_blank">افتح الواتساب وأرسل الرمز</a><p class="muted" id="lgs">بانتظار الإرسال…</p>`;
+    const t0 = Date.now();
+    const poll = async () => {
+      if (Date.now() - t0 > 9.5 * 60_000) { $("#lgs").textContent = "انتهت صلاحية الرمز، اضغط تسجيل الدخول من جديد."; return; }
+      try { const st = await api("status", { sid: s.sid }); if (st.status === "approved") { setToken(st.token); return boot(); } if (st.status === "expired") { $("#lgs").textContent = "انتهت صلاحية الرمز."; return; } } catch (e) {}
+      setTimeout(poll, 3000);
+    };
+    poll();
+  } catch (e) { $("#lg").innerHTML = `<div class="err">${esc(e.message)}</div>`; }
+}
+async function logout() { try { await api("logout"); } catch (e) {} setToken(null); loginScreen(); }
+
+// ===== التحميل =====
+async function boot() {
+  if (!TOKEN) return loginScreen();
+  try { D = await api("load"); } catch (e) { return; }
+  $("#hdr").hidden = false;
+  $("#vb").innerHTML = (D.vendor.logo_url ? `<img src="${esc(D.vendor.logo_url)}" alt="">` : "") + `<div><b>${esc(D.vendor.name)}</b><small>بوابة مزوّد الخدمة</small></div>`;
+  $("#who").textContent = `${D.me.full_name} · ${D.me.role_ar}`;
+  render();
+}
+function counts() {
+  return {
+    sched: D.visits.filter((v) => v.status === "pending").length,
+    quotes: D.quotes.filter((q) => q.status === "submitted").length,
+    inv: D.invoices.filter((x) => !x.is_paid && x.decision !== "rejected").length,
+    comp: D.complaints.filter((c) => c.status === "open").length,
+  };
+}
+function render() {
+  const c = counts();
+  const T = [["home", "الرئيسية"], ["visits", "الزيارات", c.sched], ["quotes", "عروض الأسعار"], ["invoices", "الفواتير"], ["contracts", "العقود"], ["complaints", "الشكاوى", c.comp]];
+  if (["gm", "coordinator"].includes(D.me.role)) T.push(["team", "الفريق"]);
+  $("#tabs").innerHTML = T.map(([k, l, n]) => `<button class="${TAB === k ? "on" : ""}" onclick="go('${k}')">${l}${n ? `<b>${n}</b>` : ""}</button>`).join("");
+  ({ home, visits, quotes, invoices, contracts, complaints, team })[TAB]();
+}
+function go(t) { TAB = t; render(); window.scrollTo(0, 0); }
+
+function home() {
+  const c = counts();
+  $("#app").innerHTML = `<div class="kpis">
+    <div class="kpi" onclick="go('visits')"><b>${c.sched}</b>زيارات بانتظار الجدولة</div>
+    <div class="kpi" onclick="go('quotes')"><b>${c.quotes}</b>عروض بانتظار الاعتماد</div>
+    <div class="kpi" onclick="go('invoices')"><b>${c.inv}</b>فواتير غير مسددة</div>
+    <div class="kpi" onclick="go('complaints')"><b>${c.comp}</b>شكاوى مفتوحة</div></div>
+    <div class="card"><h2>العقود</h2>${D.contracts.map((k) => `<div class="row" style="border-bottom:1px solid var(--line);padding:6px 0"><div><h3>${esc(k.title)}</h3><span class="muted">${esc(cx(k.complex_id))} · حتى ${fD(k.end_date)}</span></div><span class="badge ${k.status === "active" ? "ok" : "warn"}">${k.status === "active" ? "ساري" : k.status === "expired" ? "منتهي" : "ملغى"}</span></div>`).join("") || '<p class="muted">لا توجد عقود</p>'}</div>`;
+}
+
+// ===== الزيارات =====
+function visits() {
+  const rows = D.visits.map((v) => {
+    const [l, cls] = VST[v.status] ?? [v.status, ""]; const t = tech(v.technician_id);
+    return `<div class="card"><div class="row"><div><h3>${esc(cx(v.complex_id))} — ${fM(v.visit_month)}</h3><span class="muted">${esc(v.ref_code ?? "")} · ${esc(ctr(v.contract_id)?.title ?? "")}</span></div><span class="badge ${cls}">${l}</span></div>
+      <p style="margin:8px 0">📅 ${v.scheduled_at ? fDT(v.scheduled_at) : "لم تُحدد"} · 👷 ${t ? esc(t.full_name) : "—"}</p>
+      <div class="row" style="justify-content:flex-start">
+      ${canSched() && ["pending", "scheduled"].includes(v.status) ? `<button class="btn sm" onclick="schedModal('${v.id}')">${v.status === "pending" ? "جدولة الزيارة" : "تغيير الموعد"}</button>` : ""}
+      ${canSched() && ["scheduled", "in_progress"].includes(v.status) ? `<button class="btn ghost sm" onclick="openForm('${v.id}')">تعبئة التقرير بدل الفني</button>` : ""}
+      ${["submitted", "confirmed"].includes(v.status) ? `<a class="btn ghost sm" style="text-decoration:none" target="_blank" href="/osp/report/?r=${v.report_token}">عرض التقرير</a>` : ""}</div></div>`;
+  }).join("");
+  $("#app").innerHTML = `<h2>الزيارات الدورية</h2>${rows || '<div class="card muted">لا توجد زيارات لهذه الفترة. تُنشأ زيارة كل شهر تلقائياً للعقود السارية.</div>'}`;
+}
+function schedModal(id) {
+  const v = D.visits.find((x) => x.id === id); const techs = D.team.filter((t) => t.is_active && t.role === "technician");
+  const def = v.scheduled_at ? new Date(new Date(v.scheduled_at).getTime() + 3 * 36e5).toISOString().slice(0, 16) : "";
+  modal(`<h2>جدولة زيارة ${esc(cx(v.complex_id))}</h2><label>الفني</label><select id="mt">${techs.map((t) => `<option value="${t.id}" ${t.id === v.technician_id ? "selected" : ""}>${esc(t.full_name)}</option>`).join("")}</select>
+    ${techs.length ? "" : '<div class="err">ما فيه فنيين مسجّلين. أضفهم من تبويب الفريق.</div>'}
+    <label>التاريخ والوقت</label><input type="datetime-local" id="mw" value="${def}"><div id="me"></div>
+    <div class="row" style="margin-top:12px"><button class="btn" onclick="doSched('${id}')" ${techs.length ? "" : "disabled"}>حفظ وإرسال للفني</button><button class="btn ghost" onclick="closeModal()">إلغاء</button></div>`);
+}
+async function doSched(id) {
+  const w = $("#mw").value; if (!w) return $("#me").innerHTML = '<div class="err">حدد الموعد</div>';
+  try { await api("schedule", { visit_id: id, technician_id: $("#mt").value, scheduled_at: w + ":00+03:00" }); closeModal(); await reload("تم حفظ الموعد وإرسال الرابط للفني ومشرف المجمع"); }
+  catch (e) { $("#me").innerHTML = `<div class="err">${esc(e.message)}</div>`; }
+}
+async function openForm(id) { try { const r = await api("form_link", { visit_id: id }); window.open(r.url, "_blank"); } catch (e) { alert(e.message); } }
+
+// ===== عروض الأسعار =====
+function quotes() {
+  const rows = D.quotes.map((q) => { const [l, c] = QST[q.status] ?? [q.status, ""]; return `<tr><td>${esc(q.ref_code)}</td><td>${esc(cx(q.complex_id))}<br><span class="muted">${esc(q.title ?? "")}</span></td><td>${money(q.total)}</td><td><span class="badge ${c}">${l}</span>${q.reject_reason ? `<br><span class="muted">${esc(q.reject_reason)}</span>` : ""}</td><td><a target="_blank" href="/osp/doc/?v=${q.view_token}">عرض</a></td></tr>`; }).join("");
+  $("#app").innerHTML = `<div class="row"><h2>عروض الأسعار</h2>${canSched() ? '<button class="btn" onclick="quoteForm()">+ عرض سعر جديد</button>' : ""}</div>
+    <div class="card" style="overflow-x:auto"><table><thead><tr><th>الرقم</th><th>المجمع</th><th>الإجمالي (ريال)</th><th>الحالة</th><th></th></tr></thead><tbody>${rows || '<tr><td colspan="5" class="muted">لا توجد عروض</td></tr>'}</tbody></table></div>`;
+}
+let QI = [];
+function quoteForm() {
+  QI = [{ item_type: "", qty: 1 }];
+  const act = D.contracts.filter((c) => c.status !== "cancelled");
+  $("#app").innerHTML = `<div class="row"><h2>عرض سعر جديد</h2><button class="btn ghost" onclick="go('quotes')">رجوع</button></div><div class="card">
+    <div class="grid2"><div><label>العقد / المجمع</label><select id="qc" onchange="renderItems()">${act.map((c) => `<option value="${c.id}">${esc(cx(c.complex_id))} — ${esc(c.title)}</option>`).join("")}</select><span class="muted" id="qcov"></span></div>
+    <div><label>عنوان العرض</label><input id="qt" placeholder="مثال: توريد وتركيب قطع غيار"></div></div>
+    <h3 style="margin:16px 0 8px">البنود</h3><div class="items" id="qitems"></div><button class="btn ghost sm" onclick="QI.push({item_type:'',qty:1});renderItems()">+ بند</button>
+    <div class="row" style="margin-top:12px"><span>الإجمالي شامل الضريبة: <b id="qtot">0</b> ريال</span></div>
+    <div class="grid2"><div><label>الشروط (كل شرط في سطر)</label><textarea id="qterms" rows="4">الأسعار شاملة التوريد والتركيب وضريبة القيمة المضافة.
+مدة التنفيذ: ... يوم عمل من تاريخ اعتماد العرض.
+الضمان على القطع والتركيب: ...</textarea></div><div><label>صلاحية العرض (يوم)</label><input id="qv" type="number" value="15"></div></div>
+    <div id="qerr"></div><button class="btn" style="margin-top:12px" onclick="sendQuote(this)">إرسال لمدير العقار</button></div>`;
+  renderItems();
+}
+function contractAssets(cid) { const ids = D.contract_assets.filter((l) => l.contract_id === cid).map((l) => l.asset_id); return D.assets.filter((a) => ids.includes(a.id)); }
+function renderItems() {
+  const cid = $("#qc")?.value; const c = ctr(cid); const as = contractAssets(cid);
+  if ($("#qcov")) $("#qcov").textContent = c?.parts_coverage ? "تغطية القطع: " + COV[c.parts_coverage] + (c.parts_exclusions?.length ? " (مستثنى: " + c.parts_exclusions.join("، ") + ")" : "") : "تغطية القطع غير محددة في العقد";
+  $("#qitems").innerHTML = QI.map((it, i) => `<div class="it"><div class="g">
+    <div><label>المبنى / الأصل</label><select onchange="QI[${i}].asset_id=this.value"><option value="">—</option>${as.map((a) => `<option value="${a.id}" ${a.id === it.asset_id ? "selected" : ""}>${esc(a.building ?? a.code)}</option>`).join("")}</select></div>
+    <div><label>نوع البند</label><select onchange="QI[${i}].item_type=this.value;renderItems()"><option value="">اختر…</option>${Object.entries(ITYPE).map(([k, l]) => `<option value="${k}" ${k === it.item_type ? "selected" : ""}>${l}</option>`).join("")}</select></div>
+    <div><label>الوصف</label><input value="${esc(it.description ?? "")}" oninput="QI[${i}].description=this.value"></div>
+    <div><label>الكمية</label><input type="number" min="1" value="${it.qty ?? 1}" oninput="QI[${i}].qty=this.value;tot()"></div>
+    <div><label>سعر الوحدة</label><input type="number" min="0" value="${it.unit_price ?? ""}" oninput="QI[${i}].unit_price=this.value;tot()"></div>
+    <div><button class="btn ghost sm" onclick="QI.splice(${i},1);renderItems()">حذف</button></div></div>
+    ${it.item_type === "damage" ? `<label>صورة الضرر (إلزامية)</label><input type="file" accept="image/*" onchange="upPhoto(${i},this)"> <span class="muted" id="ph${i}">${it.photo_path ? "✓ تم الرفع" : ""}</span>` : ""}
+    ${it.item_type === "customer_request" ? `<label>من طلبه؟</label><input value="${esc(it.requested_by ?? "")}" placeholder="مثال: مدير العقار" oninput="QI[${i}].requested_by=this.value">` : ""}
+    ${it.item_type === "wear" && c?.parts_coverage === "full" ? '<div class="err" style="margin:6px 0 0">العقد شامل قطع الغيار — هذا البند بيتوقف لأنه مشمول</div>' : ""}</div>`).join("");
+  tot();
+}
+function tot() { $("#qtot").textContent = money(QI.reduce((s, it) => s + (Number(it.qty) || 0) * (Number(it.unit_price) || 0), 0)); }
+async function shrink(file) { const img = await createImageBitmap(file); const k = Math.min(1, 1400 / Math.max(img.width, img.height)); const c = document.createElement("canvas"); c.width = img.width * k; c.height = img.height * k; c.getContext("2d").drawImage(img, 0, 0, c.width, c.height); return await new Promise((r) => c.toBlob(r, "image/jpeg", .75)); }
+async function upload(kind, file) {
+  const pdf = /pdf$/i.test(file.type); const body = pdf ? file : await shrink(file);
+  const u = await api("upload_url", { kind, ext: pdf ? "pdf" : "jpg" });
+  const r = await fetch(u.url, { method: "PUT", headers: { "Content-Type": pdf ? "application/pdf" : "image/jpeg" }, body });
+  if (!r.ok) throw new Error("فشل رفع الملف"); return u.path;
+}
+async function upPhoto(i, inp) { const f = inp.files?.[0]; if (!f) return; $("#ph" + i).textContent = "جاري الرفع…"; try { QI[i].photo_path = await upload("quote", f); $("#ph" + i).textContent = "✓ تم الرفع"; } catch (e) { $("#ph" + i).textContent = e.message; } }
+async function sendQuote(btn) {
+  btn.disabled = true;
+  try {
+    const r = await api("quote_create", { contract_id: $("#qc").value, title: $("#qt").value, items: QI, terms: $("#qterms").value.split("\n").map((s) => s.trim()).filter(Boolean), valid_days: $("#qv").value });
+    await reload(`تم إرسال العرض ${r.ref} لمدير العقار` + (r.status === "review" ? " (فيه ملاحظات بيشوفها المدير)" : "")); go("quotes");
+  } catch (e) {
+    btn.disabled = false;
+    $("#qerr").innerHTML = `<div class="err">${esc(e.message)}${e.data?.notes?.length ? "<ul>" + e.data.notes.map((n) => `<li><b>${esc(n.item)}:</b> ${esc(n.msg)}</li>`).join("") + "</ul>" : ""}</div>`;
+  }
+}
+
+// ===== الفواتير =====
+function invoices() {
+  const rows = D.invoices.map((x) => { const [l, c] = invState(x); return `<tr><td>${esc(x.invoice_number)}</td><td>${esc(cx(x.complex_id))}</td><td>${money(x.total)}</td><td><span class="badge ${c}">${l}</span>${(x.match_notes ?? []).length && !x.is_paid ? `<br><span class="muted">${x.match_notes.map((n) => esc(n.msg)).join("<br>")}</span>` : ""}${x.decision_reason ? `<br><span class="muted">${esc(x.decision_reason)}</span>` : ""}</td><td><a target="_blank" href="/osp/doc/?v=${x.view_token}">عرض</a></td></tr>`; }).join("");
+  $("#app").innerHTML = `<div class="row"><h2>الفواتير</h2>${["gm", "coordinator", "accountant"].includes(D.me.role) ? '<button class="btn" onclick="invForm()">+ رفع فاتورة</button>' : ""}</div>
+    <div class="card" style="overflow-x:auto"><table><thead><tr><th>رقم الفاتورة</th><th>المجمع</th><th>الإجمالي</th><th>الحالة</th><th></th></tr></thead><tbody>${rows || '<tr><td colspan="5" class="muted">لا توجد فواتير</td></tr>'}</tbody></table></div>`;
+}
+function invForm() {
+  const due = D.installments.filter((i) => i.status === "due"); const aq = D.quotes.filter((q) => q.status === "approved");
+  $("#app").innerHTML = `<div class="row"><h2>رفع فاتورة</h2><button class="btn ghost" onclick="go('invoices')">رجوع</button></div><div class="card">
+    <label>الفاتورة عن</label><select id="ik" onchange="$('#iq1').hidden=this.value!=='i';$('#iq2').hidden=this.value!=='q'"><option value="i">قسط عقد</option><option value="q">عرض سعر معتمد</option></select>
+    <div id="iq1"><label>القسط</label><select id="ii">${due.map((i) => { const c = ctr(i.contract_id); return `<option value="${i.id}" data-a="${i.amount}">${esc(cx(c?.complex_id))} — قسط ${i.seq} (${fD(i.period_start)} – ${fD(i.period_end)}) — ${money(i.amount)} ريال</option>`; }).join("") || '<option value="">لا توجد أقساط مستحقة</option>'}</select></div>
+    <div id="iq2" hidden><label>عرض السعر</label><select id="iqq">${aq.map((q) => `<option value="${q.id}">${esc(q.ref_code)} — ${esc(cx(q.complex_id))} — ${money(q.total)} ريال</option>`).join("") || '<option value="">لا توجد عروض معتمدة</option>'}</select></div>
+    <div class="grid2"><div><label>رقم الفاتورة</label><input id="in"></div><div><label>تاريخ الفاتورة</label><input id="id" type="date"></div>
+    <div><label>المبلغ قبل الضريبة</label><input id="ia" type="number" oninput="$('#iv').value=(this.value*0.15).toFixed(2);$('#it').textContent=(this.value*1.15).toLocaleString('en-US',{maximumFractionDigits:2})"></div><div><label>ضريبة القيمة المضافة</label><input id="iv" type="number"></div></div>
+    <p>الإجمالي: <b id="it">0</b> ريال</p>
+    <label>ملف الفاتورة (PDF أو صورة) — يصدره المحاسب</label><input type="file" id="if" accept="application/pdf,image/*">
+    <div id="ierr"></div><button class="btn" style="margin-top:12px" onclick="sendInv(this)">رفع الفاتورة</button></div>`;
+}
+async function sendInv(btn) {
+  const f = $("#if").files?.[0]; if (!f) return $("#ierr").innerHTML = '<div class="err">ارفع ملف الفاتورة</div>';
+  btn.disabled = true;
+  try {
+    const path = await upload("invoice", f); const k = $("#ik").value;
+    const r = await api("invoice_create", { installment_id: k === "i" ? $("#ii").value : null, quote_id: k === "q" ? $("#iqq").value : null, invoice_number: $("#in").value, invoice_date: $("#id").value || null, amount: $("#ia").value, vat_amount: $("#iv").value, file_path: path });
+    await reload(r.match === "matched" ? "✅ الفاتورة مطابقة ووصلت لمدير العقار جاهزة للدفع" : "⚠️ الفاتورة وصلت للمدير لكنها غير مطابقة: " + r.notes.map((n) => n.msg).join(" · ")); go("invoices");
+  } catch (e) { btn.disabled = false; $("#ierr").innerHTML = `<div class="err">${esc(e.message)}</div>`; }
+}
+
+// ===== العقود =====
+function contracts() {
+  $("#app").innerHTML = `<h2>العقود</h2>` + (D.contracts.map((c) => {
+    const ins = D.installments.filter((i) => i.contract_id === c.id);
+    return `<div class="card"><div class="row"><div><h3>${esc(c.title)}</h3><span class="muted">${esc(cx(c.complex_id))} · ${fD(c.start_date)} – ${fD(c.end_date)}</span></div><span class="badge ${c.status === "active" ? "ok" : "warn"}">${c.status === "active" ? "ساري" : c.status === "expired" ? "منتهي" : "ملغى"}</span></div>
+    <div class="grid2" style="margin-top:8px"><div>القيمة: <b>${c.total_amount ? money(c.total_amount) + " ريال" : "—"}</b><br>الدفع: ${FREQ[c.payment_frequency] ?? "غير محدد"}<br>القطع: ${COV[c.parts_coverage] ?? "غير محدد"}</div>
+    <div>الزيارات: ${c.visits_per_year ?? "—"} / سنة<br>الطوارئ: ${c.sla_emergency_minutes ? c.sla_emergency_minutes / 60 + " ساعة" : "—"} · العطل: ${c.sla_breakdown_hours ?? "—"} ساعة<br>الصيانة الدورية: خلال ${c.sla_scheduled_hours ?? "—"} ساعة من الموعد</div></div>
+    ${ins.length ? `<table style="margin-top:10px"><tr><th>القسط</th><th>الفترة</th><th>المبلغ</th><th>الحالة</th></tr>${ins.map((i) => `<tr><td>${i.seq}</td><td>${fD(i.period_start)} – ${fD(i.period_end)}</td><td>${money(i.amount)}</td><td><span class="badge ${i.status === "paid" ? "ok" : i.status === "invoiced" ? "" : "warn"}">${({ due: "مستحق", invoiced: "مفوتر", paid: "مدفوع" })[i.status]}</span></td></tr>`).join("")}</table>` : '<p class="muted">جدول الدفعات يطلع بعد ما يحدد مدير العقار طريقة الدفع.</p>'}
+    <div class="row" style="justify-content:flex-start;margin-top:8px">${c.vendor_file_path ? `<button class="btn ghost sm" onclick="viewFile('${c.vendor_file_path}')">عرض نسخة العقد</button>` : ""}
+    ${canSched() ? `<label class="btn ghost sm" style="margin:0;color:var(--navy)">رفع نسخة العقد الموقّعة<input type="file" hidden accept="application/pdf,image/*" onchange="upContract('${c.id}',this)"></label>` : ""}</div></div>`;
+  }).join("") || '<div class="card muted">لا توجد عقود</div>');
+}
+async function upContract(id, inp) { const f = inp.files?.[0]; if (!f) return; try { const p = await upload("contract", f); await api("contract_file", { contract_id: id, file_path: p }); await reload("تم رفع العقد"); } catch (e) { alert(e.message); } }
+async function viewFile(p) { try { const r = await api("file_url", { path: p }); window.open(r.url, "_blank"); } catch (e) { alert(e.message); } }
+
+// ===== الشكاوى =====
+function complaints() {
+  $("#app").innerHTML = `<h2>شكاوى العملاء</h2>` + (D.complaints.map((c) => `<div class="card"><div class="row"><h3>${esc(cx(c.complex_id))}</h3><span class="badge ${c.status === "open" ? "warn" : "ok"}">${c.status === "open" ? "مفتوحة" : "تم الرد"}</span></div>
+    <p>${esc(c.body)}</p><span class="muted">${fDT(c.created_at)}</span>
+    ${c.reply ? `<div class="okm">${esc(c.reply)}</div>` : canSched() ? `<textarea id="r_${c.id}" rows="2" placeholder="اكتب الرد"></textarea><button class="btn sm" style="margin-top:6px" onclick="reply('${c.id}')">إرسال الرد</button>` : ""}</div>`).join("") || '<div class="card muted">لا توجد شكاوى</div>');
+}
+async function reply(id) { try { await api("complaint_reply", { id, reply: $("#r_" + id).value }); await reload("تم إرسال الرد"); } catch (e) { alert(e.message); } }
+
+// ===== الفريق =====
+function team() {
+  $("#app").innerHTML = `<div class="row"><h2>الفريق</h2><button class="btn" onclick="teamModal()">+ إضافة</button></div><div class="card" style="overflow-x:auto"><table><tr><th>الاسم</th><th>الجوال</th><th>الدور</th><th>الحالة</th><th></th></tr>
+    ${D.team.map((t) => `<tr><td>${esc(t.full_name)}</td><td dir="ltr" style="text-align:right">+${esc(t.phone)}</td><td>${ROLES[t.role]}</td><td>${t.is_active ? '<span class="badge ok">نشط</span>' : '<span class="badge">موقوف</span>'}</td>
+    <td>${t.id !== D.me.id && t.role !== "gm" && (t.role !== "coordinator" || D.me.role === "gm") ? `<button class="btn ghost sm" onclick="toggleT('${t.id}',${!t.is_active})">${t.is_active ? "إيقاف" : "تفعيل"}</button>` : ""}</td></tr>`).join("")}</table></div>`;
+}
+function teamModal() {
+  modal(`<h2>إضافة عضو</h2><label>الاسم</label><input id="tn"><label>رقم الجوال</label><input id="tp" placeholder="05xxxxxxxx" inputmode="tel">
+    <label>الدور</label><select id="tr"><option value="technician">فني</option><option value="accountant">محاسب</option>${D.me.role === "gm" ? '<option value="coordinator">منسق</option>' : ""}</select><div id="te"></div>
+    <div class="row" style="margin-top:12px"><button class="btn" onclick="addT()">إضافة</button><button class="btn ghost" onclick="closeModal()">إلغاء</button></div>`);
+}
+async function addT() { try { await api("team_add", { full_name: $("#tn").value, phone: $("#tp").value, role: $("#tr").value }); closeModal(); await reload("تمت الإضافة"); } catch (e) { $("#te").innerHTML = `<div class="err">${esc(e.message)}</div>`; } }
+async function toggleT(id, a) { try { await api("team_toggle", { id, active: a }); await reload(); } catch (e) { alert(e.message); } }
+
+// ===== أدوات =====
+function modal(h) { $("#modal").innerHTML = `<div class="modal" onclick="if(event.target===this)closeModal()"><div class="card">${h}</div></div>`; }
+function closeModal() { $("#modal").innerHTML = ""; }
+async function reload(msg) { D = await api("load"); render(); if (msg) { const d = document.createElement("div"); d.className = "okm"; d.textContent = msg; $("#app").prepend(d); setTimeout(() => d.remove(), 6000); } }
+boot();
+</script>
+</body>
+</html>
