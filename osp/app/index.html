@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#0A0A6B">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src https://hscwuuqkizupczcvcacv.supabase.co; base-uri 'none'; form-action 'none'">
+<title>دخول OSP | لوحة التحكم</title>
+<link rel="icon" href="/assets/icon.svg" type="image/svg+xml">
+<link rel="preload" href="/assets/fonts/plex-arabic-400.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:Plex;src:url(/assets/fonts/plex-arabic-400.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:Plex;src:url(/assets/fonts/plex-arabic-600.woff2) format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:Plex;src:url(/assets/fonts/plex-arabic-700.woff2) format("woff2");font-weight:700;font-display:swap}
+:root{--navy:#0A0A6B;--green:#57C27F;--btn:#167A47;--bad:#d64545;--mist:#F3F5FA;--line:#E1E4EF;--text:#1A1E3C;--muted:#5b6475}
+[hidden]{display:none!important}
+*{box-sizing:border-box}
+body{margin:0;font-family:Plex,system-ui,Tahoma,sans-serif;color:var(--text);background:var(--mist);font-size:15px;line-height:1.6;min-height:100vh;display:flex;flex-direction:column}
+a{color:var(--btn)}
+header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+.hd{max-width:960px;margin:auto;padding:10px 16px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.brand{display:flex;align-items:center;gap:10px;color:var(--navy);text-decoration:none}
+.brand svg{height:26px;width:auto}
+.brand small{display:block;color:var(--muted);font-size:12px;line-height:1.2}
+.brand b{display:block;line-height:1.2}
+main{flex:1;width:100%;max-width:960px;margin:auto;padding:16px}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px;margin-bottom:12px}
+h1{margin:0 0 4px;color:var(--navy);font-size:22px}
+h2{margin:0 0 10px;color:var(--navy);font-size:17px}
+.muted{color:var(--muted);font-size:13px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:12px;padding:12px 18px;font:600 15px Plex,sans-serif;cursor:pointer;background:var(--btn);color:#fff;text-decoration:none;min-height:46px}
+.btn.wa{background:#25D366;color:#073b1c;width:100%}
+.btn.ghost{background:#fff;color:var(--navy);border:1px solid var(--line)}
+.btn.sm{padding:6px 12px;font-size:13px;min-height:36px;border-radius:10px}
+.btn:disabled{opacity:.5;cursor:default}
+.login{max-width:440px;margin:24px auto;text-align:center;padding:24px 20px}
+.steps{display:flex;justify-content:center;gap:6px;margin:4px 0 18px}
+.steps i{width:28px;height:4px;border-radius:4px;background:var(--line)}
+.steps i.on{background:var(--green)}
+.code{direction:ltr;font:700 40px/1.1 Plex,monospace;letter-spacing:8px;color:var(--navy);margin:8px 0 14px}
+.timer{font-size:12px;color:var(--muted);margin-top:10px}
+.waiting{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:14px;color:var(--muted);font-size:14px}
+.spin{width:16px;height:16px;border:2px solid var(--line);border-top-color:var(--btn);border-radius:50%;animation:sp 1s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+.otp{direction:ltr;width:100%;max-width:220px;text-align:center;font:700 32px Plex,monospace;letter-spacing:12px;border:2px solid var(--line);border-radius:14px;padding:10px;margin:6px auto 12px;display:block;color:var(--navy)}
+.otp:focus{outline:none;border-color:var(--btn)}
+.err{background:#fdecec;border:1px solid #f3b4b4;color:#8a1f1f;border-radius:12px;padding:10px 12px;margin:12px 0 0;font-size:14px}
+.okm{background:#e8f7ee;border:1px solid #9fd8b5;color:#11683a;border-radius:12px;padding:10px 12px;margin:10px 0;font-size:14px}
+.note{background:#f6f7fc;border-radius:12px;padding:10px 12px;font-size:13px;color:var(--muted);margin-top:16px;text-align:right}
+.alt{margin-top:14px;font-size:13px}
+.kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:12px}
+.kpi{background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px}
+.kpi b{display:block;font-size:28px;color:var(--navy);line-height:1.2}
+.kpi span{font-size:13px;color:var(--muted)}
+.list{list-style:none;margin:0;padding:0}
+.list li{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:11px 0;border-bottom:1px solid var(--line)}
+.list li:last-child{border-bottom:0}
+.list .n{background:var(--navy);color:#fff;border-radius:20px;min-width:30px;text-align:center;padding:1px 9px;font-weight:700;font-size:13px}
+.sw{position:relative;width:48px;height:28px;flex:none}
+.sw input{opacity:0;width:0;height:0}
+.sw span{position:absolute;inset:0;background:#cfd4e3;border-radius:28px;transition:.2s;cursor:pointer}
+.sw span:before{content:"";position:absolute;width:22px;height:22px;top:3px;right:3px;background:#fff;border-radius:50%;transition:.2s}
+.sw input:checked+span{background:var(--btn)}
+.sw input:checked+span:before{transform:translateX(-20px)}
+.sw input:disabled+span{opacity:.45;cursor:default}
+.price{display:flex;gap:8px;align-items:center}
+.price input{width:110px;border:1px solid var(--line);border-radius:10px;padding:8px;font:15px Plex,sans-serif;text-align:center;direction:ltr}
+.tag{font-size:11px;background:#eef1f8;color:var(--navy);border-radius:10px;padding:1px 8px;margin-inline-start:6px}
+.foot{text-align:center;color:var(--muted);font-size:12px;padding:18px}
+.foot b{color:var(--navy)}
+.sk{height:14px;border-radius:7px;background:linear-gradient(90deg,#eef0f6,#f7f8fb,#eef0f6);background-size:200% 100%;animation:sk 1.2s infinite;margin:8px 0}
+@keyframes sk{to{background-position:-200% 0}}
+@media(min-width:760px){.kpis{grid-template-columns:repeat(4,1fr)}.cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}.cols .card{margin-bottom:0}}
+</style>
+</head>
+<body>
+<header>
+  <div class="hd">
+    <a class="brand" href="/osp/" aria-label="OSP">
+      <svg viewBox="190 720 810 360" aria-hidden="true"><g fill="currentColor"><path d="M211 845h76v215h-76z"/><path d="M327,741 H490 C590,741 660,810 660,900 C660,990 590,1060 490,1060 H327 V858 H403 V983 H490 C545,983 583,950 583,900 C583,850 545,818 490,818 H327 Z"/><path d="M606 741L704 741L801 838L801 887L752 887Z"/><path d="M801 913L801 962L704 1060L606 1060L752 913Z"/><path d="M826 913L876 913L948 985L977 985L977 1060L900 1060L900 1035L826 962Z"/></g><path fill="#57C27F" d="M217 741h64a6 6 0 0 1 6 6v64a6 6 0 0 1-6 6h-64a6 6 0 0 1-6-6v-64a6 6 0 0 1 6-6z"/><path fill="#57C27F" d="M900 741L977 741L977 816L948 816L876 887L826 887L826 838L900 764Z"/></svg>
+      <span><b>OSP</b><small>خدمات اتحاد الملاك</small></span>
+    </a>
+    <div id="hdu" hidden><button class="btn ghost sm" id="out" type="button">خروج</button></div>
+  </div>
+</header>
+<main id="app"><div class="card login"><div class="sk"></div><div class="sk" style="width:60%;margin:auto"></div></div></main>
+<div class="foot">لوحة تحكم <b>OSP</b> · من <b>iDX</b></div>
+<script>
+(function () {
+  var API = "https://hscwuuqkizupczcvcacv.supabase.co/functions/v1/dashboard";
+  var BOT = "966565020464";
+  var TK = "osp_dash_token", LK = "osp_dash_login";
+  var app = document.getElementById("app"), hdu = document.getElementById("hdu");
+  var TOKEN = null, pollT = null, tickT = null, L = null;
+
+  function store(k, v, sess) { try { var s = sess ? sessionStorage : localStorage; v == null ? s.removeItem(k) : s.setItem(k, JSON.stringify(v)); } catch (e) {} }
+  function load(k, sess) { try { return JSON.parse((sess ? sessionStorage : localStorage).getItem(k)); } catch (e) { return null; } }
+  function el(tag, attrs, kids) {
+    var e = document.createElement(tag);
+    for (var k in attrs || {}) { if (k === "text") e.textContent = attrs[k]; else if (k === "on") for (var ev in attrs.on) e.addEventListener(ev, attrs.on[ev]); else e.setAttribute(k, attrs[k]); }
+    (kids || []).forEach(function (c) { if (c != null) e.appendChild(typeof c === "string" ? document.createTextNode(c) : c); });
+    return e;
+  }
+  function clear(n) { while (n.firstChild) n.removeChild(n.firstChild); }
+  function api(action, extra) {
+    var h = { "Content-Type": "application/json" };
+    if (TOKEN) h.Authorization = "Bearer " + TOKEN;
+    var body = Object.assign({ action: action }, extra || {});
+    return fetch(API, { method: "POST", headers: h, body: JSON.stringify(body) }).then(function (r) {
+      return r.json().catch(function () { return { error: "تعذّر الاتصال" }; }).then(function (j) {
+        if (r.status === 401) { setToken(null); loginScreen(); throw new Error("انتهت الجلسة، ادخل من جديد"); }
+        if (!r.ok) { var e = new Error(j.error || "صار خطأ، جرّب مرة ثانية"); e.data = j; throw e; }
+        return j;
+      });
+    }, function () { throw new Error("تعذّر الاتصال، تأكد من الإنترنت"); });
+  }
+  function setToken(t, exp) {
+    TOKEN = t;
+    store(TK, t ? { t: t, exp: exp } : null);
+  }
+  var tz = { timeZone: "Asia/Riyadh" };
+  function fTime(d) { return new Date(d).toLocaleString("ar-SA-u-ca-gregory-nu-latn", Object.assign({ weekday: "long", hour: "numeric", minute: "2-digit" }, tz)); }
+  function stopTimers() { clearTimeout(pollT); clearInterval(tickT); pollT = tickT = null; }
+
+  // ================= الدخول =================
+  function loginScreen() {
+    stopTimers(); hdu.hidden = true; clear(app);
+    var saved = load(LK, true);
+    if (saved && new Date(saved.expires_at) > new Date()) { L = saved; return saved.step === "confirm" ? confirmStep() : sendStep(); }
+    var c = el("div", { class: "card login" }, [
+      el("h1", { text: "دخول OSP" }),
+      el("p", { class: "muted", text: "ادخل برقم جوالك المسجّل في OSP. النظام يعرف صلاحيتك تلقائياً." }),
+      el("button", { class: "btn", type: "button", style: "width:100%;margin-top:10px", text: "🔐 تسجيل الدخول", on: { click: start } }),
+      el("div", { id: "lgm" }),
+      el("div", { class: "note" }, ["الدخول بخطوتين: ترسل رمزاً للبوت من واتساب جوالك، ثم تكتب رمز التأكيد اللي يرجع لك. الجلسة صالحة يوماً واحداً من وقت الدخول."]),
+      el("p", { class: "alt" }, ["مزوّد خدمة؟ ", el("a", { href: "/osp/vendor/", text: "ادخل من بوابة المزوّدين" })])
+    ]);
+    app.appendChild(c);
+  }
+  function start(ev) {
+    var b = ev && ev.target; if (b) b.disabled = true;
+    api("start").then(function (s) {
+      L = { sid: s.sid, nonce: s.nonce, code: s.code, expires_at: s.expires_at, step: "send" };
+      store(LK, L, true); sendStep();
+    }).catch(function (e) { if (b) b.disabled = false; showErr("lgm", e.message); });
+  }
+  function showErr(id, msg) { var m = document.getElementById(id); if (m) { clear(m); m.appendChild(el("div", { class: "err", text: msg })); } }
+  function restart() { store(LK, null, true); L = null; loginScreen(); }
+  function countdown(node) {
+    function t() {
+      var s = Math.max(0, Math.round((new Date(L.expires_at) - new Date()) / 1000));
+      node.textContent = s ? "صالح لمدة " + Math.floor(s / 60) + ":" + String(s % 60).padStart(2, "0") : "انتهت صلاحية الرمز";
+      if (!s) expired();
+    }
+    t(); clearInterval(tickT); tickT = setInterval(t, 1000);
+  }
+  function expired() {
+    stopTimers(); store(LK, null, true); clear(app);
+    app.appendChild(el("div", { class: "card login" }, [
+      el("h1", { text: "انتهت صلاحية الرمز" }),
+      el("p", { class: "muted", text: "ولا يهمك، خذ رمزاً جديداً." }),
+      el("button", { class: "btn", type: "button", style: "width:100%", text: "رمز جديد", on: { click: function () { L = null; loginScreen(); start(); } } })
+    ]));
+  }
+  function sendStep() {
+    stopTimers(); clear(app);
+    var msg = "دخول " + L.code;
+    var tm = el("div", { class: "timer" });
+    app.appendChild(el("div", { class: "card login" }, [
+      el("div", { class: "steps" }, [el("i", { class: "on" }), el("i")]),
+      el("h1", { text: "أرسل الرمز للبوت" }),
+      el("p", { class: "muted", text: "من واتساب جوالك المسجّل:" }),
+      el("div", { class: "code", text: L.code }),
+      el("a", { class: "btn wa", href: "https://wa.me/" + BOT + "?text=" + encodeURIComponent(msg), target: "_blank", rel: "noopener" }, ["📲 أرسل من واتساب"]),
+      el("p", { class: "muted", style: "margin-top:10px" }, ["أو أرسل «" + msg + "» للرقم ", el("span", { dir: "ltr", text: "+966 56 502 0464" })]),
+      tm,
+      el("div", { class: "waiting" }, [el("span", { class: "spin" }), "بانتظار رسالتك…"]),
+      el("p", { class: "alt" }, [el("a", { href: "#", text: "رمز جديد", on: { click: function (e) { e.preventDefault(); restart(); start(); } } })])
+    ]));
+    countdown(tm); poll();
+  }
+  function poll() {
+    clearTimeout(pollT);
+    if (!L) return;
+    if (document.hidden) return;
+    api("status", { sid: L.sid, nonce: L.nonce }).then(function (s) {
+      if (s.status === "confirm") { L.step = "confirm"; store(LK, L, true); return confirmStep(); }
+      if (s.status === "expired" || s.status === "used") return expired();
+      pollT = setTimeout(poll, 2500);
+    }).catch(function () { pollT = setTimeout(poll, 4000); });
+  }
+  document.addEventListener("visibilitychange", function () { if (!document.hidden && L && L.step === "send") poll(); });
+  function confirmStep() {
+    stopTimers(); clear(app);
+    var inp = el("input", { class: "otp", inputmode: "numeric", autocomplete: "one-time-code", maxlength: "4", pattern: "[0-9]*", "aria-label": "رمز التأكيد" });
+    var btn = el("button", { class: "btn", type: "button", style: "width:100%", text: "دخول" });
+    var tm = el("div", { class: "timer" });
+    function go() {
+      var v = inp.value.replace(/[٠-٩]/g, function (d) { return "٠١٢٣٤٥٦٧٨٩".indexOf(d); }).replace(/\D/g, "");
+      if (v.length !== 4) return showErr("cfm", "رمز التأكيد 4 أرقام");
+      btn.disabled = true;
+      api("confirm", { sid: L.sid, nonce: L.nonce, code: v }).then(function (r) {
+        store(LK, null, true); L = null; setToken(r.token, r.expires_at); boot();
+      }).catch(function (e) {
+        btn.disabled = false; inp.value = ""; inp.focus();
+        if (e.data && e.data.restart) { store(LK, null, true); return expired(); }
+        showErr("cfm", e.message + (e.data && e.data.left != null ? " — باقي " + e.data.left + " محاولات" : ""));
+      });
+    }
+    btn.addEventListener("click", go);
+    inp.addEventListener("input", function () { if (inp.value.replace(/\D/g, "").length === 4) go(); });
+    inp.addEventListener("keydown", function (e) { if (e.key === "Enter") go(); });
+    app.appendChild(el("div", { class: "card login" }, [
+      el("div", { class: "steps" }, [el("i", { class: "on" }), el("i", { class: "on" })]),
+      el("h1", { text: "اكتب رمز التأكيد" }),
+      el("p", { class: "muted", text: "وصلك على الواتساب من بوت OSP (4 أرقام)." }),
+      inp, btn, el("div", { id: "cfm" }), tm,
+      el("p", { class: "alt" }, [el("a", { href: "#", text: "ابدأ من جديد", on: { click: function (e) { e.preventDefault(); restart(); } } })])
+    ]));
+    countdown(tm); setTimeout(function () { inp.focus(); }, 50);
+  }
+
+  // ================= اللوحة =================
+  function boot() {
+    var s = load(TK);
+    if (!s || !s.t || (s.exp && new Date(s.exp) < new Date())) { setToken(null); return loginScreen(); }
+    TOKEN = s.t; stopTimers(); hdu.hidden = false;
+    clear(app); app.appendChild(el("div", { class: "card" }, [el("div", { class: "sk" }), el("div", { class: "sk", style: "width:70%" }), el("div", { class: "sk", style: "width:40%" })]));
+    Promise.all([api("me"), api("list")]).then(function (r) { home(r[0], r[1]); }).catch(function (e) {
+      if (!TOKEN) return; clear(app); app.appendChild(el("div", { class: "card" }, [el("div", { class: "err", text: e.message }), el("button", { class: "btn ghost sm", type: "button", style: "margin-top:10px", text: "إعادة المحاولة", on: { click: boot } })]));
+    });
+  }
+  function home(me, ls) {
+    clear(app);
+    var first = String(me.name || "").split(" ")[0];
+    var cx = (me.complexes || [])[0];
+    var total = (me.pending || []).reduce(function (a, x) { return a + x.n; }, 0);
+    app.appendChild(el("div", { class: "card" }, [
+      el("h1", { text: "أهلاً " + first }),
+      el("p", { class: "muted", style: "margin:0" }, [(cx ? cx.name + " · " + (cx.city || "") : "") + " — جلستك تنتهي " + fTime(me.expires_at)])
+    ]));
+    app.appendChild(el("div", { class: "kpis" }, [
+      el("div", { class: "kpi" }, [el("b", { text: String(total) }), el("span", { text: "بانتظار قرارك" })]),
+      el("div", { class: "kpi" }, [el("b", { text: String(me.open_requests || 0) }), el("span", { text: "بلاغ مفتوح" })]),
+      el("div", { class: "kpi" }, [el("b", { text: String((ls.services || []).filter(function (s) { return s.enabled; }).length) }), el("span", { text: "خدمة شغّالة" })]),
+      el("div", { class: "kpi" }, [el("b", { text: String((me.complexes || []).length) }), el("span", { text: "مجمّع" })])
+    ]));
+    var q = el("ul", { class: "list" });
+    (me.pending || []).forEach(function (x) { q.appendChild(el("li", {}, [el("span", {}, [x.icon + " " + x.label]), el("span", { class: "n", text: String(x.n) })])); });
+    var qc = el("div", { class: "card" }, [
+      el("h2", { text: "بانتظارك" }),
+      total ? q : el("p", { class: "muted", text: "✅ ما فيه شي ينتظرك الحين." }),
+      total ? el("a", { class: "btn", href: "https://wa.me/" + BOT + "?text=" + encodeURIComponent("القائمة"), target: "_blank", rel: "noopener", style: "width:100%;margin-top:10px" }, ["افتح البوت وبتّ فيها"]) : null,
+      total ? el("p", { class: "muted", style: "margin:8px 0 0", text: "في البوت اختر «✅ يحتاج قرارك». البتّ من اللوحة مباشرة جاي في التحديث الجاي." }) : null
+    ]);
+    var sv = el("ul", { class: "list" });
+    (ls.services || []).forEach(function (s) {
+      var cb = el("input", { type: "checkbox", "aria-label": s.name_ar });
+      cb.checked = !!s.enabled; if (!s.built) cb.disabled = true;
+      cb.addEventListener("change", function () {
+        var want = cb.checked; cb.disabled = true;
+        api("toggle", { key: s.key, enabled: want }).then(function () { s.enabled = want; cb.disabled = false; flash(sc, (want ? "✅ تم تشغيل " : "⏸️ تم إيقاف ") + s.name_ar); })
+          .catch(function (e) { cb.checked = !want; cb.disabled = false; flash(sc, e.message, true); });
+      });
+      sv.appendChild(el("li", {}, [
+        el("span", {}, [(s.icon ? s.icon + " " : "") + s.name_ar, s.built ? null : el("span", { class: "tag", text: "قيد التطوير" })]),
+        el("label", { class: "sw" }, [cb, el("span")])
+      ]));
+    });
+    var sc = el("div", { class: "card" }, [el("h2", { text: "الخدمات" }), el("p", { class: "muted", style: "margin-top:-6px", text: "الخدمة الموقوفة تظهر للسكان «متوقفة»." }), sv]);
+    var pl = el("ul", { class: "list" });
+    (ls.prices || []).forEach(function (p) {
+      var inp = el("input", { type: "number", inputmode: "decimal", min: "1", value: String(p.value), "aria-label": p.label });
+      var b = el("button", { class: "btn sm", type: "button", text: "حفظ" }); b.disabled = true;
+      inp.addEventListener("input", function () { b.disabled = Number(inp.value) === p.value || !(Number(inp.value) > 0); });
+      b.addEventListener("click", function () {
+        b.disabled = true;
+        api("set_price", { key: p.key, value: Number(inp.value) }).then(function (r) { p.value = r.value; flash(pc, "✅ تم حفظ " + p.label); })
+          .catch(function (e) { b.disabled = false; flash(pc, e.message, true); });
+      });
+      pl.appendChild(el("li", {}, [el("span", { text: p.label }), el("span", { class: "price" }, [inp, b])]));
+    });
+    var pc = el("div", { class: "card" }, [el("h2", { text: "الأسعار (ريال)" }), pl]);
+    app.appendChild(qc);
+    app.appendChild(el("div", { class: "cols" }, [sc, pc]));
+  }
+  function flash(card, msg, bad) {
+    var old = card.querySelector(".okm,.err"); if (old) old.remove();
+    var m = el("div", { class: bad ? "err" : "okm", text: msg }); card.insertBefore(m, card.children[1]);
+    setTimeout(function () { m.remove(); }, 3500);
+  }
+  document.getElementById("out").addEventListener("click", function () {
+    api("logout").catch(function () {}).then(function () { setToken(null); loginScreen(); });
+  });
+  boot();
+})();
+</script>
+</body>
+</html>

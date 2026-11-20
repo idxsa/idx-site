@@ -234,3 +234,4 @@ footer .base{border-top:1px solid rgba(255,255,255,.12);margin-top:40px;padding-
 .osp-brand span{font-size:20px;font-weight:600;color:var(--text-2);padding-inline-start:16px;border-inline-start:3px solid #57C27F}
 .osp-ref{margin-top:10px;font-size:16px;color:var(--text-2)}
 @media (max-width:700px){.osp-brand .osp-mark{height:44px}.osp-brand span{font-size:17px}}
+.top .osp-login{padding:7px 14px;font-size:14px;margin-top:0}
