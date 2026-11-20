@@ -38,8 +38,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 h1,h2,h3{color:var(--heading)}
 
 /* الرأس */
-.top{position:sticky;top:0;z-index:30;border-bottom:1px solid var(--line)}
-.top::before{content:"";position:absolute;inset:0;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);z-index:-1;pointer-events:none}
+.top{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
 .top .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:14px}
 .brand{display:flex;align-items:center;text-decoration:none;flex-shrink:0;color:var(--logo)}
 .brand svg{height:28px;width:auto;display:block}
