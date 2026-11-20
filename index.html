@@ -76,7 +76,8 @@ section{padding:clamp(64px,9vw,112px) 0;position:relative}
 .btn.green{background:var(--green);color:var(--navy)}
 
 /* header */
-header.top{position:sticky;top:0;z-index:100;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:border-color .3s}
+header.top{position:sticky;top:0;z-index:100;border-bottom:1px solid transparent;transition:border-color .3s}
+header.top::before{content:"";position:absolute;inset:0;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);z-index:-1;pointer-events:none}
 header.top.scrolled{border-color:var(--line)}
 header .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:20px}
 .brand{display:block}.brand svg{height:34px;width:77px;color:var(--navy)}
@@ -595,11 +596,13 @@ footer p{font-size:15px}
 
 /* header over dark hero */
 header.top.on-dark:not(.scrolled){background:transparent;border-color:transparent}
+header.top.on-dark:not(.scrolled)::before{background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none}
 header.top.on-dark:not(.scrolled) .brand svg{color:#fff}
 header.top.on-dark:not(.scrolled) .nav a{color:rgba(255,255,255,.7)}
 header.top.on-dark:not(.scrolled) .nav a[aria-current]{color:#fff}
 header.top.on-dark:not(.scrolled) .icon-btn{border-color:rgba(255,255,255,.18);color:#fff}
 header.top.on-dark:not(.scrolled) .tools .btn{background:var(--green);color:var(--navy)}
+@media(max-width:1020px){header.top.on-dark:not(.scrolled) .nav a,header.top.on-dark:not(.scrolled) .nav a[aria-current]{color:var(--ink)}header.top.on-dark:not(.scrolled) .nav .nav-cta{color:var(--on-primary)}}
 header.top{position:fixed;left:0;right:0}
 main{padding-top:0}
 
