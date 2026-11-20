@@ -72,6 +72,62 @@ h2{margin:0 0 10px;color:var(--navy);font-size:17px}
 .foot b{color:var(--navy)}
 .sk{height:14px;border-radius:7px;background:linear-gradient(90deg,#eef0f6,#f7f8fb,#eef0f6);background-size:200% 100%;animation:sk 1.2s infinite;margin:8px 0}
 @keyframes sk{to{background-position:-200% 0}}
+input[type=text],input[type=search],input[type=number],select{width:100%;border:1px solid var(--line);border-radius:10px;padding:10px;font:15px Plex,sans-serif;background:#fff;color:var(--text)}
+input:focus,select:focus{outline:2px solid #b9e3c9;border-color:var(--btn)}
+.ph{display:flex;align-items:flex-start;gap:10px;margin:4px 2px 12px}
+.back{border:1px solid var(--line);background:#fff;border-radius:10px;width:40px;height:40px;font-size:18px;cursor:pointer;flex:none;color:var(--navy)}
+.tabbar{position:fixed;bottom:0;inset-inline:0;z-index:6;background:#fff;border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(5,1fr);padding:4px 4px calc(4px + env(safe-area-inset-bottom))}
+.tabbar button{position:relative;border:0;background:none;display:flex;flex-direction:column;align-items:center;gap:1px;padding:6px 2px;font:600 11.5px Plex,sans-serif;color:var(--muted);cursor:pointer;border-radius:10px;min-height:52px}
+.tabbar button i{font-style:normal;font-size:19px;line-height:1.2}
+.tabbar button.on{color:var(--navy);background:#eef1f8}
+.nb{position:absolute;top:2px;inset-inline-start:calc(50% + 6px);background:var(--bad);color:#fff;font-style:normal;font-size:10.5px;border-radius:10px;padding:0 5px;line-height:16px}
+body.in main{padding-bottom:90px}
+body.in .foot{padding-bottom:84px}
+.kpi.link{cursor:pointer;text-align:start;font:inherit;color:inherit}
+.kpi b{direction:ltr;unicode-bidi:isolate;text-align:right}
+.kpi.good b{color:var(--btn)}.kpi.badk b{color:var(--bad)}
+.bd{display:inline-block;border-radius:20px;padding:1px 10px;font-size:12px;font-weight:600;background:#eef1f8;color:var(--navy);white-space:nowrap}
+.bd.ok{background:#e3f5ea;color:#11683a}.bd.warn{background:#fff3d6;color:#8a5a00}.bd.bad{background:#fde6e6;color:#9b2222}
+.row{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 12px}
+.chip{border:1px solid var(--line);background:#fff;border-radius:20px;padding:6px 12px;font:600 13px Plex,sans-serif;color:var(--navy);cursor:pointer}
+.chip.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.card.item{display:block;width:100%;text-align:start;font:inherit;color:inherit;cursor:pointer}
+.card.item:hover{border-color:#c9cfe2}
+.desc{margin:6px 0 0;font-size:14px;color:var(--text);white-space:pre-wrap}
+.warnline{background:#fff7e6;border:1px solid #f3dca6;color:#7a5200;border-radius:10px;padding:8px 10px;font-size:13px;margin:8px 0}
+.trig{margin-top:6px;font-size:13px;color:var(--btn)}
+.bar{height:10px;background:#eef1f8;border-radius:10px;overflow:hidden;margin-top:8px}.bar i{display:block;height:100%;background:var(--btn)}
+.tbl .tr{display:grid;grid-template-columns:1fr auto auto;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line)}
+.tbl .tr:last-child{border-bottom:0}
+.tr small{display:block;color:var(--muted);font-size:12.5px}
+.num{text-align:left;direction:ltr}.num small{text-align:left}
+.pos{color:var(--btn)}.neg{color:var(--bad)}.warnt{color:#8a5a00!important}
+.flt{display:grid;gap:10px}
+.lbl{font-size:13px;color:var(--muted)}
+.bot .me{align-self:flex-end;background:#e3f5ea;color:#11683a;border-radius:14px;padding:6px 12px;font-size:13px;margin:0 0 10px auto;width:fit-content;max-width:85%}
+.bot{display:flex;flex-direction:column}
+.msg .wt{font-size:15px;line-height:1.75;white-space:normal}
+.msg h3{margin:0 0 6px;color:var(--navy)}
+.acts{display:flex;flex-direction:column;gap:8px;margin-top:12px}
+.acts .btn{width:100%}
+.btn.danger{color:var(--bad);border-color:#f3b4b4}
+.row-btn{display:block;width:100%;text-align:start;border:1px solid var(--line);background:#fafbfe;border-radius:12px;padding:10px 12px;font:inherit;cursor:pointer;color:var(--text)}
+.row-btn:hover{border-color:var(--btn)}
+.row-btn b{display:block;color:var(--navy);font-size:15px}.row-btn small{display:block;color:var(--muted);font-size:12.5px}
+.sec{font-size:12px;color:var(--muted);margin-top:6px}
+.composer .row{gap:8px}.composer .chips{margin:10px 0 0}
+.opt{border:1px solid var(--line);border-radius:12px;padding:10px;margin-bottom:8px;display:grid;gap:8px;background:#fcfcfe}
+.opt.off{opacity:.6}
+.mv{display:flex;gap:4px;flex:none}
+.ic{width:36px;height:40px;border:1px solid var(--line);background:#fff;border-radius:10px;cursor:pointer;color:var(--navy)}
+.ic:disabled{opacity:.3}
+.ck{display:flex;align-items:center;gap:6px;font-size:14px;cursor:pointer}
+.ck input{width:18px;height:18px}
+.addr{margin-top:6px}.addr .btn{flex:none}
+@media(min-width:760px){.tabbar{position:sticky;top:57px;bottom:auto;border-top:0;border-bottom:1px solid var(--line);display:flex;justify-content:center;gap:4px;padding:4px}
+.tabbar button{flex-direction:row;gap:6px;font-size:14px;min-height:40px;padding:6px 14px}.tabbar button i{font-size:16px}.nb{position:static;margin-inline-start:4px}
+body.in main{padding-bottom:16px}.kpis{grid-template-columns:repeat(4,1fr)}}
 @media(min-width:760px){.kpis{grid-template-columns:repeat(4,1fr)}.cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}.cols .card{margin-bottom:0}}
 </style>
 </head>
@@ -99,7 +155,7 @@ h2{margin:0 0 10px;color:var(--navy);font-size:17px}
   function load(k, sess) { try { return JSON.parse((sess ? sessionStorage : localStorage).getItem(k)); } catch (e) { return null; } }
   function el(tag, attrs, kids) {
     var e = document.createElement(tag);
-    for (var k in attrs || {}) { if (k === "text") e.textContent = attrs[k]; else if (k === "on") for (var ev in attrs.on) e.addEventListener(ev, attrs.on[ev]); else e.setAttribute(k, attrs[k]); }
+    for (var k in attrs || {}) { if (attrs[k] == null) continue; if (k === "text") e.textContent = attrs[k]; else if (k === "on") for (var ev in attrs.on) e.addEventListener(ev, attrs.on[ev]); else e.setAttribute(k, attrs[k]); }
     (kids || []).forEach(function (c) { if (c != null) e.appendChild(typeof c === "string" ? document.createTextNode(c) : c); });
     return e;
   }
@@ -126,7 +182,7 @@ h2{margin:0 0 10px;color:var(--navy);font-size:17px}
 
   // ================= الدخول =================
   function loginScreen() {
-    stopTimers(); hdu.hidden = true; clear(app);
+    stopTimers(); hdu.hidden = true; document.body.classList.remove("in"); if (nav) nav.hidden = true; clear(app);
     var saved = load(LK, true);
     if (saved && new Date(saved.expires_at) > new Date()) { L = saved; return saved.step === "confirm" ? confirmStep() : sendStep(); }
     var c = el("div", { class: "card login" }, [
@@ -223,74 +279,418 @@ h2{margin:0 0 10px;color:var(--navy);font-size:17px}
   }
 
   // ================= اللوحة =================
+  var TABS = [
+    ["home", "🏠", "الرئيسية"], ["decide", "✅", "قراراتك"], ["maint", "🛠️", "الصيانة"], ["fees", "💰", "الرسوم"], ["more", "☰", "المزيد"]
+  ];
+  var MORE = [
+    ["custody", "💼 العهدة", "رصيد المشرف وحركاته"], ["services", "⚙️ الخدمات والأسعار", "تشغيل وإيقاف وتعديل الأسعار"],
+    ["issues", "📝 الخيارات الجاهزة", "خيارات المشاكل في البلاغات"], ["audit", "📜 سجل التعديلات", "مين سوّى وش ومتى"], ["roadmap", "🗺️ خارطة الطريق", "الأفكار المؤجلة ومتى نرجع لها"]
+  ];
+  var TAB = "home", ME = null, nav = null;
+  var money = function (n) { return Number(n || 0).toLocaleString("en-US", { maximumFractionDigits: 2 }); };
+  var fDay = function (d) { return d ? new Date(d).toLocaleDateString("ar-SA-u-ca-gregory-nu-latn", Object.assign({ day: "numeric", month: "short" }, tz)) : "—"; };
+  var fDT = function (d) { return d ? new Date(d).toLocaleString("ar-SA-u-ca-gregory-nu-latn", Object.assign({ day: "numeric", month: "short", hour: "numeric", minute: "2-digit" }, tz)) : "—"; };
+  var ST = { new: ["جديد", "warn"], diagnosing: ["قيد المعاينة", ""], quoting: ["عروض أسعار", ""], pending_approval: ["بانتظار الاعتماد", "warn"], approved: ["معتمد", ""], in_progress: ["قيد التنفيذ", ""], completed: ["تم الإنجاز", "ok"], closed: ["مغلق", "ok"], rejected: ["مرفوض", "bad"], warranty: ["لدى المطوّر", ""] };
+  var KIND = { maintenance: "🛠️ صيانة", complaint: "📣 شكوى", security: "🚨 أمني", emergency: "🆘 طوارئ" };
+  var DUE = { due: ["غير مسدد", "bad"], partially_paid: ["مسدد جزئياً", "warn"], paid: ["مسدد", "ok"], waived: ["معفى", ""] };
+  var BL = { parked: ["مؤجلة", ""], ready: ["جاهزة", "warn"], planned: ["مخططة", "warn"], in_progress: ["قيد التنفيذ", "warn"], done: ["منجزة", "ok"], dropped: ["ملغاة", "bad"] };
+  var SCOPE = { unit: "داخل الوحدة", common: "مناطق مشتركة", any: "الكل" };
+  function badge(pair) { return el("span", { class: "bd " + (pair ? pair[1] : ""), text: pair ? pair[0] : "" }); }
+  function card(kids, cls) { return el("div", { class: "card " + (cls || "") }, kids); }
+  function kpi(v, l, cls) { return el("div", { class: "kpi " + (cls || "") }, [el("b", { text: v }), el("span", { text: l })]); }
+  function loading() { clear(app); app.appendChild(card([el("div", { class: "sk" }), el("div", { class: "sk", style: "width:70%" }), el("div", { class: "sk", style: "width:40%" })])); }
+  function fail(e, retry) { clear(app); app.appendChild(card([el("div", { class: "err", text: e.message }), el("button", { class: "btn ghost sm", type: "button", style: "margin-top:10px", text: "إعادة المحاولة", on: { click: retry } })])); }
+  function flash(cardEl, msg, bad) {
+    var old = cardEl.querySelector(".okm,.err"); if (old) old.remove();
+    var m = el("div", { class: bad ? "err" : "okm", text: msg }); cardEl.insertBefore(m, cardEl.children[1] || null);
+    setTimeout(function () { m.remove(); }, 3500);
+  }
+  function wtext(s) { // نص واتساب: *غامق* + أسطر
+    var out = el("div", { class: "wt" });
+    String(s || "").split("\n").forEach(function (line, i) {
+      if (i) out.appendChild(el("br"));
+      line.split(/(\*[^*\n]+\*)/g).forEach(function (part) {
+        if (/^\*[^*]+\*$/.test(part)) out.appendChild(el("b", { text: part.slice(1, -1) })); else if (part) out.appendChild(document.createTextNode(part));
+      });
+    });
+    return out;
+  }
+
   function boot() {
     var s = load(TK);
     if (!s || !s.t || (s.exp && new Date(s.exp) < new Date())) { setToken(null); return loginScreen(); }
-    TOKEN = s.t; stopTimers(); hdu.hidden = false;
-    clear(app); app.appendChild(el("div", { class: "card" }, [el("div", { class: "sk" }), el("div", { class: "sk", style: "width:70%" }), el("div", { class: "sk", style: "width:40%" })]));
-    Promise.all([api("me"), api("list")]).then(function (r) { home(r[0], r[1]); }).catch(function (e) {
-      if (!TOKEN) return; clear(app); app.appendChild(el("div", { class: "card" }, [el("div", { class: "err", text: e.message }), el("button", { class: "btn ghost sm", type: "button", style: "margin-top:10px", text: "إعادة المحاولة", on: { click: boot } })]));
-    });
+    TOKEN = s.t; stopTimers(); hdu.hidden = false; document.body.classList.add("in");
+    if (!nav) {
+      nav = el("nav", { class: "tabbar", "aria-label": "أقسام اللوحة" });
+      TABS.forEach(function (t) { nav.appendChild(el("button", { type: "button", "data-t": t[0], on: { click: function () { go(t[0]); } } }, [el("i", { text: t[1] }), el("span", { text: t[2] })])); });
+      document.querySelector("header").insertAdjacentElement("afterend", nav);
+    }
+    nav.hidden = false;
+    var h = (location.hash || "").slice(1);
+    go(h && (TABS.some(function (t) { return t[0] === h; }) || MORE.some(function (t) { return t[0] === h; })) ? h : "home");
   }
-  function home(me, ls) {
-    clear(app);
-    var first = String(me.name || "").split(" ")[0];
-    var cx = (me.complexes || [])[0];
-    var total = (me.pending || []).reduce(function (a, x) { return a + x.n; }, 0);
-    app.appendChild(el("div", { class: "card" }, [
-      el("h1", { text: "أهلاً " + first }),
-      el("p", { class: "muted", style: "margin:0" }, [(cx ? cx.name + " · " + (cx.city || "") : "") + " — جلستك تنتهي " + fTime(me.expires_at)])
-    ]));
-    app.appendChild(el("div", { class: "kpis" }, [
-      el("div", { class: "kpi" }, [el("b", { text: String(total) }), el("span", { text: "بانتظار قرارك" })]),
-      el("div", { class: "kpi" }, [el("b", { text: String(me.open_requests || 0) }), el("span", { text: "بلاغ مفتوح" })]),
-      el("div", { class: "kpi" }, [el("b", { text: String((ls.services || []).filter(function (s) { return s.enabled; }).length) }), el("span", { text: "خدمة شغّالة" })]),
-      el("div", { class: "kpi" }, [el("b", { text: String((me.complexes || []).length) }), el("span", { text: "مجمّع" })])
-    ]));
-    var q = el("ul", { class: "list" });
-    (me.pending || []).forEach(function (x) { q.appendChild(el("li", {}, [el("span", {}, [x.icon + " " + x.label]), el("span", { class: "n", text: String(x.n) })])); });
-    var qc = el("div", { class: "card" }, [
-      el("h2", { text: "بانتظارك" }),
-      total ? q : el("p", { class: "muted", text: "✅ ما فيه شي ينتظرك الحين." }),
-      total ? el("a", { class: "btn", href: "https://wa.me/" + BOT + "?text=" + encodeURIComponent("القائمة"), target: "_blank", rel: "noopener", style: "width:100%;margin-top:10px" }, ["افتح البوت وبتّ فيها"]) : null,
-      total ? el("p", { class: "muted", style: "margin:8px 0 0", text: "في البوت اختر «✅ يحتاج قرارك». البتّ من اللوحة مباشرة جاي في التحديث الجاي." }) : null
+  window.addEventListener("hashchange", function () {
+    var h = (location.hash || "").slice(1);
+    if (TOKEN && nav && !nav.hidden && h && h !== TAB && (TABS.some(function (t) { return t[0] === h; }) || MORE.some(function (t) { return t[0] === h; }))) go(h);
+  });
+  function go(t) {
+    TAB = t;
+    try { history.replaceState(null, "", "#" + t); } catch (e) {}
+    var top = MORE.some(function (m) { return m[0] === t; }) ? "more" : t;
+    [].forEach.call(nav.children, function (b) { b.classList.toggle("on", b.getAttribute("data-t") === top); });
+    window.scrollTo(0, 0);
+    ({ home: home, decide: decide, maint: maint, fees: fees, more: more, custody: custody, services: services, issues: issues, audit: audit, roadmap: roadmap })[t]();
+  }
+  function head(title, sub, back) {
+    return el("div", { class: "ph" }, [
+      back ? el("button", { class: "back", type: "button", "aria-label": "رجوع", text: "→", on: { click: function () { go(back); } } }) : null,
+      el("div", {}, [el("h1", { text: title }), sub ? el("p", { class: "muted", style: "margin:0", text: sub }) : null])
     ]);
-    var sv = el("ul", { class: "list" });
-    (ls.services || []).forEach(function (s) {
-      var cb = el("input", { type: "checkbox", "aria-label": s.name_ar });
-      cb.checked = !!s.enabled; if (!s.built) cb.disabled = true;
-      cb.addEventListener("change", function () {
-        var want = cb.checked; cb.disabled = true;
-        api("toggle", { key: s.key, enabled: want }).then(function () { s.enabled = want; cb.disabled = false; flash(sc, (want ? "✅ تم تشغيل " : "⏸️ تم إيقاف ") + s.name_ar); })
-          .catch(function (e) { cb.checked = !want; cb.disabled = false; flash(sc, e.message, true); });
-      });
-      sv.appendChild(el("li", {}, [
-        el("span", {}, [(s.icon ? s.icon + " " : "") + s.name_ar, s.built ? null : el("span", { class: "tag", text: "قيد التطوير" })]),
-        el("label", { class: "sw" }, [cb, el("span")])
+  }
+
+  // ---------- الرئيسية
+  function home() {
+    loading();
+    api("me").then(function (me) {
+      ME = me; clear(app);
+      var first = String(me.name || "").split(" ")[0];
+      var cx = (me.complexes || [])[0];
+      var total = (me.pending || []).reduce(function (a, x) { return a + x.n; }, 0);
+      setBadge(total);
+      app.appendChild(head("أهلاً " + first, (cx ? cx.name + " · " + (cx.city || "") : "") + " — جلستك تنتهي " + fTime(me.expires_at)));
+      app.appendChild(el("div", { class: "kpis" }, [
+        el("button", { class: "kpi link", type: "button", on: { click: function () { go("decide"); } } }, [el("b", { text: String(total) }), el("span", { text: "بانتظار قرارك" })]),
+        el("button", { class: "kpi link", type: "button", on: { click: function () { go("maint"); } } }, [el("b", { text: String(me.open_requests || 0) }), el("span", { text: "بلاغ مفتوح" })]),
+        el("button", { class: "kpi link", type: "button", on: { click: function () { go("fees"); } } }, [el("b", { text: "💰" }), el("span", { text: "الرسوم" })]),
+        el("button", { class: "kpi link", type: "button", on: { click: function () { go("custody"); } } }, [el("b", { text: "💼" }), el("span", { text: "العهدة" })])
       ]));
-    });
-    var sc = el("div", { class: "card" }, [el("h2", { text: "الخدمات" }), el("p", { class: "muted", style: "margin-top:-6px", text: "الخدمة الموقوفة تظهر للسكان «متوقفة»." }), sv]);
-    var pl = el("ul", { class: "list" });
-    (ls.prices || []).forEach(function (p) {
-      var inp = el("input", { type: "number", inputmode: "decimal", min: "1", value: String(p.value), "aria-label": p.label });
-      var b = el("button", { class: "btn sm", type: "button", text: "حفظ" }); b.disabled = true;
-      inp.addEventListener("input", function () { b.disabled = Number(inp.value) === p.value || !(Number(inp.value) > 0); });
-      b.addEventListener("click", function () {
-        b.disabled = true;
-        api("set_price", { key: p.key, value: Number(inp.value) }).then(function (r) { p.value = r.value; flash(pc, "✅ تم حفظ " + p.label); })
-          .catch(function (e) { b.disabled = false; flash(pc, e.message, true); });
+      var q = el("ul", { class: "list" });
+      (me.pending || []).forEach(function (x) { q.appendChild(el("li", {}, [el("span", { text: x.icon + " " + x.label }), el("span", { class: "n", text: String(x.n) })])); });
+      app.appendChild(card([
+        el("h2", { text: "بانتظارك" }),
+        total ? q : el("p", { class: "muted", text: "✅ ما فيه شي ينتظرك الحين." }),
+        total ? el("button", { class: "btn", type: "button", style: "width:100%;margin-top:10px", text: "ابدأ القرارات", on: { click: function () { go("decide"); } } }) : null
+      ]));
+    }).catch(function (e) { if (TOKEN) fail(e, home); });
+  }
+  function setBadge(n) {
+    var b = nav && nav.querySelector('[data-t="decide"]'); if (!b) return;
+    var old = b.querySelector(".nb"); if (old) old.remove();
+    if (n) b.appendChild(el("em", { class: "nb", text: n > 99 ? "99+" : String(n) }));
+  }
+
+  // ---------- القرارات (نفس البوت بالضبط)
+  var BOTQ = Promise.resolve(), botBox = null, botBusy = false;
+  var DEC_FIRST = null;
+  function decide() {
+    clear(app);
+    app.appendChild(head("قراراتك", "نفس قرارات البوت، من هنا. كل قرار ينفّذ بنفس الطريقة ويتسجّل."));
+    botBox = el("div", { class: "bot" });
+    var inp = el("input", { type: "text", placeholder: "اكتب ردّك هنا (سبب، مبلغ، مرجع M-12...)", "aria-label": "ردّك للبوت" });
+    var send = el("button", { class: "btn sm", type: "button", text: "إرسال" });
+    function sendText() { var v = inp.value.trim(); if (!v) return; inp.value = ""; botSend({ text: v }, "✍️ " + v); }
+    send.addEventListener("click", sendText);
+    inp.addEventListener("keydown", function (e) { if (e.key === "Enter") sendText(); });
+    app.appendChild(botBox);
+    app.appendChild(el("div", { class: "card composer" }, [el("div", { class: "row" }, [inp, send]),
+      el("div", { class: "chips" }, [
+        el("button", { class: "chip", type: "button", text: "✅ يحتاج قرارك", on: { click: function () { botSend({ id: "a_approvals", title: "يحتاج قرارك" }); } } }),
+        el("button", { class: "chip", type: "button", text: "📋 آخر البلاغات", on: { click: function () { botSend({ id: "a_requests", title: "آخر البلاغات" }); } } }),
+        el("button", { class: "chip", type: "button", text: "⚙️ قائمة البوت", on: { click: function () { botSend({ id: "a_menu", title: "القائمة" }); } } })
+      ])]));
+    var f = DEC_FIRST || [{ id: "a_approvals", title: "يحتاج قرارك" }]; DEC_FIRST = null;
+    botSend(f[0], f[1]);
+  }
+  function botSend(input, echo) {
+    if (botBusy) return;
+    botBusy = true; if (!botBox) return;
+    [].forEach.call(botBox.querySelectorAll("button"), function (b) { b.disabled = true; });
+    clear(botBox);
+    if (echo || input.title) botBox.appendChild(el("div", { class: "me", text: echo || input.title }));
+    var w = el("div", { class: "waiting" }, [el("span", { class: "spin" }), "لحظة…"]); botBox.appendChild(w);
+    api("bot", input).then(function (r) {
+      botBusy = false; w.remove();
+      if (!r.out.length) botBox.appendChild(card([el("p", { class: "muted", style: "margin:0", text: "تم ✅" })]));
+      r.out.forEach(function (p) { botBox.appendChild(renderMsg(p)); });
+      refreshBadge();
+    }).catch(function (e) { botBusy = false; w.remove(); botBox.appendChild(el("div", { class: "err", text: e.message })); });
+  }
+  function renderMsg(p) {
+    var c = el("div", { class: "card msg" });
+    if (p.type === "text") { c.appendChild(wtext(p.text && p.text.body)); return c; }
+    if (p.type === "image" || p.type === "document") {
+      var m = p[p.type] || {};
+      c.appendChild(el("a", { class: "btn ghost sm", href: m.link || "#", target: "_blank", rel: "noopener noreferrer", text: "📎 " + (m.caption || (p.type === "image" ? "صورة" : "ملف")) }));
+      return c;
+    }
+    if (p.type === "interactive") {
+      var it = p.interactive || {};
+      if (it.header && it.header.text) c.appendChild(el("h3", { text: it.header.text }));
+      c.appendChild(wtext(it.body && it.body.text));
+      if (it.footer && it.footer.text) c.appendChild(el("p", { class: "muted", text: it.footer.text }));
+      var acts = el("div", { class: "acts" });
+      if (it.type === "button") {
+        ((it.action || {}).buttons || []).forEach(function (b) {
+          var r = b.reply || {};
+          var cls = /رفض|❌|إلغاء/.test(r.title) ? "btn ghost danger" : /اعتماد|✅|موافق/.test(r.title) ? "btn" : "btn ghost";
+          acts.appendChild(el("button", { class: cls, type: "button", text: r.title, on: { click: function () { botSend({ id: r.id, title: r.title }); } } }));
+        });
+      } else if (it.type === "list") {
+        ((it.action || {}).sections || []).forEach(function (s) {
+          if (s.title && (it.action.sections.length > 1)) acts.appendChild(el("div", { class: "sec", text: s.title }));
+          (s.rows || []).forEach(function (r) {
+            acts.appendChild(el("button", { class: "row-btn", type: "button", on: { click: function () { botSend({ id: r.id, title: r.title }); } } }, [el("b", { text: r.title }), r.description ? el("small", { text: r.description }) : null]));
+          });
+        });
+      } else if (it.type === "cta_url" && it.action && it.action.parameters) {
+        acts.appendChild(el("a", { class: "btn ghost", href: it.action.parameters.url, target: "_blank", rel: "noopener noreferrer", text: it.action.parameters.display_text || "فتح" }));
+      }
+      c.appendChild(acts);
+      return c;
+    }
+    c.appendChild(el("p", { class: "muted", text: "رسالة من نوع غير مدعوم في اللوحة — افتحها في البوت." }));
+    return c;
+  }
+  function refreshBadge() { api("me").then(function (me) { ME = me; setBadge((me.pending || []).reduce(function (a, x) { return a + x.n; }, 0)); }).catch(function () {}); }
+
+  // ---------- الصيانة
+  var MF = "open";
+  function maint() {
+    loading();
+    api("requests", { filter: MF === "all" ? "" : MF, limit: 100 }).then(function (r) {
+      clear(app);
+      app.appendChild(head("الصيانة والبلاغات", "اضغط أي بلاغ يفتح لك كرته في «قراراتك»."));
+      var t = r.totals || {};
+      app.appendChild(el("div", { class: "kpis" }, [kpi(String(t.jobs || 0), "عمل مقفل"), kpi(money(t.billed), "المفوتر على المجمع (ر.س)"), kpi(money(t.cost), "التكلفة (ر.س)"), kpi(money(t.margin), "هامشك (ر.س)", "good")]));
+      var chips = el("div", { class: "chips" });
+      [["open", "المفتوحة"], ["jobs", "الأعمال والتكاليف"], ["all", "الكل"]].forEach(function (f) {
+        chips.appendChild(el("button", { class: "chip" + (MF === f[0] ? " on" : ""), type: "button", text: f[1], on: { click: function () { MF = f[0]; maint(); } } }));
       });
-      pl.appendChild(el("li", {}, [el("span", { text: p.label }), el("span", { class: "price" }, [inp, b])]));
+      app.appendChild(chips);
+      var list = el("div", {});
+      if (!r.rows.length) list.appendChild(card([el("p", { class: "muted", style: "margin:0", text: "ما فيه بلاغات هنا." })]));
+      r.rows.forEach(function (x) {
+        var place = x.units && x.units.unit_number ? "الوحدة " + x.units.unit_number : (x.common_area || "مناطق مشتركة");
+        var money2 = x.wo_status ? el("div", { class: "muted" }, ["💼 التكلفة " + money(x.wo_cost) + " · السعر النهائي " + money(x.wo_final_price) + (x.wo_cost != null && x.wo_final_price != null ? " · الهامش " + money(Number(x.wo_final_price) - Number(x.wo_cost)) : "")]) : null;
+        list.appendChild(el("button", { class: "card item", type: "button", on: { click: function () { DEC_FIRST = [{ text: x.ref_code }, "🔎 " + x.ref_code]; go("decide"); } } }, [
+          el("div", { class: "row" }, [el("b", { text: x.ref_code + " · " + (x.category || "") }), badge(ST[x.status] || [x.status, ""])]),
+          el("div", { class: "muted", text: (KIND[x.kind] || x.kind) + " · " + place + " · " + fDay(x.created_at) }),
+          x.description ? el("div", { class: "desc", text: x.description }) : null,
+          x.reject_requested_at ? el("div", { class: "warnline", text: "↩️ المشرف طلب رفضه: " + (x.reject_reason || "") }) : null,
+          money2
+        ]));
+      });
+      app.appendChild(list);
+    }).catch(function (e) { if (TOKEN) fail(e, maint); });
+  }
+
+  // ---------- الرسوم
+  var FF = "unpaid", FQ = "";
+  function fees() {
+    loading();
+    api("fees").then(function (r) {
+      clear(app);
+      if (!r.period) { app.appendChild(head("الرسوم")); app.appendChild(card([el("p", { class: "muted", text: "ما فيه سنة مالية مدخلة." })])); return; }
+      var t = r.totals;
+      app.appendChild(head("رسوم " + r.period.name, "الاستحقاق " + fDay(r.period.due_date) + " · التذكير يبدأ " + fDay(r.period.reminders_from)));
+      var pct = t.amount ? Math.round(t.paid / t.amount * 100) : 0;
+      app.appendChild(el("div", { class: "kpis" }, [kpi(money(t.amount), "المستحق (ر.س)"), kpi(money(t.paid), "المحصّل (ر.س)", "good"), kpi(money(t.review), "إيصالات تحت المراجعة"), kpi(t.paidUnits + " / " + t.units, "وحدة مسددة")]));
+      app.appendChild(card([el("div", { class: "row" }, [el("b", { text: "نسبة التحصيل" }), el("b", { text: pct + "%" })]), el("div", { class: "bar" }, [el("i", { style: "width:" + pct + "%" })])]));
+      var search = el("input", { type: "search", placeholder: "ابحث برقم الوحدة أو اسم المالك", value: FQ, "aria-label": "بحث" });
+      var chips = el("div", { class: "chips" });
+      [["unpaid", "غير المسددة"], ["review", "تحت المراجعة"], ["paid", "المسددة"], ["all", "الكل"]].forEach(function (f) {
+        chips.appendChild(el("button", { class: "chip" + (FF === f[0] ? " on" : ""), type: "button", text: f[1], on: { click: function () { FF = f[0]; draw(); [].forEach.call(chips.children, function (c, i) { c.classList.toggle("on", ["unpaid", "review", "paid", "all"][i] === FF); }); } } }));
+      });
+      var box = el("div", { class: "card tbl" });
+      function draw() {
+        clear(box);
+        var q = FQ.trim().toLowerCase();
+        var rows = r.rows.filter(function (x) {
+          if (FF === "unpaid" && (x.status === "paid" || x.status === "waived")) return false;
+          if (FF === "paid" && x.status !== "paid") return false;
+          if (FF === "review" && !x.review) return false;
+          return !q || x.unit.toLowerCase().indexOf(q) >= 0 || (x.owner || "").toLowerCase().indexOf(q) >= 0;
+        });
+        box.appendChild(el("p", { class: "muted", style: "margin:0 0 6px", text: rows.length + " وحدة" }));
+        rows.forEach(function (x) {
+          box.appendChild(el("div", { class: "tr" }, [
+            el("div", {}, [el("b", { text: x.unit }), el("small", { text: x.owner || "—" })]),
+            el("div", { class: "num" }, [el("b", { text: money(x.amount) }), x.paid ? el("small", { text: "مدفوع " + money(x.paid) }) : null, x.review ? el("small", { class: "warnt", text: "تحت المراجعة " + money(x.review) }) : null]),
+            badge(DUE[x.status] || [x.status, ""])
+          ]));
+        });
+      }
+      search.addEventListener("input", function () { FQ = search.value; draw(); });
+      app.appendChild(card([search, chips], "flt"));
+      app.appendChild(box); draw();
+    }).catch(function (e) { if (TOKEN) fail(e, fees); });
+  }
+
+  // ---------- المزيد
+  function more() {
+    clear(app);
+    app.appendChild(head("المزيد"));
+    var l = el("div", {});
+    MORE.forEach(function (m) { l.appendChild(el("button", { class: "card item", type: "button", on: { click: function () { go(m[0]); } } }, [el("b", { text: m[1] }), el("div", { class: "muted", text: m[2] })])); });
+    app.appendChild(l);
+  }
+
+  // ---------- العهدة
+  function custody() {
+    loading();
+    api("custody").then(function (r) {
+      clear(app);
+      app.appendChild(head("العهدة", r.holder ? "عند " + r.holder + (r.last ? " · آخر تصفية " + r.last.ref_code + " (" + fDay(r.last.created_at) + ")" : " · ما صارت تصفية للحين") : "", "more"));
+      if (!r.holder) { app.appendChild(card([el("p", { class: "muted", text: "ما فيه مشرف مسجّل." })])); return; }
+      app.appendChild(el("div", { class: "kpis" }, [kpi(money(r.balance), "الرصيد الحالي (ر.س)", r.balance < 0 ? "badk" : "good"), kpi(money(r.opening), "رصيد بداية الكشف"), kpi(money(r.transfers), "المستلم"), kpi(money(r.spent), "المصروف")]));
+      if (r.balance < 0) app.appendChild(el("div", { class: "warnline", text: "⚠️ الرصيد بالسالب: المشرف صرف أكثر من اللي استلمه. حوّل له عهدة من البوت (💼 العهدة)." }));
+      if (r.pending_purchases) app.appendChild(el("div", { class: "warnline", text: "⏳ " + r.pending_purchases + " طلب شراء بانتظار اعتمادك (ما انخصم للحين)." }));
+      var box = el("div", { class: "card tbl" }, [el("h2", { text: "الحركات من آخر تصفية" })]);
+      if (!r.entries.length) box.appendChild(el("p", { class: "muted", text: "ما فيه حركات." }));
+      r.entries.forEach(function (e) {
+        var t = e.kind === "transfer";
+        box.appendChild(el("div", { class: "tr" }, [
+          el("div", {}, [el("b", { text: t ? "➕ تحويل" : "➖ " + ((e.purchase_requests && e.purchase_requests.ref_code) || "صرف") }), el("small", { text: (e.purchase_requests && e.purchase_requests.description) || e.note || "" })]),
+          el("div", { class: "num" }, [el("b", { class: t ? "pos" : "neg", text: (t ? "+" : "−") + money(e.amount) }), el("small", { text: fDay(e.created_at) })]),
+          e.status === "pending" ? badge(["بانتظار التأكيد", "warn"]) : el("span")
+        ]));
+      });
+      app.appendChild(box);
+    }).catch(function (e) { if (TOKEN) fail(e, custody); });
+  }
+
+  // ---------- الخدمات والأسعار
+  function services() {
+    loading();
+    api("list").then(function (ls) {
+      clear(app);
+      app.appendChild(head("الخدمات والأسعار", null, "more"));
+      var sv = el("ul", { class: "list" });
+      var sc = card([el("h2", { text: "الخدمات" }), el("p", { class: "muted", style: "margin-top:-6px", text: "الخدمة الموقوفة تظهر للسكان «متوقفة»." }), sv]);
+      (ls.services || []).forEach(function (s) {
+        var cb = el("input", { type: "checkbox", "aria-label": s.name_ar });
+        cb.checked = !!s.enabled; if (!s.built) cb.disabled = true;
+        cb.addEventListener("change", function () {
+          var want = cb.checked; cb.disabled = true;
+          api("toggle", { key: s.key, enabled: want }).then(function () { s.enabled = want; cb.disabled = false; flash(sc, (want ? "✅ تم تشغيل " : "⏸️ تم إيقاف ") + s.name_ar); })
+            .catch(function (e) { cb.checked = !want; cb.disabled = false; flash(sc, e.message, true); });
+        });
+        sv.appendChild(el("li", {}, [el("span", {}, [(s.icon ? s.icon + " " : "") + s.name_ar, s.built ? null : el("span", { class: "tag", text: "قيد التطوير" })]), el("label", { class: "sw" }, [cb, el("span")])]));
+      });
+      var pl = el("ul", { class: "list" });
+      var pc = card([el("h2", { text: "الأسعار (ريال)" }), pl]);
+      (ls.prices || []).forEach(function (p) {
+        var inp = el("input", { type: "number", inputmode: "decimal", min: "1", value: String(p.value), "aria-label": p.label });
+        var b = el("button", { class: "btn sm", type: "button", text: "حفظ" }); b.disabled = true;
+        inp.addEventListener("input", function () { b.disabled = Number(inp.value) === p.value || !(Number(inp.value) > 0); });
+        b.addEventListener("click", function () {
+          b.disabled = true;
+          api("set_price", { key: p.key, value: Number(inp.value) }).then(function (r) { p.value = r.value; flash(pc, "✅ تم حفظ " + p.label); })
+            .catch(function (e) { b.disabled = false; flash(pc, e.message, true); });
+        });
+        pl.appendChild(el("li", {}, [el("span", { text: p.label }), el("span", { class: "price" }, [inp, b])]));
+      });
+      app.appendChild(el("div", { class: "cols" }, [sc, pc]));
+    }).catch(function (e) { if (TOKEN) fail(e, services); });
+  }
+
+  // ---------- الخيارات الجاهزة
+  var ICAT = null;
+  function issues() {
+    loading();
+    api("issues").then(function (r) {
+      clear(app);
+      app.appendChild(head("الخيارات الجاهزة", "اللي يشوفه الساكن والمشرف لما يبلّغ. الحد 8 خيارات لكل بند، و«أخرى» تنضاف تلقائياً.", "more"));
+      var cats = [];
+      r.options.forEach(function (o) { if (cats.indexOf(o.cat) < 0) cats.push(o.cat); });
+      if (!ICAT || cats.indexOf(ICAT) < 0) ICAT = cats[0];
+      var sel = el("select", { "aria-label": "البند" });
+      cats.forEach(function (c) { var o = el("option", { value: c, text: c }); if (c === ICAT) o.selected = true; sel.appendChild(o); });
+      sel.addEventListener("change", function () { ICAT = sel.value; issues(); });
+      app.appendChild(card([el("label", { class: "lbl", text: "البند" }), sel], "flt"));
+      var groups = {};
+      r.options.filter(function (o) { return o.cat === ICAT; }).forEach(function (o) { var k = o.scope + "|" + (o.sub || ""); (groups[k] = groups[k] || []).push(o); });
+      Object.keys(groups).forEach(function (k) {
+        var parts = k.split("|"), sub = parts[1];
+        var subL = sub ? ((r.subs.filter(function (s) { return s.cat === ICAT && s.key === sub; })[0] || {}).label || sub) : "";
+        var g = card([el("h2", { text: SCOPE[parts[0]] + (subL ? " · " + subL : "") })]);
+        var ul = el("div", {});
+        groups[k].forEach(function (o, i) { ul.appendChild(optRow(o, i, groups[k].length, g)); });
+        g.appendChild(ul);
+        g.appendChild(addRow(ICAT, parts[0], sub, g));
+        app.appendChild(g);
+      });
+    }).catch(function (e) { if (TOKEN) fail(e, issues); });
+  }
+  function optRow(o, i, n, g) {
+    var lab = el("input", { type: "text", value: o.label, maxlength: "24", "aria-label": "نص الخيار" });
+    var hint = el("input", { type: "text", value: o.hint || "", maxlength: "72", placeholder: "شرح قصير (اختياري)", "aria-label": "الشرح" });
+    var urg = el("input", { type: "checkbox" }); urg.checked = !!o.urgent;
+    var act = el("input", { type: "checkbox" }); act.checked = !!o.active;
+    var save = el("button", { class: "btn sm", type: "button", text: "حفظ" }); save.disabled = true;
+    function dirty() { save.disabled = lab.value.trim() === o.label && hint.value.trim() === (o.hint || "") && urg.checked === !!o.urgent && act.checked === !!o.active; }
+    [lab, hint].forEach(function (x) { x.addEventListener("input", dirty); }); [urg, act].forEach(function (x) { x.addEventListener("change", dirty); });
+    save.addEventListener("click", function () {
+      save.disabled = true;
+      api("issue_save", { id: o.id, label: lab.value, hint: hint.value, urgent: urg.checked, active: act.checked }).then(function (r) { Object.assign(o, r.option); dirty(); flash(g, "✅ تم الحفظ"); })
+        .catch(function (e) { dirty(); flash(g, e.message, true); });
     });
-    var pc = el("div", { class: "card" }, [el("h2", { text: "الأسعار (ريال)" }), pl]);
-    app.appendChild(qc);
-    app.appendChild(el("div", { class: "cols" }, [sc, pc]));
+    function mv(dir) { api("issue_move", { id: o.id, dir: dir }).then(issues).catch(function (e) { flash(g, e.message, true); }); }
+    return el("div", { class: "opt" + (o.active ? "" : " off") }, [
+      el("div", { class: "row" }, [lab, el("span", { class: "mv" }, [
+        el("button", { type: "button", class: "ic", "aria-label": "لفوق", text: "▲", disabled: i === 0 ? "" : null, on: { click: function () { mv("up"); } } }),
+        el("button", { type: "button", class: "ic", "aria-label": "لتحت", text: "▼", disabled: i === n - 1 ? "" : null, on: { click: function () { mv("down"); } } })
+      ])]),
+      hint,
+      el("div", { class: "row" }, [el("label", { class: "ck" }, [act, " ظاهر"]), el("label", { class: "ck" }, [urg, " 🔴 عاجل"]), save])
+    ]);
   }
-  function flash(card, msg, bad) {
-    var old = card.querySelector(".okm,.err"); if (old) old.remove();
-    var m = el("div", { class: bad ? "err" : "okm", text: msg }); card.insertBefore(m, card.children[1]);
-    setTimeout(function () { m.remove(); }, 3500);
+  function addRow(cat, scope, sub, g) {
+    var lab = el("input", { type: "text", maxlength: "24", placeholder: "➕ خيار جديد", "aria-label": "خيار جديد" });
+    var b = el("button", { class: "btn ghost sm", type: "button", text: "إضافة" });
+    b.addEventListener("click", function () {
+      if (!lab.value.trim()) return lab.focus();
+      b.disabled = true;
+      api("issue_save", { cat: cat, scope: scope, sub: sub || null, label: lab.value }).then(issues).catch(function (e) { b.disabled = false; flash(g, e.message, true); });
+    });
+    return el("div", { class: "row addr" }, [lab, b]);
   }
+
+  // ---------- السجل
+  function audit() {
+    loading();
+    api("audit").then(function (r) {
+      clear(app);
+      app.appendChild(head("سجل التعديلات", "آخر 80 عملية", "more"));
+      var box = el("div", { class: "card tbl" });
+      r.rows.forEach(function (x) {
+        box.appendChild(el("div", { class: "tr" }, [
+          el("div", {}, [el("b", { text: x.who + " · " + x.action }), el("small", { text: x.entity + (x.note ? " — " + x.note : "") })]),
+          el("div", { class: "num" }, [el("small", { text: fDT(x.created_at) })])
+        ]));
+      });
+      app.appendChild(box);
+    }).catch(function (e) { if (TOKEN) fail(e, audit); });
+  }
+
+  // ---------- خارطة الطريق
+  function roadmap() {
+    loading();
+    api("roadmap").then(function (r) {
+      clear(app);
+      app.appendChild(head("خارطة الطريق", "أفكار مؤجلة مع الشرط اللي يرجّعها", "more"));
+      r.rows.forEach(function (x) {
+        app.appendChild(card([
+          el("div", { class: "row" }, [el("b", { text: x.title }), badge(BL[x.status] || [x.status, ""])]),
+          x.area ? el("div", { class: "muted", text: x.area }) : null,
+          x.details ? el("p", { class: "desc", text: x.details }) : null,
+          x.why_not_now ? el("div", { class: "muted", text: "ليش مو الحين: " + x.why_not_now }) : null,
+          x.trigger_condition ? el("div", { class: "trig", text: "🔔 نرجع لها: " + x.trigger_condition }) : null
+        ]));
+      });
+    }).catch(function (e) { if (TOKEN) fail(e, roadmap); });
+  }
+
   document.getElementById("out").addEventListener("click", function () {
     api("logout").catch(function () {}).then(function () { setToken(null); loginScreen(); });
   });
