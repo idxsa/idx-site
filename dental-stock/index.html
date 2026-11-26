@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dental Stock — تطبيق إدارة مخزون عيادات الأسنان | iDX</title>
+<meta name="description" content="Dental Stock من iDX: تطبيق لأجهزة iPhone وiPad وMac لإدارة مخزون عيادات الأسنان، الصرف بالكاميرا، حالات المعمل، تكلفة المريض، وتوقّع نفاد المواد.">
+<meta name="theme-color" content="#0A0A6B">
+<link rel="canonical" href="https://idx.sa/dental-stock/">
+<link rel="alternate" hreflang="ar" href="https://idx.sa/dental-stock/">
+<link rel="alternate" hreflang="en" href="https://idx.sa/en/dental-stock/">
+<link rel="alternate" hreflang="x-default" href="https://idx.sa/dental-stock/">
+<meta property="og:type" content="website"><meta property="og:locale" content="ar_SA">
+<meta property="og:title" content="Dental Stock — مخزون عيادتك، تحت السيطرة">
+<meta property="og:description" content="تطبيق إدارة مخزون عيادات الأسنان من iDX. صوّر المادة، ويخصمها التطبيق تلقائياً.">
+<meta property="og:url" content="https://idx.sa/dental-stock/">
+<meta property="og:site_name" content="iDX">
+<meta property="og:image" content="https://idx.sa/assets/dental-stock/og-ar.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/dental-stock/icon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/dental-stock/icon.png">
+<link rel="preload" href="/assets/fonts/plex-arabic-400.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "SoftwareApplication", "name": "Dental Stock", "url": "https://idx.sa/dental-stock/", "image": "https://idx.sa/assets/dental-stock/icon.png", "description": "تطبيق لإدارة مخزون عيادات الأسنان: الصرف بالكاميرا، وتوقّع نفاد المواد، وحالات المعمل، وتكلفة المريض.", "operatingSystem": "iOS 17, iPadOS 17, macOS 14", "applicationCategory": "BusinessApplication", "inLanguage": "ar", "offers": [{"@type": "Offer", "name": "شهري", "price": "149", "priceCurrency": "SAR"}, {"@type": "Offer", "name": "سنوي — السنة الأولى", "price": "799", "priceCurrency": "SAR"}], "author": {"@id": "https://idx.sa/#org"}, "contributor": {"@type": "Person", "name": "Anas Saab", "worksFor": {"@id": "https://idx.sa/#org"}}, "publisher": {"@id": "https://idx.sa/#org"}}, {"@type": "Organization", "@id": "https://idx.sa/#org", "name": "شركة التحول الرقمي الذكي", "alternateName": "iDX", "url": "https://idx.sa/", "logo": "https://idx.sa/assets/icon-512.png"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://idx.sa/"}, {"@type": "ListItem", "position": 2, "name": "منتجاتنا", "item": "https://idx.sa/products/"}, {"@type": "ListItem", "position": 3, "name": "Dental Stock", "item": "https://idx.sa/dental-stock/"}]}]}</script>
+<script>try{var t=localStorage.getItem("idx-theme");if(t)document.documentElement.dataset.theme=t;else if(matchMedia("(prefers-color-scheme: dark)").matches)document.documentElement.dataset.theme="dark"}catch(e){}</script>
+<style>
+@font-face{font-family:"IBM Plex Sans Arabic";font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/plex-arabic-400.woff2) format("woff2");unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0898-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC}@font-face{font-family:"IBM Plex Sans Arabic";font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/plex-latin-400.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:"IBM Plex Sans Arabic";font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/plex-arabic-600.woff2) format("woff2");unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0898-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC}@font-face{font-family:"IBM Plex Sans Arabic";font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/plex-latin-600.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:"IBM Plex Sans Arabic";font-style:normal;font-weight:700;font-display:swap;src:url(/assets/fonts/plex-arabic-700.woff2) format("woff2");unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0898-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC}@font-face{font-family:"IBM Plex Sans Arabic";font-style:normal;font-weight:700;font-display:swap;src:url(/assets/fonts/plex-latin-700.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+/* ============ iDX tokens ============ */
+:root{
+  --navy:#0A0A6B;--green:#57C27F;
+  --bg:#FFFFFF;--mist:#F4F5FB;--surface:#FFFFFF;--ink:#0C0C33;--muted:#5B5C7E;--line:#E2E3EF;
+  --primary:#0A0A6B;--on-primary:#FFFFFF;--accent:#57C27F;--accent-text:#1F7A45;--soft:#EEF0FF;
+  --shadow:0 24px 60px -24px rgba(10,10,107,.28);
+  --font:"IBM Plex Sans Arabic",system-ui,-apple-system,"Segoe UI",Tahoma,sans-serif;
+  --max:1200px;--pad:clamp(20px,5vw,56px);--r:16px;
+  --ds-blue:#1E88E5;--ds-sky:#5FB3F5;--ds-navy:#0E2A47;
+}
+[data-theme="dark"]{
+  --bg:#06062A;--mist:#0A0A36;--surface:#0E0E44;--ink:#F1F2FA;--muted:#A6A8CC;--line:#1E2060;
+  --primary:#57C27F;--on-primary:#06062A;--accent:#57C27F;--accent-text:#7BD9A0;--soft:#131352;
+  --shadow:0 24px 60px -24px rgba(0,0,0,.6);
+}
+*{box-sizing:border-box;margin:0;padding:0;min-width:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:clip}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.75;-webkit-font-smoothing:antialiased;overflow-x:clip;transition:background .3s,color .3s}
+a{color:inherit;text-decoration:none}
+img,svg{display:block}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+.ltr{direction:ltr;unicode-bidi:isolate;display:inline-block}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+::selection{background:var(--green);color:var(--navy)}
+h1,h2,h3{line-height:1.3;font-weight:700;text-wrap:balance}
+h2{font-size:clamp(28px,4vw,44px);letter-spacing:-.005em}
+.sub{color:var(--muted);font-size:clamp(16px,1.6vw,19px);margin-top:12px;max-width:640px;text-wrap:pretty}
+section{padding:clamp(64px,9vw,112px) 0;position:relative}
+.mist{background:var(--mist)}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--accent-text);font-weight:600;font-size:14px;margin-bottom:14px}
+.eyebrow::before{content:"";width:10px;height:10px;border-radius:3px;background:var(--green)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--primary);color:var(--on-primary);padding:14px 26px;border-radius:12px;font-weight:600;font-size:16px;transition:transform .2s,box-shadow .2s,background .2s;white-space:nowrap}
+.btn:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+.btn.ghost:hover{border-color:var(--ink);box-shadow:none}
+.btn svg{width:20px;height:20px}
+.store{background:#000;color:#fff;border-radius:14px;padding:10px 20px;gap:12px;line-height:1.2;text-align:start}
+[data-theme="dark"] .store{background:#fff;color:#000}
+.store svg{width:28px;height:28px}
+.store small{display:block;font-size:11.5px;font-weight:500;opacity:.8}
+.store b{font-family:var(--font);font-size:18px;font-weight:700}
+.store[aria-disabled="true"]{cursor:default}
+/* header */
+header.top{position:sticky;top:0;z-index:100;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:border-color .3s}
+header.top.scrolled{border-color:var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:20px}
+.brand svg{height:34px;width:77px;color:var(--navy)}
+[data-theme="dark"] .brand svg,[data-theme="dark"] .flogo svg{color:#FFFFFF}
+.nav{display:flex;align-items:center;gap:26px;font-size:15px}
+.nav a{color:var(--muted);transition:color .2s}
+.nav a:hover,.nav a[aria-current]{color:var(--ink)}
+.nav .nav-cta{display:none}
+.tools{display:flex;align-items:center;gap:8px}
+.icon-btn{width:42px;height:42px;border:1.5px solid var(--line);border-radius:12px;display:grid;place-items:center;font-size:13px;font-weight:700;transition:border-color .2s}
+.icon-btn:hover{border-color:var(--ink)}
+.icon-btn svg{width:19px;height:19px}
+.theme-dark{display:none}[data-theme="dark"] .theme-dark{display:block}[data-theme="dark"] .theme-light{display:none}
+.tools .btn{padding:10px 18px;font-size:14px}
+.menu{display:none}
+@media(max-width:1020px){
+  .nav{position:fixed;inset:72px 0 auto 0;background:var(--bg);flex-direction:column;align-items:stretch;gap:0;padding:12px var(--pad) 24px;border-bottom:1px solid var(--line);transform:translateY(-120%);transition:transform .4s cubic-bezier(.7,0,.2,1);z-index:-1}
+  .nav.open{transform:none}
+  .nav a{padding:14px 0;border-bottom:1px solid var(--line);font-size:18px;color:var(--ink)}
+  .nav .nav-cta{display:flex;margin-top:16px;border:0;color:var(--on-primary)}
+  .tools .wa{display:none}.menu{display:grid}
+}
+/* breadcrumb */
+.crumb{font-size:14px;color:var(--muted);display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.crumb a:hover{color:var(--ink)}
+/* hero */
+.hero{padding:clamp(36px,5vw,64px) 0 clamp(64px,8vw,100px);overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(var(--line) 1.4px,transparent 1.4px);background-size:28px 28px;-webkit-mask-image:radial-gradient(70% 60% at 30% 40%,#000,transparent);mask-image:radial-gradient(70% 60% at 30% 40%,#000,transparent);pointer-events:none}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;position:relative}
+@media(max-width:940px){.hero .wrap{grid-template-columns:1fr}}
+.app-id{display:flex;align-items:center;gap:16px;margin-bottom:26px}
+.app-id img{width:76px;height:76px;border-radius:18px;box-shadow:0 14px 30px -10px rgba(14,42,71,.55)}
+.app-id b{font-family:var(--font);font-size:22px;font-weight:800;display:block;line-height:1.2}
+.app-id b em{font-style:normal;color:var(--ds-blue)}
+.app-id span{color:var(--muted);font-size:14px}
+.hero h1{font-size:clamp(36px,5.4vw,64px);letter-spacing:-.01em}
+.hero h1 em{font-style:normal;color:var(--accent-text)}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px;align-items:center}
+.meta{display:flex;gap:22px;flex-wrap:wrap;margin-top:28px;color:var(--muted);font-size:14px}
+.meta span{display:inline-flex;align-items:center;gap:8px}
+.meta svg{width:18px;height:18px;color:var(--accent)}
+/* phone */
+.stage{position:relative;display:flex;justify-content:center;align-items:center;min-height:620px}
+.stage::before{content:"";position:absolute;width:520px;height:520px;max-width:100%;border-radius:50%;background:radial-gradient(circle,#1E88E5 0%,transparent 65%);opacity:.28;filter:blur(30px)}
+.phone{--w:300px;--k:.7692;width:calc(var(--w) + 20px);border-radius:calc(var(--w) * .16);background:#0A1726;padding:10px;box-shadow:0 0 0 1.5px #2A5C8F,0 50px 90px -30px rgba(5,5,31,.65);position:relative;flex-shrink:0}
+.phone .scr{width:var(--w);height:calc(var(--w) * 844 / 390);border-radius:calc(var(--w) * .13);overflow:hidden;position:relative;background:#F4F7FA}
+.phone .scr-in{width:390px;height:844px;position:absolute;top:0;right:0;transform-origin:top right;transform:scale(var(--k));pointer-events:none}
+.phone .isl{position:absolute;top:calc(var(--w) * .03);left:50%;width:calc(var(--w) * .28);height:calc(var(--w) * .075);margin-left:calc(var(--w) * -.14);border-radius:99px;background:#000}
+.hero .phone{--w:300px;--k:.7692;transform:rotate(-3deg)}
+.hero .phone.back{position:absolute;--w:250px;--k:.641;transform:translate(-62%,24px) rotate(-10deg);opacity:.95;z-index:0}
+.hero .phone.front{z-index:1;transform:translateX(22%) rotate(3deg)}
+@media(max-width:560px){.hero .phone.back{display:none}.hero .phone.front{transform:none}.stage{min-height:0}}
+/* features */
+.sec-head{margin-bottom:clamp(32px,5vw,56px)}
+.feats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+@media(max-width:940px){.feats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.feats{grid-template-columns:1fr}}
+.feat{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:28px;transition:transform .3s,box-shadow .3s,border-color .3s}
+.feat:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:transparent}
+.fi{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:var(--soft);color:var(--navy);margin-bottom:18px}
+[data-theme="dark"] .fi{color:var(--green)}
+.fi svg{width:24px;height:24px}
+.feat h3{font-size:19px;margin-bottom:6px}
+.feat p{color:var(--muted);font-size:15.5px}
+/* gallery */
+.gallery{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin-top:8px}
+.gallery figure{display:flex;flex-direction:column;align-items:center;gap:16px}
+.gallery .phone{--w:220px;--k:.5641}
+.gallery figcaption{font-weight:600;font-size:15px}
+.gallery figcaption span{display:block;color:var(--muted);font-weight:500;font-size:13.5px;text-align:center}
+/* story */
+.story .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+@media(max-width:940px){.story .wrap{grid-template-columns:1fr}}
+.steps{list-style:none;display:flex;flex-direction:column;gap:22px;margin-top:26px;counter-reset:s}
+.steps li{display:grid;grid-template-columns:44px 1fr;gap:16px;counter-increment:s}
+.steps li::before{content:"0" counter(s);font-family:var(--font);font-weight:800;color:var(--accent-text);font-size:15px;border:1.5px solid var(--line);border-radius:12px;height:44px;display:grid;place-items:center}
+.steps b{display:block;font-size:17px}
+.steps span{color:var(--muted);font-size:15px}
+.stack{list-style:none;background:#0B0B26;border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:10px 26px;color:#E7E9FF;box-shadow:0 40px 80px -30px rgba(5,5,31,.6)}
+.stack li{display:flex;justify-content:space-between;gap:18px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.08);align-items:baseline;flex-wrap:wrap}
+.stack li:last-child{border:0}
+.stack b{font-family:var(--font);color:#7BD9A0;font-size:15px}
+.stack span{color:#A6A8CC;font-size:14.5px}
+.stack-h{font-family:var(--font);font-size:12px;color:#8C8FBF;letter-spacing:.12em;padding:14px 0 6px}
+/* privacy */
+.priv{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:8px}
+@media(max-width:800px){.priv{grid-template-columns:1fr}}
+.priv div{border-top:2px solid var(--green);padding-top:18px}
+.priv b{display:block;font-size:17px;margin-bottom:4px}
+.priv p{color:var(--muted);font-size:15px}
+/* pricing */
+.plans{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;max-width:880px}
+@media(max-width:700px){.plans{grid-template-columns:1fr}}
+.plan{background:var(--surface);border:1.5px solid var(--line);border-radius:22px;padding:30px;position:relative;display:flex;flex-direction:column;gap:12px}
+.plan.best{border-color:var(--navy);box-shadow:var(--shadow)}
+[data-theme="dark"] .plan.best{border-color:var(--green)}
+.plan .tag{position:absolute;top:-13px;inset-inline-start:24px;background:var(--green);color:var(--navy);font-size:13px;font-weight:700;padding:3px 12px;border-radius:99px}
+.plan h3{font-size:18px}
+.price{display:flex;align-items:baseline;gap:8px}
+.price b{font-family:var(--font);font-size:46px;font-weight:800;letter-spacing:-.02em;line-height:1}
+.price span{color:var(--muted)}
+.plan ul{list-style:none;display:flex;flex-direction:column;gap:8px;margin-top:6px}
+.plan li{display:flex;gap:10px;font-size:15px;color:var(--muted)}
+.plan li svg{width:18px;height:18px;color:var(--accent);flex-shrink:0;margin-top:5px}
+.fine{color:var(--muted);font-size:13.5px;margin-top:18px;max-width:880px}
+/* cta */
+.cta{background:var(--navy);color:#fff;text-align:center;overflow:hidden}
+.cta::before{content:"";position:absolute;width:640px;height:640px;border-radius:50%;background:#1D20B8;filter:blur(150px);opacity:.45;top:-30%;left:50%;transform:translateX(-50%)}
+.cta .wrap{position:relative;display:flex;flex-direction:column;align-items:center;gap:18px}
+.cta p{color:#B9BBE6;max-width:560px}
+.cta .btn{background:var(--green);color:var(--navy)}
+.cta .credit{font-size:14px;color:#8C8FBF;margin-top:10px}
+/* footer */
+footer{border-top:1px solid var(--line);padding:56px 0 30px;font-size:14.5px}
+footer .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px}
+@media(max-width:800px){footer .wrap{grid-template-columns:1fr}}
+.flogo svg{height:30px;width:68px;color:var(--navy);margin-bottom:14px}
+footer p,footer li{color:var(--muted)}
+footer h4{font-size:15px;margin-bottom:12px}
+footer ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+footer a:hover{color:var(--ink)}
+.legal{grid-column:1/-1;border-top:1px solid var(--line);padding-top:22px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--muted);font-size:13.5px}
+.legal nav{display:flex;gap:18px;flex-wrap:wrap}
+/* reveal */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="logo" viewBox="190 720 810 360"><g fill="currentColor"><rect x="211" y="845" width="76" height="215"/><path d="M327,741 H490 C590,741 660,810 660,900 C660,990 590,1060 490,1060 H327 V858 H403 V983 H490 C545,983 583,950 583,900 C583,850 545,818 490,818 H327 Z"/><polygon points="606,741 704,741 801,838 801,887 752,887"/><polygon points="801,913 801,962 704,1060 606,1060 752,913"/><polygon points="826,913 876,913 948,985 977,985 977,1060 900,1060 900,1035 826,962"/></g><g fill="#57C27F"><rect x="211" y="741" width="76" height="76" rx="6"/><polygon points="900,741 977,741 977,816 948,816 876,887 826,887 826,838 900,764"/></g></symbol>
+</defs></svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="iDX — الصفحة الرئيسية"><svg viewBox="0 0 810 360" role="img" aria-label="iDX"><use href="#logo"/></svg></a>
+    <nav class="nav" id="nav" aria-label="القائمة"><a href="/">الرئيسية</a><a href="/chatbot/">بوت واتساب</a><a href="/ai/">الذكاء الاصطناعي</a><a href="/web/">المواقع وSEO</a><a href="/marketing/">التسويق</a><a href="/products/" aria-current="page">منتجاتنا</a><a href="/blog/">المدونة</a><a class="btn nav-cta js-wa" href="#" data-msg="السلام عليكم، أبغى أعرف أكثر عن تطبيق Dental Stock">تواصل معنا</a></nav>
+    <div class="tools">
+      <a class="icon-btn" href="/en/dental-stock/" hreflang="en" lang="en" aria-label="English version">EN</a>
+      <button class="icon-btn" id="theme" type="button" aria-label="تبديل الوضع الليلي" aria-pressed="false"><svg class="theme-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="theme-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+      <a class="btn wa js-wa" href="#" data-msg="السلام عليكم، أبغى أعرف أكثر عن تطبيق Dental Stock">تواصل معنا</a>
+      <button class="icon-btn menu" id="menu" type="button" aria-label="القائمة" aria-expanded="false" aria-controls="nav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <nav class="crumb rv" aria-label="مسار التنقل"><a href="/">الرئيسية</a><span aria-hidden="true">/</span><a href="/products/">منتجاتنا</a><span aria-hidden="true">/</span><span aria-current="page">Dental Stock</span></nav>
+      <div class="app-id rv d1"><img src="/assets/dental-stock/icon.png" alt="أيقونة تطبيق Dental Stock" width="76" height="76"><div><b class="ltr">Dental<em>Stock</em></b><span>تطبيق لأجهزة iPhone وiPad وMac</span></div></div>
+      <h1 class="rv d1">مخزون عيادة الأسنان،<br><em>تحت السيطرة.</em></h1>
+      <p class="sub rv d2">صوّر المادة ويخصمها التطبيق تلقائياً. اعرف موعد نفاد كل مادة، وتابع حالات المعمل، واحسب تكلفة كل مريض، مع فريق كامل يعمل على مخزون واحد.</p>
+      <div class="cta-row rv d2">
+        <a class="btn store" id="store" href="#" aria-disabled="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16.4 12.6c0-2.4 2-3.5 2-3.6-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.9-3.5.9s-1.8-.9-3-.8C7 7.3 5.6 8.2 4.8 9.6c-1.7 2.9-.4 7.2 1.2 9.6.8 1.1 1.7 2.4 2.9 2.4 1.2-.1 1.6-.8 3-.8s1.8.8 3 .7c1.3 0 2.1-1.2 2.8-2.3.9-1.3 1.3-2.6 1.3-2.6s-2.6-1-2.6-4zM14.2 5.6c.6-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.4-.6.7-1.2 1.8-1 2.9 1.1.1 2.2-.5 2.8-1.3z" fill="currentColor" stroke="none"/></svg><span><small>قريبًا على</small><b>App Store</b></span></a>
+        <a class="btn ghost js-wa" href="#" data-msg="السلام عليكم، أبغى أجرّب تطبيق Dental Stock لعيادتي">اطلب تجربة لعيادتك</a>
+      </div>
+      <div class="meta rv d3"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>شهر مجاني</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>بياناتك في iCloud الخاص بعيادتك</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>وضع ليلي</span></div>
+    </div>
+    <div class="stage rv d2">
+      <div class="phone back"><div class="scr"><div class="scr-in" aria-hidden="true"><div dir="rtl" style="width: 390px; height: 844px; box-sizing: border-box; position: relative; overflow: hidden; background: #F4F7FA; color: #0E2A47; font-family: 'IBM Plex Sans Arabic', sans-serif">
+<div style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; background: radial-gradient(80% 50% at 50% 34%, #3A4652 0%, #151C23 70%, #0B0F14 100%)"></div>
+<div style="position: absolute; top: 200px; left: 50%; margin-left: -70px; width: 140px; height: 190px; border-radius: 18px; background: linear-gradient(160deg, #F2F4F6, #C9D0D7); box-shadow: 0 30px 60px rgba(0,0,0,0.5); transform: rotate(-6deg); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px">
+  <span style="font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 13px; font-weight: 800; color: #B71C1C" dir="ltr">Filtek Z350</span><span style="font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 22px; font-weight: 800; color: #263238" dir="ltr">A2</span>
+  <div style="display: flex; gap: 2px; height: 26px" aria-hidden="true"><span style="width: 2px; background: #263238"></span><span style="width: 1px; background: #263238"></span><span style="width: 3px; background: #263238"></span><span style="width: 1px; background: #263238"></span><span style="width: 2px; background: #263238"></span><span style="width: 3px; background: #263238"></span><span style="width: 1px; background: #263238"></span><span style="width: 2px; background: #263238"></span><span style="width: 1px; background: #263238"></span><span style="width: 3px; background: #263238"></span></div>
+</div>
+<div style="position: absolute; top: 176px; left: 85px; width: 220px; height: 240px">
+  <span style="position: absolute; top: 0; right: 0; width: 38px; height: 38px; border-top: 4px solid #5FB3F5; border-right: 4px solid #5FB3F5; border-top-right-radius: 18px"></span>
+  <span style="position: absolute; top: 0; left: 0; width: 38px; height: 38px; border-top: 4px solid #5FB3F5; border-left: 4px solid #5FB3F5; border-top-left-radius: 18px"></span>
+  <span style="position: absolute; bottom: 0; right: 0; width: 38px; height: 38px; border-bottom: 4px solid #5FB3F5; border-right: 4px solid #5FB3F5; border-bottom-right-radius: 18px"></span>
+  <span style="position: absolute; bottom: 0; left: 0; width: 38px; height: 38px; border-bottom: 4px solid #5FB3F5; border-left: 4px solid #5FB3F5; border-bottom-left-radius: 18px"></span>
+</div>
+<div style="position: absolute; top: 56px; left: 18px; right: 18px; display: flex; justify-content: space-between; align-items: center">
+  <button aria-label="إغلاق" style="width: 44px; height: 44px; border-radius: 50%; border: 0; background: rgba(255,255,255,0.14); backdrop-filter: blur(10px); display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <span style="height: 34px; padding: 0 14px; border-radius: 999px; background: rgba(255,255,255,0.14); color: #FFFFFF; font-size: 13px; font-weight: 600; display: flex; align-items: center; gap: 6px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#5FB3F5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/></svg>تعرّف ذكي</span>
+  <button aria-label="الفلاش" style="width: 44px; height: 44px; border-radius: 50%; border: 0; background: rgba(255,255,255,0.14); display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></button>
+</div>
+<div style="position: absolute; left: 10px; right: 10px; bottom: 24px; background: #FFFFFF; border-radius: 30px; padding: 20px; display: flex; flex-direction: column; gap: 16px; box-shadow: 0 -10px 40px rgba(0,0,0,0.35)">
+  <div style="align-self: center; width: 40px; height: 5px; border-radius: 3px; background: #D5DDE5"></div>
+  <div style="display: flex; align-items: center; gap: 14px">
+    <div style="width: 56px; height: 56px; border-radius: 18px; background: #2E8B57; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 7px rgba(46,139,87,0.14)"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg></div>
+    <div style="flex-grow: 1; display: flex; flex-direction: column; gap: 1px"><span style="font-size: 12px; font-weight: 600; color: #2E8B57">تم التعرف · باركود + صورة</span><span style="font-size: 20px; font-weight: 700; color: #0E2A47">كومبوزت A2</span><span style="font-size: 12px; color: #5B6F82">الرصيد بعد الصرف: 1 سرنجة</span></div>
+  </div>
+  <div style="display: flex; gap: 10px">
+    <div style="flex-grow: 1; display: flex; align-items: center; justify-content: space-between; background: #F4F7FA; border-radius: 18px; padding: 6px">
+      <button aria-label="زيادة" style="width: 46px; height: 46px; border-radius: 14px; border: 0; background: #FFFFFF; box-shadow: 0 1px 3px rgba(14,42,71,0.12); color: #0E2A47; font-size: 22px">+</button>
+      <span style="font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 26px; font-weight: 800; color: #0E2A47">1</span>
+      <button aria-label="إنقاص" style="width: 46px; height: 46px; border-radius: 14px; border: 0; background: #FFFFFF; box-shadow: 0 1px 3px rgba(14,42,71,0.12); color: #0E2A47; font-size: 22px">−</button>
+    </div>
+    <button style="width: 120px; border-radius: 18px; border: 1px solid #E3EAF1; background: #FFFFFF; color: #0E2A47; font-size: 13px; font-weight: 600; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1565C0" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg>ربط بمريض</button>
+  </div>
+  <button style="height: 56px; border-radius: 18px; border: 0; background: #1565C0; color: #FFFFFF; font-size: 16px; font-weight: 700">تأكيد الصرف</button>
+</div>
+
+</div></div><span class="isl"></span></div></div>
+      <div class="phone front"><div class="scr"><div class="scr-in" aria-hidden="true"><div dir="rtl" style="width: 390px; height: 844px; box-sizing: border-box; position: relative; overflow: hidden; background: #F4F7FA; color: #0E2A47; font-family: 'IBM Plex Sans Arabic', sans-serif">
+<div style="position: absolute; top: 0; right: 0; left: 0; padding: 56px 18px 0; display: flex; flex-direction: column; gap: 14px"><div style="display: flex; justify-content: space-between; align-items: center">
+  <div style="display: flex; align-items: center; gap: 11px"><div style="width: 44px; height: 44px; border-radius: 14px; background: #FFFFFF; border: 1px solid #E3EAF1; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #1565C0">ع</div>
+  <div style="display: flex; flex-direction: column"><span style="font-size: 12px; color: #5B6F82">صباح الخير، د. سارة</span><span style="font-size: 20px; font-weight: 700">عيادة الابتسامة</span></div></div>
+  <button aria-label="التنبيهات" style="position: relative; width: 44px; height: 44px; border-radius: 14px; border: 1px solid #E3EAF1; background: #FFFFFF; color: #0E2A47; display: flex; align-items: center; justify-content: center"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#0E2A47" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 1 1 12 0c0 7 3 8 3 8H3s3-1 3-8M10 20a2 2 0 0 0 4 0"/></svg><span style="position: absolute; top: 10px; left: 11px; width: 8px; height: 8px; border-radius: 50%; background: #E5484D; border: 2px solid #FFFFFF"></span></button>
+</div><div style="border-radius: 26px; padding: 18px 18px 14px; background: linear-gradient(155deg, #1A4775 0%, #0E2A47 55%, #081B30 100%); color: #FFFFFF; box-shadow: 0 16px 34px rgba(8,27,48,0.28); display: flex; flex-direction: column; gap: 10px">
+  <div style="display: flex; justify-content: space-between; align-items: center"><span style="font-size: 13px; color: #A9C2DA">قيمة المخزون</span><span style="font-size: 12px; font-weight: 600; color: #7FE0A8; background: rgba(127,224,168,0.12); padding: 3px 9px; border-radius: 999px" dir="ltr">↑ 4.2%</span></div>
+  <div style="display: flex; align-items: baseline; gap: 6px"><span style="font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 40px; font-weight: 800; letter-spacing: -1.2px" dir="ltr">48,250</span><span style="font-size: 15px; color: #5FB3F5; font-weight: 600">ر.س</span></div>
+  <svg width="318" height="70" viewBox="0 0 318 70" aria-hidden="true" style="display: block; transform: scaleX(-1)"><defs><linearGradient id="sp0" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5FB3F5" stop-opacity="0.45"/><stop offset="1" stop-color="#5FB3F5" stop-opacity="0"/></linearGradient></defs><polygon points="0,70 0.0,62 11.0,60 21.9,63 32.9,58 43.9,59 54.8,55 65.8,57 76.8,52 87.7,54 98.7,50 109.7,51 120.6,47 131.6,49 142.6,44 153.5,46 164.5,42 175.4,40 186.4,41 197.4,37 208.3,38 219.3,34 230.3,35 241.2,31 252.2,33 263.2,29 274.1,30 285.1,27 296.1,25 307.0,26 318.0,22 318,70" fill="url(#sp0)"/><polyline points="0.0,62 11.0,60 21.9,63 32.9,58 43.9,59 54.8,55 65.8,57 76.8,52 87.7,54 98.7,50 109.7,51 120.6,47 131.6,49 142.6,44 153.5,46 164.5,42 175.4,40 186.4,41 197.4,37 208.3,38 219.3,34 230.3,35 241.2,31 252.2,33 263.2,29 274.1,30 285.1,27 296.1,25 307.0,26 318.0,22" fill="none" stroke="#5FB3F5" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="318" cy="22" r="4.5" fill="#FFFFFF" stroke="#5FB3F5" stroke-width="2.5"/></svg>
+  <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px">
+    <div style="background: rgba(255,255,255,0.07); border-radius: 14px; padding: 8px 10px; display: flex; flex-direction: column"><span style="font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 18px; font-weight: 700">186</span><span style="font-size: 11px; color: #A9C2DA">مادة</span></div>
+    <div style="background: rgba(255,255,255,0.07); border-radius: 14px; padding: 8px 10px; display: flex; flex-direction: column"><span style="font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 18px; font-weight: 700; color: #F5B26B">7</span><span style="font-size: 11px; color: #A9C2DA">ناقصة</span></div>
+    <div style="background: rgba(255,255,255,0.07); border-radius: 14px; padding: 8px 10px; display: flex; flex-direction: column"><span style="font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 18px; font-weight: 700; color: #F28B82">3</span><span style="font-size: 11px; color: #A9C2DA">صلاحية</span></div>
+    <div style="background: rgba(255,255,255,0.07); border-radius: 14px; padding: 8px 10px; display: flex; flex-direction: column"><span style="font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 18px; font-weight: 700; color: #5FB3F5">4</span><span style="font-size: 11px; color: #A9C2DA">بالمعمل</span></div>
+  </div>
+</div><div style="display: flex; gap: 10px"><button style="flex-grow: 1; height: 56px; border-radius: 18px; border: 0; background: #1565C0; color: #FFFFFF; font-size: 16px; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 10px; box-shadow: 0 10px 22px rgba(21,101,192,0.35)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 12h10"/></svg>صرف بالكاميرا</button><button aria-label="استلام فاتورة" style="width: 56px; height: 56px; border-radius: 18px; border: 1px solid #E3EAF1; background: #FFFFFF; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1565C0" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><path d="M9 12h8M9 16h6"/></svg></button></div><div style="background: #FFFFFF; border: 1px solid #E3EAF1; border-radius: 22px; padding: 14px 16px; display: flex; flex-direction: column; gap: 10px">
+  <div style="display: flex; justify-content: space-between; align-items: baseline"><span style="font-size: 15px; font-weight: 700">الصرف هذا الأسبوع</span><span style="font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 15px; font-weight: 700; color: #1565C0">3,140 <span style="font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 12px; color: #5B6F82; font-weight: 500">ر.س</span></span></div>
+  <div style="display: flex; gap: 8px; align-items: flex-end"><div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 6px"><div style="width: 100%; max-width: 26px; height: 74px; display: flex; align-items: flex-end"><div style="width: 100%; height: 42%; border-radius: 7px; background: #EAF2FB"></div></div><span style="font-size: 11px; color: #5B6F82; font-weight: 500">س</span></div><div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 6px"><div style="width: 100%; max-width: 26px; height: 74px; display: flex; align-items: flex-end"><div style="width: 100%; height: 58%; border-radius: 7px; background: #EAF2FB"></div></div><span style="font-size: 11px; color: #5B6F82; font-weight: 500">ح</span></div><div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 6px"><div style="width: 100%; max-width: 26px; height: 74px; display: flex; align-items: flex-end"><div style="width: 100%; height: 36%; border-radius: 7px; background: #EAF2FB"></div></div><span style="font-size: 11px; color: #5B6F82; font-weight: 500">ن</span></div><div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 6px"><div style="width: 100%; max-width: 26px; height: 74px; display: flex; align-items: flex-end"><div style="width: 100%; height: 70%; border-radius: 7px; background: #EAF2FB"></div></div><span style="font-size: 11px; color: #5B6F82; font-weight: 500">ث</span></div><div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 6px"><div style="width: 100%; max-width: 26px; height: 74px; display: flex; align-items: flex-end"><div style="width: 100%; height: 52%; border-radius: 7px; background: #EAF2FB"></div></div><span style="font-size: 11px; color: #5B6F82; font-weight: 500">ر</span></div><div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 6px"><div style="width: 100%; max-width: 26px; height: 74px; display: flex; align-items: flex-end"><div style="width: 100%; height: 88%; border-radius: 7px; background: #1E88E5"></div></div><span style="font-size: 11px; color: #0E2A47; font-weight: 700">خ</span></div><div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 6px"><div style="width: 100%; max-width: 26px; height: 74px; display: flex; align-items: flex-end"><div style="width: 100%; height: 24%; border-radius: 7px; background: #EAF2FB"></div></div><span style="font-size: 11px; color: #5B6F82; font-weight: 500">ج</span></div></div>
+</div><div style="background: #FFFFFF; border: 1px solid #E3EAF1; border-radius: 22px; padding: 12px 14px; display: flex; align-items: center; gap: 12px">
+  <div style="position: relative; width: 46px; height: 46px; flex-shrink: 0"><svg width="46" height="46" viewBox="0 0 46 46" aria-hidden="true" style="transform: rotate(-90deg)"><circle cx="23.0" cy="23.0" r="20.5" fill="none" stroke="#EAF2FB" stroke-width="5"/><circle cx="23.0" cy="23.0" r="20.5" fill="none" stroke="#E8922E" stroke-width="5" stroke-linecap="round" stroke-dasharray="128.8" stroke-dashoffset="92.7"/></svg><span style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 12px; font-weight: 700; color: #0E2A47">2</span></div>
+  <div style="flex-grow: 1; display: flex; flex-direction: column"><span style="font-size: 15px; font-weight: 700">كومبوزت A2</span><span style="font-size: 12px; color: #5B6F82">باقي 2 من حد أدنى 5 · يخلص خلال 4 أيام</span></div>
+  <button style="height: 34px; padding: 0 12px; border-radius: 11px; border: 0; background: #EAF2FB; color: #1565C0; font-size: 12px; font-weight: 700">اطلب</button>
+</div></div>
+<nav style="position: absolute; left: 0; right: 0; bottom: 0; height: 86px; box-sizing: border-box; padding: 10px 10px 26px; background: rgba(255,255,255,0.92); backdrop-filter: blur(20px); border-top: 1px solid #E3EAF1; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr))"><a href="#" style="display: flex; flex-direction: column; align-items: center; gap: 3px; color: #1565C0; text-decoration: none; font-size: 10px; font-weight: 600"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1565C0" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>الرئيسية</a><a href="#" style="display: flex; flex-direction: column; align-items: center; gap: 3px; color: #5B6F82; text-decoration: none; font-size: 10px; font-weight: 500"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#5B6F82" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8l-9-5-9 5 9 5 9-5zM3 8v8l9 5 9-5V8M12 13v8"/></svg>المواد</a><a href="#" style="display: flex; flex-direction: column; align-items: center; gap: 3px; color: #5B6F82; text-decoration: none; font-size: 10px; font-weight: 500"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#5B6F82" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg>المرضى</a><a href="#" style="display: flex; flex-direction: column; align-items: center; gap: 3px; color: #5B6F82; text-decoration: none; font-size: 10px; font-weight: 500"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#5B6F82" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6M10 3v6L5 18a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3"/><path d="M7.5 14h9"/></svg>المعمل</a><a href="#" style="display: flex; flex-direction: column; align-items: center; gap: 3px; color: #5B6F82; text-decoration: none; font-size: 10px; font-weight: 500"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#5B6F82" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/></svg>الإعدادات</a></nav>
+</div></div><span class="isl"></span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="mist" id="features">
+  <div class="wrap">
+    <div class="sec-head"><p class="eyebrow rv">المزايا</p><h2 class="rv d1">كل ما تحتاجه عيادة الأسنان في تطبيق واحد</h2><p class="sub rv d2">صُمّم مع طاقم عيادة أسنان حقيقية، ويعمل بالطريقة نفسها التي يعمل بها المساعد والطبيب ومدير العيادة.</p></div>
+    <div class="feats"><article class="feat rv d1"><span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 12h10"/></svg></span><h3>صرف واستلام بالكاميرا</h3><p>صوّر المادة أو الباركود، فيتعرّف عليها التطبيق ويخصم الكمية. وتُقرأ فاتورة المورّد من صورة واحدة.</p></article><article class="feat rv d2"><span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></span><h3>توقّع موعد نفاد كل مادة</h3><p>يحسب معدل الاستهلاك من حركات الصرف، ويعرض الأيام المتبقية قبل نفاد كل مادة، حتى لا يتوقف العمل على الكرسي.</p></article><article class="feat rv d3"><span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6M10 3v6L5 18a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3"/><path d="M7.5 14h9"/></svg></span><h3>حالات المعمل</h3><p>تتبّع كل حالة: أُرسلت، أو استُلمت، أو أُعيدت للتعديل، مع تذكير بالمواعيد ورسالة جاهزة للمعمل.</p></article><article class="feat rv d1"><span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg></span><h3>تكلفة المريض</h3><p>سجّل المواد المستخدمة في كل زيارة، واعرف تكلفة العلاج الفعلية على العيادة.</p></article><article class="feat rv d2"><span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="9" r="2.5"/><path d="M2.5 20c.8-3.5 3.3-5.5 6.5-5.5s5.7 2 6.5 5.5M15.5 14.6c2.6.2 4.6 2 5.2 5.4"/></svg></span><h3>فريق واحد، مخزن واحد</h3><p>يدعو مدير العيادة الموظفين، وتتزامن التغييرات فوراً بين الأجهزة عبر iCloud.</p></article><article class="feat rv d3"><span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 1 1 12 0c0 7 3 8 3 8H3s3-1 3-8M10 20a2 2 0 0 0 4 0"/></svg></span><h3>تنبيهات وويدجت</h3><p>تنبيه عند نقص أي مادة أو قرب انتهاء صلاحيتها، وأداة (ويدجت) تعرض النواقص على الشاشة الرئيسية.</p></article></div>
+  </div>
+</section>
+
+<section id="screens">
+  <div class="wrap">
+    <div class="sec-head"><p class="eyebrow rv">الشاشات</p><h2 class="rv d1">واجهة هادئة وواضحة، فاتحة أو ليلية</h2></div>
+    <div class="gallery">
+      <figure class="rv"><div class="phone "><div class="scr"><div class="scr-in" aria-hidden="true"><div dir="rtl" style="width: 390px; height: 844px; box-sizing: border-box; position: relative; overflow: hidden; background: #F4F7FA; color: #0E2A47; font-family: 'IBM Plex Sans Arabic', sans-serif">
+<div style="position: absolute; top: 0; right: 0; left: 0; padding: 56px 18px 0; display: flex; flex-direction: column; gap: 14px"><div style="display: flex; justify-content: space-between; align-items: center">
+  <div style="display: flex; align-items: center; gap: 11px"><div style="width: 44px; height: 44px; border-radius: 14px; background: #FFFFFF; border: 1px solid #E3EAF1; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #1565C0">ع</div>
+  <div style="display: flex; flex-direction: column"><span style="font-size: 12px; color: #5B6F82">صباح الخير، د. سارة</span><span style="font-size: 20px; font-weight: 700">عيادة الابتسامة</span></div></div>
+  <button aria-label="التنبيهات" style="position: relative; width: 44px; height: 44px; border-radius: 14px; border: 1px solid #E3EAF1; background: #FFFFFF; color: #0E2A47; display: flex; align-items: center; justify-content: center"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#0E2A47" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 1 1 12 0c0 7 3 8 3 8H3s3-1 3-8M10 20a2 2 0 0 0 4 0"/></svg><span style="position: absolute; top: 10px; left: 11px; width: 8px; height: 8px; border-radius: 50%; background: #E5484D; border: 2px solid #FFFFFF"></span></button>
+</div><div style="border-radius: 26px; padding: 18px 18px 14px; background: linear-gradient(155deg, #1A4775 0%, #0E2A47 55%, #081B30 100%); color: #FFFFFF; box-shadow: 0 16px 34px rgba(8,27,48,0.28); display: flex; flex-direction: column; gap: 10px">
+  <div style="display: flex; justify-content: space-between; align-items: center"><span style="font-size: 13px; color: #A9C2DA">قيمة المخزون</span><span style="font-size: 12px; font-weight: 600; color: #7FE0A8; background: rgba(127,224,168,0.12); padding: 3px 9px; border-radius: 999px" dir="ltr">↑ 4.2%</span></div>
+  <div style="display: flex; align-items: baseline; gap: 6px"><span style="font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 40px; font-weight: 800; letter-spacing: -1.2px" dir="ltr">48,250</span><span style="font-size: 15px; color: #5FB3F5; font-weight: 600">ر.س</span></div>
+  <svg width="318" height="70" viewBox="0 0 318 70" aria-hidden="true" style="display: block; transform: scaleX(-1)"><defs><linearGradient id="sp0" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5FB3F5" stop-opacity="0.45"/><stop offset="1" stop-color="#5FB3F5" stop-opacity="0"/></linearGradient></defs><polygon points="0,70 0.0,62 11.0,60 21.9,63 32.9,58 43.9,59 54.8,55 65.8,57 76.8,52 87.7,54 98.7,50 109.7,51 120.6,47 131.6,49 142.6,44 153.5,46 164.5,42 175.4,40 186.4,41 197.4,37 208.3,38 219.3,34 230.3,35 241.2,31 252.2,33 263.2,29 274.1,30 285.1,27 296.1,25 307.0,26 318.0,22 318,70" fill="url(#sp0)"/><polyline points="0.0,62 11.0,60 21.9,63 32.9,58 43.9,59 54.8,55 65.8,57 76.8,52 87.7,54 98.7,50 109.7,51 120.6,47 131.6,49 142.6,44 153.5,46 164.5,42 175.4,40 186.4,41 197.4,37 208.3,38 219.3,34 230.3,35 241.2,31 252.2,33 263.2,29 274.1,30 285.1,27 296.1,25 307.0,26 318.0,22" fill="none" stroke="#5FB3F5" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="318" cy="22" r="4.5" fill="#FFFFFF" stroke="#5FB3F5" stroke-width="2.5"/></svg>
+  <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px">
+    <div style="background: rgba(255,255,255,0.07); border-radius: 14px; padding: 8px 10px; display: flex; flex-direction: column"><span style="font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 18px; font-weight: 700">186</span><span style="font-size: 11px; color: #A9C2DA">مادة</span></div>
+    <div style="background: rgba(255,255,255,0.07); border-radius: 14px; padding: 8px 10px; display: flex; flex-direction: column"><span style="font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 18px; font-weight: 700; color: #F5B26B">7</span><span style="font-size: 11px; color: #A9C2DA">ناقصة</span></div>
+    <div style="background: rgba(255,255,255,0.07); border-radius: 14px; padding: 8px 10px; display: flex; flex-direction: column"><span style="font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 18px; font-weight: 700; color: #F28B82">3</span><span style="font-size: 11px; color: #A9C2DA">صلاحية</span></div>
+    <div style="background: rgba(255,255,255,0.07); border-radius: 14px; padding: 8px 10px; display: flex; flex-direction: column"><span style="font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 18px; font-weight: 700; color: #5FB3F5">4</span><span style="font-size: 11px; color: #A9C2DA">بالمعمل</span></div>
+  </div>
+</div><div style="display: flex; gap: 10px"><button style="flex-grow: 1; height: 56px; border-radius: 18px; border: 0; background: #1565C0; color: #FFFFFF; font-size: 16px; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 10px; box-shadow: 0 10px 22px rgba(21,101,192,0.35)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 12h10"/></svg>صرف بالكاميرا</button><button aria-label="استلام فاتورة" style="width: 56px; height: 56px; border-radius: 18px; border: 1px solid #E3EAF1; background: #FFFFFF; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1565C0" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><path d="M9 12h8M9 16h6"/></svg></button></div><div style="background: #FFFFFF; border: 1px solid #E3EAF1; border-radius: 22px; padding: 14px 16px; display: flex; flex-direction: column; gap: 10px">
+  <div style="display: flex; justify-content: space-between; align-items: baseline"><span style="font-size: 15px; font-weight: 700">الصرف هذا الأسبوع</span><span style="font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 15px; font-weight: 700; color: #1565C0">3,140 <span style="font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 12px; color: #5B6F82; font-weight: 500">ر.س</span></span></div>
+  <div style="display: flex; gap: 8px; align-items: flex-end"><div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 6px"><div style="width: 100%; max-width: 26px; height: 74px; display: flex; align-items: flex-end"><div style="width: 100%; height: 42%; border-radius: 7px; background: #EAF2FB"></div></div><span style="font-size: 11px; color: #5B6F82; font-weight: 500">س</span></div><div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 6px"><div style="width: 100%; max-width: 26px; height: 74px; display: flex; align-items: flex-end"><div style="width: 100%; height: 58%; border-radius: 7px; background: #EAF2FB"></div></div><span style="font-size: 11px; color: #5B6F82; font-weight: 500">ح</span></div><div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 6px"><div style="width: 100%; max-width: 26px; height: 74px; display: flex; align-items: flex-end"><div style="width: 100%; height: 36%; border-radius: 7px; background: #EAF2FB"></div></div><span style="font-size: 11px; color: #5B6F82; font-weight: 500">ن</span></div><div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 6px"><div style="width: 100%; max-width: 26px; height: 74px; display: flex; align-items: flex-end"><div style="width: 100%; height: 70%; border-radius: 7px; background: #EAF2FB"></div></div><span style="font-size: 11px; color: #5B6F82; font-weight: 500">ث</span></div><div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 6px"><div style="width: 100%; max-width: 26px; height: 74px; display: flex; align-items: flex-end"><div style="width: 100%; height: 52%; border-radius: 7px; background: #EAF2FB"></div></div><span style="font-size: 11px; color: #5B6F82; font-weight: 500">ر</span></div><div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 6px"><div style="width: 100%; max-width: 26px; height: 74px; display: flex; align-items: flex-end"><div style="width: 100%; height: 88%; border-radius: 7px; background: #1E88E5"></div></div><span style="font-size: 11px; color: #0E2A47; font-weight: 700">خ</span></div><div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 6px"><div style="width: 100%; max-width: 26px; height: 74px; display: flex; align-items: flex-end"><div style="width: 100%; height: 24%; border-radius: 7px; background: #EAF2FB"></div></div><span style="font-size: 11px; color: #5B6F82; font-weight: 500">ج</span></div></div>
+</div><div style="background: #FFFFFF; border: 1px solid #E3EAF1; border-radius: 22px; padding: 12px 14px; display: flex; align-items: center; gap: 12px">
+  <div style="position: relative; width: 46px; height: 46px; flex-shrink: 0"><svg width="46" height="46" viewBox="0 0 46 46" aria-hidden="true" style="transform: rotate(-90deg)"><circle cx="23.0" cy="23.0" r="20.5" fill="none" stroke="#EAF2FB" stroke-width="5"/><circle cx="23.0" cy="23.0" r="20.5" fill="none" stroke="#E8922E" stroke-width="5" stroke-linecap="round" stroke-dasharray="128.8" stroke-dashoffset="92.7"/></svg><span style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 12px; font-weight: 700; color: #0E2A47">2</span></div>
+  <div style="flex-grow: 1; display: flex; flex-direction: column"><span style="font-size: 15px; font-weight: 700">كومبوزت A2</span><span style="font-size: 12px; color: #5B6F82">باقي 2 من حد أدنى 5 · يخلص خلال 4 أيام</span></div>
+  <button style="height: 34px; padding: 0 12px; border-radius: 11px; border: 0; background: #EAF2FB; color: #1565C0; font-size: 12px; font-weight: 700">اطلب</button>
+</div></div>
+<nav style="position: absolute; left: 0; right: 0; bottom: 0; height: 86px; box-sizing: border-box; padding: 10px 10px 26px; background: rgba(255,255,255,0.92); backdrop-filter: blur(20px); border-top: 1px solid #E3EAF1; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr))"><a href="#" style="display: flex; flex-direction: column; align-items: center; gap: 3px; color: #1565C0; text-decoration: none; font-size: 10px; font-weight: 600"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1565C0" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>الرئيسية</a><a href="#" style="display: flex; flex-direction: column; align-items: center; gap: 3px; color: #5B6F82; text-decoration: none; font-size: 10px; font-weight: 500"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#5B6F82" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8l-9-5-9 5 9 5 9-5zM3 8v8l9 5 9-5V8M12 13v8"/></svg>المواد</a><a href="#" style="display: flex; flex-direction: column; align-items: center; gap: 3px; color: #5B6F82; text-decoration: none; font-size: 10px; font-weight: 500"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#5B6F82" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg>المرضى</a><a href="#" style="display: flex; flex-direction: column; align-items: center; gap: 3px; color: #5B6F82; text-decoration: none; font-size: 10px; font-weight: 500"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#5B6F82" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6M10 3v6L5 18a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3"/><path d="M7.5 14h9"/></svg>المعمل</a><a href="#" style="display: flex; flex-direction: column; align-items: center; gap: 3px; color: #5B6F82; text-decoration: none; font-size: 10px; font-weight: 500"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#5B6F82" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/></svg>الإعدادات</a></nav>
+</div></div><span class="isl"></span></div></div><figcaption>الرئيسية<span>قيمة المخزون والنواقص</span></figcaption></figure>
+      <figure class="rv d1"><div class="phone "><div class="scr"><div class="scr-in" aria-hidden="true"><div dir="rtl" style="width: 390px; height: 844px; box-sizing: border-box; position: relative; overflow: hidden; background: #F4F7FA; color: #0E2A47; font-family: 'IBM Plex Sans Arabic', sans-serif">
+<div style="position: absolute; top: 0; right: 0; left: 0; padding: 54px 18px 0; display: flex; flex-direction: column; gap: 14px">
+  <div style="display: flex; justify-content: space-between; align-items: center"><a aria-label="رجوع" style="width: 44px; height: 44px; border-radius: 14px; border: 1px solid #E3EAF1; background: #FFFFFF; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0E2A47" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a><span style="font-size: 15px; font-weight: 600">تفاصيل المادة</span><button style="height: 44px; padding: 0 14px; border-radius: 14px; border: 1px solid #E3EAF1; background: #FFFFFF; color: #1565C0; font-size: 14px; font-weight: 600">تعديل</button></div>
+  <div style="display: flex; align-items: center; gap: 14px">
+    <div style="width: 64px; height: 64px; border-radius: 20px; background: #1E88E51A; display: flex; align-items: center; justify-content: center"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E88E5" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3c-2.5 0-4 2-4 4.5 0 3 1.5 4 2 7 .5 3 1 7 2.5 7s1.5-4 2.5-6c.5-1 1.5-1 2 0 1 2 1 6 2.5 6s2-4 2.5-7c.5-3 2-4 2-7C21 5 19.5 3 17 3c-2 0-3 1-5 1S9 3 7 3z"/></svg></div>
+    <div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 24px; font-weight: 700">كومبوزت A2</span><span style="font-size: 13px; color: #5B6F82">حشوات · 3M Filtek Z350 · باركود 0081</span></div>
+  </div>
+  <div style="background: #FFFFFF; border: 1px solid #E3EAF1; border-radius: 22px; padding: 16px; display: flex; align-items: center; gap: 16px">
+    <div style="position: relative; width: 92px; height: 92px; flex-shrink: 0"><svg width="92" height="92" viewBox="0 0 92 92" aria-hidden="true" style="transform: rotate(-90deg)"><circle cx="46.0" cy="46.0" r="41.5" fill="none" stroke="#EAF2FB" stroke-width="9"/><circle cx="46.0" cy="46.0" r="41.5" fill="none" stroke="#E8922E" stroke-width="9" stroke-linecap="round" stroke-dasharray="260.8" stroke-dashoffset="187.7"/></svg><span style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 24px; font-weight: 700; color: #0E2A47">2</span></div>
+    <div style="flex-grow: 1; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 12px">
+      <div style="display: flex; flex-direction: column"><span style="font-size: 11px; color: #5B6F82">الحد الأدنى</span><span style="font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 17px; font-weight: 700">5</span></div>
+      <div style="display: flex; flex-direction: column"><span style="font-size: 11px; color: #5B6F82">سعر الوحدة</span><span style="font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 17px; font-weight: 700">140 <span style="font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 11px; color: #5B6F82">ر.س</span></span></div>
+      <div style="display: flex; flex-direction: column"><span style="font-size: 11px; color: #5B6F82">يخلص خلال</span><span style="font-size: 17px; font-weight: 700; color: #B8661A">4 أيام</span></div>
+      <div style="display: flex; flex-direction: column"><span style="font-size: 11px; color: #5B6F82">الصلاحية</span><span style="font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 17px; font-weight: 700">08/2027</span></div>
+    </div>
+  </div>
+  <div style="background: #FFFFFF; border: 1px solid #E3EAF1; border-radius: 22px; padding: 14px 16px; display: flex; flex-direction: column; gap: 10px">
+    <div style="display: flex; justify-content: space-between; align-items: baseline"><span style="font-size: 15px; font-weight: 700">الاستهلاك الأسبوعي</span><span style="font-size: 12px; color: #5B6F82">آخر 12 أسبوع</span></div>
+    <svg width="322" height="96" viewBox="0 0 322 96" aria-hidden="true"><rect x="299.2" y="60.0" width="18.8" height="36.0" rx="5" fill="#D6E6F6"/><rect x="272.3" y="48.0" width="18.8" height="48.0" rx="5" fill="#D6E6F6"/><rect x="245.5" y="72.0" width="18.8" height="24.0" rx="5" fill="#D6E6F6"/><rect x="218.7" y="36.0" width="18.8" height="60.0" rx="5" fill="#D6E6F6"/><rect x="191.8" y="60.0" width="18.8" height="36.0" rx="5" fill="#D6E6F6"/><rect x="165.0" y="24.0" width="18.8" height="72.0" rx="5" fill="#D6E6F6"/><rect x="138.2" y="48.0" width="18.8" height="48.0" rx="5" fill="#D6E6F6"/><rect x="111.3" y="36.0" width="18.8" height="60.0" rx="5" fill="#D6E6F6"/><rect x="84.5" y="12.0" width="18.8" height="84.0" rx="5" fill="#D6E6F6"/><rect x="57.7" y="48.0" width="18.8" height="48.0" rx="5" fill="#D6E6F6"/><rect x="30.8" y="24.0" width="18.8" height="72.0" rx="5" fill="#D6E6F6"/><rect x="4.0" y="0.0" width="18.8" height="96.0" rx="5" fill="#1E88E5"/></svg>
+    <div style="display: flex; justify-content: space-between; font-size: 11px; color: #5B6F82"><span>ديسمبر</span><span>نوفمبر</span><span>أكتوبر</span><span>سبتمبر</span></div>
+  </div>
+  <div style="display: flex; flex-direction: column"><span style="font-size: 15px; font-weight: 700; padding-bottom: 2px">آخر الحركات</span><div style="display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid #E3EAF1"><div style="width: 36px; height: 36px; border-radius: 11px; background: #2E8B571A; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2E8B57" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg></div><div style="flex-grow: 1; display: flex; flex-direction: column"><span style="font-size: 14px; font-weight: 600">صرف 1 سرنجة</span><span style="font-size: 12px; color: #5B6F82">نورة · حشوة سن 36 · منذ 20 د</span></div><span style="font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 15px; font-weight: 700; color: #0E2A47" dir="ltr">−1</span></div><div style="display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid #E3EAF1"><div style="width: 36px; height: 36px; border-radius: 11px; background: #1565C01A; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1565C0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><path d="M9 12h8M9 16h6"/></svg></div><div style="flex-grow: 1; display: flex; flex-direction: column"><span style="font-size: 14px; font-weight: 600">استلام فاتورة</span><span style="font-size: 12px; color: #5B6F82">مستودع الرياض · 10 سرنجات · قبل 9 أيام</span></div><span style="font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 15px; font-weight: 700; color: #2E8B57" dir="ltr">+10</span></div><div style="display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid #E3EAF1"><div style="width: 36px; height: 36px; border-radius: 11px; background: #2E8B571A; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2E8B57" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg></div><div style="flex-grow: 1; display: flex; flex-direction: column"><span style="font-size: 14px; font-weight: 600">صرف 1 سرنجة</span><span style="font-size: 12px; color: #5B6F82">ريم · حشوة سن 14 · قبل 10 أيام</span></div><span style="font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 15px; font-weight: 700; color: #0E2A47" dir="ltr">−1</span></div></div>
+</div>
+<div style="position: absolute; left: 18px; right: 18px; bottom: 26px; display: flex; gap: 10px">
+  <button style="flex: 1; height: 54px; border-radius: 17px; border: 0; background: #1565C0; color: #FFFFFF; font-size: 15px; font-weight: 700; box-shadow: 0 10px 22px rgba(21,101,192,0.3)">صرف</button>
+  <button style="flex: 1; height: 54px; border-radius: 17px; border: 1px solid #E3EAF1; background: #FFFFFF; color: #0E2A47; font-size: 15px; font-weight: 700">إضافة للمخزون</button>
+</div>
+
+</div></div><span class="isl"></span></div></div><figcaption>تفاصيل المادة<span>الاستهلاك وموعد النفاد</span></figcaption></figure>
+      <figure class="rv d2"><div class="phone "><div class="scr"><div class="scr-in" aria-hidden="true"><div dir="rtl" style="width: 390px; height: 844px; box-sizing: border-box; position: relative; overflow: hidden; background: #F4F7FA; color: #0E2A47; font-family: 'IBM Plex Sans Arabic', sans-serif">
+<div style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; background: radial-gradient(80% 50% at 50% 34%, #3A4652 0%, #151C23 70%, #0B0F14 100%)"></div>
+<div style="position: absolute; top: 200px; left: 50%; margin-left: -70px; width: 140px; height: 190px; border-radius: 18px; background: linear-gradient(160deg, #F2F4F6, #C9D0D7); box-shadow: 0 30px 60px rgba(0,0,0,0.5); transform: rotate(-6deg); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px">
+  <span style="font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 13px; font-weight: 800; color: #B71C1C" dir="ltr">Filtek Z350</span><span style="font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 22px; font-weight: 800; color: #263238" dir="ltr">A2</span>
+  <div style="display: flex; gap: 2px; height: 26px" aria-hidden="true"><span style="width: 2px; background: #263238"></span><span style="width: 1px; background: #263238"></span><span style="width: 3px; background: #263238"></span><span style="width: 1px; background: #263238"></span><span style="width: 2px; background: #263238"></span><span style="width: 3px; background: #263238"></span><span style="width: 1px; background: #263238"></span><span style="width: 2px; background: #263238"></span><span style="width: 1px; background: #263238"></span><span style="width: 3px; background: #263238"></span></div>
+</div>
+<div style="position: absolute; top: 176px; left: 85px; width: 220px; height: 240px">
+  <span style="position: absolute; top: 0; right: 0; width: 38px; height: 38px; border-top: 4px solid #5FB3F5; border-right: 4px solid #5FB3F5; border-top-right-radius: 18px"></span>
+  <span style="position: absolute; top: 0; left: 0; width: 38px; height: 38px; border-top: 4px solid #5FB3F5; border-left: 4px solid #5FB3F5; border-top-left-radius: 18px"></span>
+  <span style="position: absolute; bottom: 0; right: 0; width: 38px; height: 38px; border-bottom: 4px solid #5FB3F5; border-right: 4px solid #5FB3F5; border-bottom-right-radius: 18px"></span>
+  <span style="position: absolute; bottom: 0; left: 0; width: 38px; height: 38px; border-bottom: 4px solid #5FB3F5; border-left: 4px solid #5FB3F5; border-bottom-left-radius: 18px"></span>
+</div>
+<div style="position: absolute; top: 56px; left: 18px; right: 18px; display: flex; justify-content: space-between; align-items: center">
+  <button aria-label="إغلاق" style="width: 44px; height: 44px; border-radius: 50%; border: 0; background: rgba(255,255,255,0.14); backdrop-filter: blur(10px); display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <span style="height: 34px; padding: 0 14px; border-radius: 999px; background: rgba(255,255,255,0.14); color: #FFFFFF; font-size: 13px; font-weight: 600; display: flex; align-items: center; gap: 6px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#5FB3F5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/></svg>تعرّف ذكي</span>
+  <button aria-label="الفلاش" style="width: 44px; height: 44px; border-radius: 50%; border: 0; background: rgba(255,255,255,0.14); display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></button>
+</div>
+<div style="position: absolute; left: 10px; right: 10px; bottom: 24px; background: #FFFFFF; border-radius: 30px; padding: 20px; display: flex; flex-direction: column; gap: 16px; box-shadow: 0 -10px 40px rgba(0,0,0,0.35)">
+  <div style="align-self: center; width: 40px; height: 5px; border-radius: 3px; background: #D5DDE5"></div>
+  <div style="display: flex; align-items: center; gap: 14px">
+    <div style="width: 56px; height: 56px; border-radius: 18px; background: #2E8B57; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 7px rgba(46,139,87,0.14)"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg></div>
+    <div style="flex-grow: 1; display: flex; flex-direction: column; gap: 1px"><span style="font-size: 12px; font-weight: 600; color: #2E8B57">تم التعرف · باركود + صورة</span><span style="font-size: 20px; font-weight: 700; color: #0E2A47">كومبوزت A2</span><span style="font-size: 12px; color: #5B6F82">الرصيد بعد الصرف: 1 سرنجة</span></div>
+  </div>
+  <div style="display: flex; gap: 10px">
+    <div style="flex-grow: 1; display: flex; align-items: center; justify-content: space-between; background: #F4F7FA; border-radius: 18px; padding: 6px">
+      <button aria-label="زيادة" style="width: 46px; height: 46px; border-radius: 14px; border: 0; background: #FFFFFF; box-shadow: 0 1px 3px rgba(14,42,71,0.12); color: #0E2A47; font-size: 22px">+</button>
+      <span style="font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 26px; font-weight: 800; color: #0E2A47">1</span>
+      <button aria-label="إنقاص" style="width: 46px; height: 46px; border-radius: 14px; border: 0; background: #FFFFFF; box-shadow: 0 1px 3px rgba(14,42,71,0.12); color: #0E2A47; font-size: 22px">−</button>
+    </div>
+    <button style="width: 120px; border-radius: 18px; border: 1px solid #E3EAF1; background: #FFFFFF; color: #0E2A47; font-size: 13px; font-weight: 600; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1565C0" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg>ربط بمريض</button>
+  </div>
+  <button style="height: 56px; border-radius: 18px; border: 0; background: #1565C0; color: #FFFFFF; font-size: 16px; font-weight: 700">تأكيد الصرف</button>
+</div>
+
+</div></div><span class="isl"></span></div></div><figcaption>الصرف بالكاميرا<span>صوّر وأكّد</span></figcaption></figure>
+      <figure class="rv d3"><div class="phone "><div class="scr"><div class="scr-in" aria-hidden="true"><div dir="rtl" style="width: 390px; height: 844px; box-sizing: border-box; position: relative; overflow: hidden; background: #07131F; color: #EAF2F9; font-family: 'IBM Plex Sans Arabic', sans-serif">
+<div style="position: absolute; top: 0; right: 0; left: 0; padding: 56px 18px 0; display: flex; flex-direction: column; gap: 14px"><div style="display: flex; justify-content: space-between; align-items: center">
+  <div style="display: flex; align-items: center; gap: 11px"><div style="width: 44px; height: 44px; border-radius: 14px; background: #0F2234; border: 1px solid #1C3349; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #5FB3F5">ع</div>
+  <div style="display: flex; flex-direction: column"><span style="font-size: 12px; color: #93A9BF">صباح الخير، د. سارة</span><span style="font-size: 20px; font-weight: 700">عيادة الابتسامة</span></div></div>
+  <button aria-label="التنبيهات" style="position: relative; width: 44px; height: 44px; border-radius: 14px; border: 1px solid #1C3349; background: #0F2234; color: #EAF2F9; display: flex; align-items: center; justify-content: center"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#EAF2F9" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 1 1 12 0c0 7 3 8 3 8H3s3-1 3-8M10 20a2 2 0 0 0 4 0"/></svg><span style="position: absolute; top: 10px; left: 11px; width: 8px; height: 8px; border-radius: 50%; background: #E5484D; border: 2px solid #0F2234"></span></button>
+</div><div style="border-radius: 26px; padding: 18px 18px 14px; background: linear-gradient(155deg, #1A4775 0%, #0E2A47 55%, #081B30 100%); color: #FFFFFF; box-shadow: 0 16px 34px rgba(8,27,48,0.5); display: flex; flex-direction: column; gap: 10px">
+  <div style="display: flex; justify-content: space-between; align-items: center"><span style="font-size: 13px; color: #A9C2DA">قيمة المخزون</span><span style="font-size: 12px; font-weight: 600; color: #7FE0A8; background: rgba(127,224,168,0.12); padding: 3px 9px; border-radius: 999px" dir="ltr">↑ 4.2%</span></div>
+  <div style="display: flex; align-items: baseline; gap: 6px"><span style="font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 40px; font-weight: 800; letter-spacing: -1.2px" dir="ltr">48,250</span><span style="font-size: 15px; color: #5FB3F5; font-weight: 600">ر.س</span></div>
+  <svg width="318" height="70" viewBox="0 0 318 70" aria-hidden="true" style="display: block; transform: scaleX(-1)"><defs><linearGradient id="sp1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5FB3F5" stop-opacity="0.45"/><stop offset="1" stop-color="#5FB3F5" stop-opacity="0"/></linearGradient></defs><polygon points="0,70 0.0,62 11.0,60 21.9,63 32.9,58 43.9,59 54.8,55 65.8,57 76.8,52 87.7,54 98.7,50 109.7,51 120.6,47 131.6,49 142.6,44 153.5,46 164.5,42 175.4,40 186.4,41 197.4,37 208.3,38 219.3,34 230.3,35 241.2,31 252.2,33 263.2,29 274.1,30 285.1,27 296.1,25 307.0,26 318.0,22 318,70" fill="url(#sp1)"/><polyline points="0.0,62 11.0,60 21.9,63 32.9,58 43.9,59 54.8,55 65.8,57 76.8,52 87.7,54 98.7,50 109.7,51 120.6,47 131.6,49 142.6,44 153.5,46 164.5,42 175.4,40 186.4,41 197.4,37 208.3,38 219.3,34 230.3,35 241.2,31 252.2,33 263.2,29 274.1,30 285.1,27 296.1,25 307.0,26 318.0,22" fill="none" stroke="#5FB3F5" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="318" cy="22" r="4.5" fill="#FFFFFF" stroke="#5FB3F5" stroke-width="2.5"/></svg>
+  <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px">
+    <div style="background: rgba(255,255,255,0.07); border-radius: 14px; padding: 8px 10px; display: flex; flex-direction: column"><span style="font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 18px; font-weight: 700">186</span><span style="font-size: 11px; color: #A9C2DA">مادة</span></div>
+    <div style="background: rgba(255,255,255,0.07); border-radius: 14px; padding: 8px 10px; display: flex; flex-direction: column"><span style="font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 18px; font-weight: 700; color: #F5B26B">7</span><span style="font-size: 11px; color: #A9C2DA">ناقصة</span></div>
+    <div style="background: rgba(255,255,255,0.07); border-radius: 14px; padding: 8px 10px; display: flex; flex-direction: column"><span style="font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 18px; font-weight: 700; color: #F28B82">3</span><span style="font-size: 11px; color: #A9C2DA">صلاحية</span></div>
+    <div style="background: rgba(255,255,255,0.07); border-radius: 14px; padding: 8px 10px; display: flex; flex-direction: column"><span style="font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 18px; font-weight: 700; color: #5FB3F5">4</span><span style="font-size: 11px; color: #A9C2DA">بالمعمل</span></div>
+  </div>
+</div><div style="display: flex; gap: 10px"><button style="flex-grow: 1; height: 56px; border-radius: 18px; border: 0; background: #1E88E5; color: #FFFFFF; font-size: 16px; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 10px; box-shadow: 0 10px 22px rgba(21,101,192,0.35)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 12h10"/></svg>صرف بالكاميرا</button><button aria-label="استلام فاتورة" style="width: 56px; height: 56px; border-radius: 18px; border: 1px solid #1C3349; background: #0F2234; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5FB3F5" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><path d="M9 12h8M9 16h6"/></svg></button></div><div style="background: #0F2234; border: 1px solid #1C3349; border-radius: 22px; padding: 14px 16px; display: flex; flex-direction: column; gap: 10px">
+  <div style="display: flex; justify-content: space-between; align-items: baseline"><span style="font-size: 15px; font-weight: 700">الصرف هذا الأسبوع</span><span style="font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 15px; font-weight: 700; color: #5FB3F5">3,140 <span style="font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 12px; color: #93A9BF; font-weight: 500">ر.س</span></span></div>
+  <div style="display: flex; gap: 8px; align-items: flex-end"><div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 6px"><div style="width: 100%; max-width: 26px; height: 74px; display: flex; align-items: flex-end"><div style="width: 100%; height: 42%; border-radius: 7px; background: #132B42"></div></div><span style="font-size: 11px; color: #93A9BF; font-weight: 500">س</span></div><div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 6px"><div style="width: 100%; max-width: 26px; height: 74px; display: flex; align-items: flex-end"><div style="width: 100%; height: 58%; border-radius: 7px; background: #132B42"></div></div><span style="font-size: 11px; color: #93A9BF; font-weight: 500">ح</span></div><div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 6px"><div style="width: 100%; max-width: 26px; height: 74px; display: flex; align-items: flex-end"><div style="width: 100%; height: 36%; border-radius: 7px; background: #132B42"></div></div><span style="font-size: 11px; color: #93A9BF; font-weight: 500">ن</span></div><div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 6px"><div style="width: 100%; max-width: 26px; height: 74px; display: flex; align-items: flex-end"><div style="width: 100%; height: 70%; border-radius: 7px; background: #132B42"></div></div><span style="font-size: 11px; color: #93A9BF; font-weight: 500">ث</span></div><div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 6px"><div style="width: 100%; max-width: 26px; height: 74px; display: flex; align-items: flex-end"><div style="width: 100%; height: 52%; border-radius: 7px; background: #132B42"></div></div><span style="font-size: 11px; color: #93A9BF; font-weight: 500">ر</span></div><div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 6px"><div style="width: 100%; max-width: 26px; height: 74px; display: flex; align-items: flex-end"><div style="width: 100%; height: 88%; border-radius: 7px; background: #3D9BEE"></div></div><span style="font-size: 11px; color: #EAF2F9; font-weight: 700">خ</span></div><div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 6px"><div style="width: 100%; max-width: 26px; height: 74px; display: flex; align-items: flex-end"><div style="width: 100%; height: 24%; border-radius: 7px; background: #132B42"></div></div><span style="font-size: 11px; color: #93A9BF; font-weight: 500">ج</span></div></div>
+</div><div style="background: #0F2234; border: 1px solid #1C3349; border-radius: 22px; padding: 12px 14px; display: flex; align-items: center; gap: 12px">
+  <div style="position: relative; width: 46px; height: 46px; flex-shrink: 0"><svg width="46" height="46" viewBox="0 0 46 46" aria-hidden="true" style="transform: rotate(-90deg)"><circle cx="23.0" cy="23.0" r="20.5" fill="none" stroke="#132B42" stroke-width="5"/><circle cx="23.0" cy="23.0" r="20.5" fill="none" stroke="#E8922E" stroke-width="5" stroke-linecap="round" stroke-dasharray="128.8" stroke-dashoffset="92.7"/></svg><span style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 12px; font-weight: 700; color: #EAF2F9">2</span></div>
+  <div style="flex-grow: 1; display: flex; flex-direction: column"><span style="font-size: 15px; font-weight: 700">كومبوزت A2</span><span style="font-size: 12px; color: #93A9BF">باقي 2 من حد أدنى 5 · يخلص خلال 4 أيام</span></div>
+  <button style="height: 34px; padding: 0 12px; border-radius: 11px; border: 0; background: #132B42; color: #5FB3F5; font-size: 12px; font-weight: 700">اطلب</button>
+</div></div>
+<nav style="position: absolute; left: 0; right: 0; bottom: 0; height: 86px; box-sizing: border-box; padding: 10px 10px 26px; background: rgba(9,22,35,0.92); backdrop-filter: blur(20px); border-top: 1px solid #1C3349; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr))"><a href="#" style="display: flex; flex-direction: column; align-items: center; gap: 3px; color: #5FB3F5; text-decoration: none; font-size: 10px; font-weight: 600"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#5FB3F5" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>الرئيسية</a><a href="#" style="display: flex; flex-direction: column; align-items: center; gap: 3px; color: #93A9BF; text-decoration: none; font-size: 10px; font-weight: 500"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#93A9BF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8l-9-5-9 5 9 5 9-5zM3 8v8l9 5 9-5V8M12 13v8"/></svg>المواد</a><a href="#" style="display: flex; flex-direction: column; align-items: center; gap: 3px; color: #93A9BF; text-decoration: none; font-size: 10px; font-weight: 500"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#93A9BF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg>المرضى</a><a href="#" style="display: flex; flex-direction: column; align-items: center; gap: 3px; color: #93A9BF; text-decoration: none; font-size: 10px; font-weight: 500"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#93A9BF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6M10 3v6L5 18a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3"/><path d="M7.5 14h9"/></svg>المعمل</a><a href="#" style="display: flex; flex-direction: column; align-items: center; gap: 3px; color: #93A9BF; text-decoration: none; font-size: 10px; font-weight: 500"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#93A9BF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/></svg>الإعدادات</a></nav>
+</div></div><span class="isl"></span></div></div><figcaption>الوضع الليلي<span>مريح للعين في العيادة</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="mist story" id="build">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow rv">كيف بنيناه</p>
+      <h2 class="rv d1">تطبيق أصلي، لا موقع داخل تطبيق</h2>
+      <p class="sub rv d2">بنته iDX بتقنيات Apple الأصلية ليكون سريعاً، ويعمل دون اتصال بالإنترنت، ويحفظ بيانات العيادة لديها.</p>
+      <ol class="steps">
+        <li class="rv"><div><b>فهم شغل العيادة</b><span>من المساعدة التي تصرف المادة إلى المدير الذي يراجع الفاتورة.</span></div></li>
+        <li class="rv d1"><div><b>تصميم هوية ونظام واجهات</b><span>شعار وأيقونة وألوان طبية، وواجهات عربية من اليمين لليسار.</span></div></li>
+        <li class="rv d2"><div><b>تطوير وتجربة داخل العيادة</b><span>نسخ تجريبية عبر TestFlight، وتعديلات بناءً على ملاحظات الطاقم.</span></div></li>
+        <li class="rv d3"><div><b>النشر على App Store</b><span>اشتراك شهري وسنوي، وصفحة متجر وصور جاهزة.</span></div></li>
+      </ol>
+    </div>
+    <div class="rv d1">
+      <ul class="stack"><li class="stack-h" aria-hidden="true">STACK</li><li class="rv"><b class="ltr">SwiftUI</b><span>واجهة أصلية لـ iPhone وiPad وMac من كود واحد</span></li><li class="rv"><b class="ltr">CloudKit</b><span>بيانات العيادة في iCloud الخاص بها، مع مشاركة آمنة للفريق</span></li><li class="rv"><b class="ltr">Vision</b><span>قراءة الباركود والنصوص داخل الجهاز دون إنترنت</span></li><li class="rv"><b class="ltr">StoreKit 2</b><span>اشتراكات Apple مع فترة تجربة وعرض للسنة الأولى</span></li><li class="rv"><b class="ltr">WidgetKit</b><span>ويدجت للشاشة الرئيسية وشاشة القفل</span></li><li class="rv"><b class="ltr">Swift Charts</b><span>رسوم الاستهلاك والقيمة والصرف الأسبوعي</span></li></ul>
+    </div>
+  </div>
+</section>
+
+<section id="privacy">
+  <div class="wrap">
+    <div class="sec-head"><p class="eyebrow rv">الخصوصية</p><h2 class="rv d1">بيانات العيادة تبقى للعيادة</h2></div>
+    <div class="priv">
+      <div class="rv"><b>في iCloud العيادة</b><p>المواد والحركات وحالات المعمل محفوظة في حساب العيادة، ولا تمر بأي خادم تابع لنا.</p></div>
+      <div class="rv d1"><b>القراءة داخل الجهاز</b><p>يُقرأ الباركود والنصوص على الجهاز نفسه. الذكاء الاصطناعي اختياري وبمفتاح العيادة.</p></div>
+      <div class="rv d2"><b>دون إعلانات أو تتبّع</b><p>لا إعلانات، ولا جمع لبيانات الاستخدام. <a href="/dental-stock/privacy/" style="color:var(--accent-text);font-weight:600">سياسة الخصوصية</a></p></div>
+    </div>
+  </div>
+</section>
+
+<section class="mist" id="pricing">
+  <div class="wrap">
+    <div class="sec-head"><p class="eyebrow rv">الأسعار</p><h2 class="rv d1">اشتراك واحد للعيادة، والفريق كله مجانًا</h2><p class="sub rv d2">مدير العيادة يشترك، والموظفون المدعوّون يستخدمون التطبيق بدون اشتراك.</p></div>
+    <div class="plans">
+      <div class="plan rv"><h3>شهري</h3><div class="price"><b class="ltr">149</b><span>ر.س / شهريًا</span></div>
+        <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>شهر تجربة مجانية</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>كل المزايا بدون حدود</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>إلغاء في أي وقت من حساب Apple</li></ul></div>
+      <div class="plan best rv d1"><span class="tag">السنة الأولى بخصم</span><h3>سنوي</h3><div class="price"><b class="ltr">799</b><span>ر.س للسنة الأولى</span></div>
+        <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>ثم 1,199 ر.س سنويًا</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>أوفر من الشهري</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>كل المزايا والتحديثات</li></ul></div>
+    </div>
+    <p class="fine rv">يتم الاشتراك عبر App Store ويتجدد تلقائياً، ويمكنك إلغاؤه في أي وقت من إعدادات حساب Apple. التجربة المجانية للاشتراك الشهري. <a href="/dental-stock/support/" style="color:var(--accent-text);font-weight:600">الدعم والأسئلة الشائعة</a></p>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2 class="rv">عندك فكرة تطبيق لمنشأتك؟</h2>
+    <p class="rv d1">Dental Stock أحد منتجات iDX، ونبني <a href="/apps/" style="color:#fff;text-decoration:underline">تطبيقات وأنظمة داخلية</a> بالمستوى نفسه لأي قطاع.</p>
+    <a class="btn js-wa rv d2" href="#" data-msg="السلام عليكم، شفت تطبيق Dental Stock وأبغى تطبيق لمنشأتي">احجز استشارة مجانية</a>
+    <p class="credit rv d3">طوّره <span class="ltr">Anas Saab</span> من فريق iDX</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><a class="flogo" href="/" aria-label="iDX"><svg viewBox="0 0 810 360" role="img" aria-label="iDX"><use href="#logo"/></svg></a><p>شركة التحول الرقمي الذكي (iDX). نبني التقنية التي تشغّل منشأتك.</p><p>الرقم الوطني الموحد: <span class="ltr">7051364813</span></p></div>
+    <div><h4>Dental Stock</h4><ul><li><a href="#features">المزايا</a></li><li><a href="#pricing">الأسعار</a></li><li><a href="/dental-stock/support/">الدعم والأسئلة الشائعة</a></li><li><a href="/dental-stock/privacy/">خصوصية التطبيق</a></li><li><a href="/products/">كل منتجاتنا</a></li></ul></div>
+    <div><h4>تواصل</h4><ul><li><a class="ltr" href="tel:+966563838599">+966 56 383 8599</a></li><li><a href="mailto:info@idx.sa">info@idx.sa</a></li><li>2904 أبي بن معاذ الأنصاري، حي الربيع، الرياض 13316</li></ul></div>
+    <div class="legal"><span>© 2026 شركة التحول الرقمي الذكي (iDX). جميع الحقوق محفوظة.</span><nav aria-label="روابط قانونية"><a href="/privacy/">سياسة الخصوصية</a><a href="/data-deletion/">حذف البيانات</a><a href="/terms/">الشروط والأحكام</a></nav></div>
+  </div>
+</footer>
+
+<script>
+// رابط App Store: ضعه هنا بعد النشر، مثال: "https://apps.apple.com/sa/app/dental-stock/id0000000000"
+var APP_STORE_URL = "";
+(function(){
+  var s=document.getElementById("store");
+  if(APP_STORE_URL){s.href=APP_STORE_URL;s.removeAttribute("aria-disabled");s.querySelector("small").textContent="حمّله من";}
+  else s.addEventListener("click",function(e){e.preventDefault()});
+  var WA="966563838599";
+  document.querySelectorAll(".js-wa").forEach(function(a){a.href="https://wa.me/"+WA+"?text="+encodeURIComponent(a.dataset.msg||"");a.target="_blank";a.rel="noopener"});
+  var root=document.documentElement,tb=document.getElementById("theme");
+  function sync(){tb.setAttribute("aria-pressed",root.dataset.theme==="dark")} sync();
+  tb.addEventListener("click",function(){root.dataset.theme=root.dataset.theme==="dark"?"light":"dark";try{localStorage.setItem("idx-theme",root.dataset.theme)}catch(e){}sync()});
+  var m=document.getElementById("menu"),n=document.getElementById("nav");
+  m.addEventListener("click",function(){var o=n.classList.toggle("open");m.setAttribute("aria-expanded",o)});
+  n.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){n.classList.remove("open");m.setAttribute("aria-expanded","false")})});
+  var h=document.querySelector("header.top");addEventListener("scroll",function(){h.classList.toggle("scrolled",scrollY>8)},{passive:true});
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll(".rv").forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>
